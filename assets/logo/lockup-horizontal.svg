@@ -1,0 +1,21 @@
+<svg width="760" height="120" viewBox="0 0 760 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HNIVision horizontal lockup">
+  <title>HNIVision</title>
+  <desc>Horizontal lockup of the HNIVision logo with wordmark and tagline.</desc>
+  <g transform="translate(20 20) scale(0.3125)">
+    <path d="M 28 128 Q 128 36 228 128 Q 128 220 28 128 Z"
+          fill="none" stroke="#1F5C3C" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M 128 66 C 90 82, 78 110, 86 138 C 94 168, 128 192, 128 192
+             C 128 192, 162 168, 170 138 C 178 110, 166 82, 128 66 Z"
+          fill="#1F5C3C"/>
+    <path d="M 128 72 L 128 188" stroke="#F8F6F1" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+    <path d="M 128 100 L 108 108 M 128 100 L 148 108
+             M 128 128 L 102 132 M 128 128 L 154 132
+             M 128 156 L 110 158 M 128 156 L 146 158"
+          stroke="#F8F6F1" stroke-width="1.6" stroke-linecap="round" opacity="0.35" fill="none"/>
+    <circle cx="128" cy="128" r="7" fill="#E8593C"/>
+    <circle cx="128" cy="128" r="3.5" fill="#F8F6F1"/>
+  </g>
+  <text x="120" y="68" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="700" fill="#1F5C3C" letter-spacing="-1">HNI</text>
+  <text x="208" y="68" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="300" fill="#2A3441" letter-spacing="-1">Vision</text>
+  <text x="120" y="92" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5F6B6A" letter-spacing="0.3">Five computer vision methods. One unified framework for human-nature interaction.</text>
+</svg>

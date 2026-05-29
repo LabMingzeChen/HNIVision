@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use HNIVision in your research, please cite it using these metadata."
+type: software
+title: "HNIVision: A Unified Framework for Human–Nature Interaction Extraction from Social Media Imagery"
+abstract: >-
+  HNIVision is an open-source Python toolkit and benchmark that unifies five
+  computer-vision paradigms — image labeling, classification, object detection,
+  image segmentation, and vision-language models — under a single interface
+  for extracting human–nature interaction (HNI) evidence from social media
+  imagery. It maps every model's output onto a four-level HNI evidence schema
+  (human presence, nature detection, activity evidence, cultural meaning) and
+  ships a reproducible benchmark on 1,000 NYC park event photos.
+authors:
+  - family-names: Chen
+    given-names: Mingze
+    affiliation: "Nature AI Lab"
+repository-code: "https://github.com/LabMingzeChen/HNIVision"
+url: "https://labmingzechen.github.io/HNIVision"
+license: MIT
+version: 0.1.0
+date-released: 2026-01-01
+keywords:
+  - computer vision
+  - human-nature interaction
+  - cultural ecosystem services
+  - social media imagery
+  - urban parks
+  - benchmark
+  - vision-language models
+  - image segmentation
+  - object detection
+preferred-citation:
+  type: article
+  title: "Verifying Computer Vision Methods for Human–Nature Interaction Extraction from Social Media Data"
+  authors:
+    - family-names: Chen
+      given-names: Mingze
+      affiliation: "Nature AI Lab"
+  year: 2026
+  notes: "[venue under review] — placeholder until companion paper is published."

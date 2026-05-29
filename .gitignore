@@ -1,0 +1,158 @@
+# -----------------------------------------------------------
+# Secrets & credentials — NEVER commit these
+# -----------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+credentials/
+
+# Google Cloud service-account JSON files (NEVER commit)
+*-service-account.json
+*credentials*.json
+voltaic-future-*.json
+
+# OpenAI / Anthropic / HF tokens
+.openai_key
+.huggingface_token
+.anthropic_key
+
+# -----------------------------------------------------------
+# Model weights — too large for git, host on HF/releases
+# -----------------------------------------------------------
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+*.engine
+weights/
+checkpoints/
+
+# Common pretrained-model cache locations
+~/.cache/torch/
+~/.cache/huggingface/
+~/.cache/clip/
+
+# -----------------------------------------------------------
+# Datasets — host externally, don't commit
+# -----------------------------------------------------------
+data/
+datasets/
+event_images/
+*.csv.gz
+*.parquet
+
+# Allow small benchmark/example data only
+!examples/sample_images/
+!docs/assets/
+
+# -----------------------------------------------------------
+# Outputs, logs, run artifacts
+# -----------------------------------------------------------
+runs/
+outputs/
+logs/
+results/
+wandb/
+mlruns/
+lightning_logs/
+tensorboard/
+*.log
+*.out
+checkpoint*.csv
+errors*.csv
+
+# -----------------------------------------------------------
+# Python
+# -----------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing & coverage
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Type checkers
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# -----------------------------------------------------------
+# IDE / editor
+# -----------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# -----------------------------------------------------------
+# OS
+# -----------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# -----------------------------------------------------------
+# Docs build
+# -----------------------------------------------------------
+site/
+docs/_build/
+docs/.cache/
+
+# Allow brand assets in `assets/` (they're public)
+!assets/**

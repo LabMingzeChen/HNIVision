@@ -1,0 +1,19 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HNIVision logo (dark mode)">
+  <title>HNIVision (dark)</title>
+  <desc>Dark-mode variant of the HNIVision logo with lighter green to maintain contrast on dark backgrounds.</desc>
+  <path d="M 28 128 Q 128 36 228 128 Q 128 220 28 128 Z"
+        fill="none" stroke="#7BB36F" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M 128 66
+           C 90 82, 78 110, 86 138
+           C 94 168, 128 192, 128 192
+           C 128 192, 162 168, 170 138
+           C 178 110, 166 82, 128 66 Z"
+        fill="#7BB36F"/>
+  <path d="M 128 72 L 128 188" stroke="#1F2A24" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+  <path d="M 128 100 L 108 108 M 128 100 L 148 108
+           M 128 128 L 102 132 M 128 128 L 154 132
+           M 128 156 L 110 158 M 128 156 L 146 158"
+        stroke="#1F2A24" stroke-width="1.6" stroke-linecap="round" opacity="0.35" fill="none"/>
+  <circle cx="128" cy="128" r="7" fill="#FF7D5E"/>
+  <circle cx="128" cy="128" r="3.5" fill="#1F2A24"/>
+</svg>
