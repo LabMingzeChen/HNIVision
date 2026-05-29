@@ -1,0 +1,200 @@
+{
+  "labeling": {
+    "labels": [
+      {
+        "description": "Cloud",
+        "confidence": 0.9246,
+        "rank_original": 1,
+        "kept_by_filter": true
+      },
+      {
+        "description": "Leisure",
+        "confidence": 0.8477,
+        "rank_original": 2,
+        "kept_by_filter": true
+      },
+      {
+        "description": "People in nature",
+        "confidence": 0.8349,
+        "rank_original": 3,
+        "kept_by_filter": true
+      },
+      {
+        "description": "Travel",
+        "confidence": 0.7405,
+        "rank_original": 4,
+        "kept_by_filter": false
+      },
+      {
+        "description": "Vacation",
+        "confidence": 0.7043,
+        "rank_original": 5,
+        "kept_by_filter": false
+      },
+      {
+        "description": "Cumulus",
+        "confidence": 0.6827,
+        "rank_original": 6,
+        "kept_by_filter": true
+      },
+      {
+        "description": "Meteorological phenomenon",
+        "confidence": 0.6119,
+        "rank_original": 7,
+        "kept_by_filter": true
+      },
+      {
+        "description": "Walkway",
+        "confidence": 0.6107,
+        "rank_original": 8,
+        "kept_by_filter": true
+      },
+      {
+        "description": "Fence",
+        "confidence": 0.5896,
+        "rank_original": 9,
+        "kept_by_filter": true
+      },
+      {
+        "description": "Lake District",
+        "confidence": 0.578,
+        "rank_original": 10,
+        "kept_by_filter": true
+      },
+      {
+        "description": "Walking",
+        "confidence": 0.5476,
+        "rank_original": 11,
+        "kept_by_filter": true
+      },
+      {
+        "description": "Holiday",
+        "confidence": 0.5167,
+        "rank_original": 12,
+        "kept_by_filter": false
+      }
+    ]
+  },
+  "classification": {
+    "predicted_class": "Garden Vegetation",
+    "predicted_class_idx": 1,
+    "confidence": 0.5953657627105713,
+    "all_probs": {
+      "Cultural Performance": 0.032805897295475006,
+      "Garden Vegetation": 0.5953657627105713,
+      "Social and Informal Recreation": 0.0038932671304792166,
+      "Sport and Exercise Activities": 0.002209724159911275,
+      "Waterscape and Built Settings": 0.2382632941007614,
+      "Wildlife Encounters": 0.0015004044398665428,
+      "Woodland Settings": 0.12596166133880615
+    }
+  },
+  "detection": {
+    "boxes": [
+      {
+        "class_name": "person",
+        "class_id": 0,
+        "confidence": 0.8144432902336121,
+        "x1": 403.5112609863281,
+        "y1": 352.8435974121094,
+        "x2": 456.5898742675781,
+        "y2": 523.173828125
+      },
+      {
+        "class_name": "person",
+        "class_id": 0,
+        "confidence": 0.7546769380569458,
+        "x1": 360.81927490234375,
+        "y1": 365.53314208984375,
+        "x2": 405.6036682128906,
+        "y2": 517.8699951171875
+      }
+    ],
+    "image_size": [
+      800,
+      532
+    ]
+  },
+  "segmentation": {
+    "pixel_shares": {
+      "shares": {
+        "wall": 0.02206531954887218,
+        "building": 0.0010385338345864662,
+        "sky": 0.5039238721804511,
+        "floor": 0.0005310150375939849,
+        "tree": 0.17923637218045113,
+        "road": 0.006663533834586466,
+        "grass": 0.04690319548872181,
+        "sidewalk": 0.024555921052631578,
+        "person": 0.03319078947368421,
+        "mountain": 5.4041353383458644e-05,
+        "plant": 0.001386278195488722,
+        "field": 0.005608552631578947,
+        "fence": 0.01743656015037594,
+        "grandstand": 0.01625,
+        "path": 0.031574248120300755,
+        "stairs": 0.027507048872180452,
+        "bannister": 0.07895676691729324,
+        "fountain": 0.0031179511278195487
+      },
+      "image_size": [
+        800,
+        532
+      ]
+    },
+    "semantic_map_shape": [
+      532,
+      800
+    ],
+    "n_classes_detected": 18
+  },
+  "vlm": {
+    "raw_response": "{\n  \"image_level_summary\": \"Two individuals stand at a stone balustrade overlooking a waterfront landscape with green lawn, trees, and a distant river under a cloudy sky.\",\n  \"human_presence\": {\n    \"visible\": \"yes\",\n    \"presence_type\": [\"individual\"],\n    \"estimated_people_count\": \"2-5\",\n    \"visual_evidence\": \"Two figures are clearly visible standing side-by-side at the balustrade, facing away from the camera toward the landscape.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"lawn\", \"waterfront\", \"woodland\", \"urban greenery\"],\n    \"dominant_nature_type\": \"waterfront\",\n    \"visual_evidence\": \"A wide river or large body of water is visible in the mid-ground, bordered by green grassy areas and trees, suggesting a waterfront park setting.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"landscape viewing\", \"watching\"],\n    \"dominant_activity\": \"landscape viewing\",\n    \"visual_evidence\": \"The two individuals are standing still, oriented toward the distant view, suggesting they are observing or appreciating the landscape.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"aesthetic appreciation\", \"recreation\"],\n    \"dominant_meaning\": \"aesthetic appreciation\",\n    \"visual_evidence\": \"The posture and orientation of the individuals toward the expansive natural view, combined with the scenic composition, suggest aesthetic appreciation of the landscape.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"yes\",\n    \"hni_strength\": \"moderate\",\n    \"reason\": \"Human presence is clearly visible, oriented toward nature, with visual cues indicating landscape viewing and aesthetic appreciation. The setting is clearly a park-like waterfront environment, supporting human\u2013nature interaction.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"\"\n}",
+    "parsed": {
+      "image_level_summary": "Two individuals stand at a stone balustrade overlooking a waterfront landscape with green lawn, trees, and a distant river under a cloudy sky.",
+      "human_presence": {
+        "visible": "yes",
+        "presence_type": [
+          "individual"
+        ],
+        "estimated_people_count": "2-5",
+        "visual_evidence": "Two figures are clearly visible standing side-by-side at the balustrade, facing away from the camera toward the landscape."
+      },
+      "nature_detection": {
+        "nature_types": [
+          "lawn",
+          "waterfront",
+          "woodland",
+          "urban greenery"
+        ],
+        "dominant_nature_type": "waterfront",
+        "visual_evidence": "A wide river or large body of water is visible in the mid-ground, bordered by green grassy areas and trees, suggesting a waterfront park setting."
+      },
+      "activity_evidence": {
+        "activity_types": [
+          "landscape viewing",
+          "watching"
+        ],
+        "dominant_activity": "landscape viewing",
+        "visual_evidence": "The two individuals are standing still, oriented toward the distant view, suggesting they are observing or appreciating the landscape."
+      },
+      "cultural_experiential_meaning": {
+        "meaning_types": [
+          "aesthetic appreciation",
+          "recreation"
+        ],
+        "dominant_meaning": "aesthetic appreciation",
+        "visual_evidence": "The posture and orientation of the individuals toward the expansive natural view, combined with the scenic composition, suggest aesthetic appreciation of the landscape."
+      },
+      "hni_overall_interpretation": {
+        "is_hni_present": "yes",
+        "hni_strength": "moderate",
+        "reason": "Human presence is clearly visible, oriented toward nature, with visual cues indicating landscape viewing and aesthetic appreciation. The setting is clearly a park-like waterfront environment, supporting human\u2013nature interaction."
+      },
+      "confidence": "high",
+      "uncertainty_notes": ""
+    },
+    "parse_error": null,
+    "tokens_used": 1504
+  }
+}

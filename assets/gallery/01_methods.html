@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HNIVision · Five methods on one image</title>
+<style>
+:root { --bg:#fafafa; --card-bg:#fff; --border:#e5e7eb; --t1:#1f2937; --t2:#6b7280; --t3:#9ca3af; }
+* { box-sizing: border-box; }
+body { margin:0; padding:0; background:var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--t1); -webkit-font-smoothing: antialiased; }
+.gallery { width:1500px; padding:40px; margin:0 auto; }
+.gallery-header { margin-bottom:28px; }
+.gallery-header h1 { margin:0 0 6px; font-size:26px; font-weight:700; letter-spacing:-0.5px; color:#14532d; }
+.gallery-header p { margin:0; font-size:14px; color:var(--t2); }
+.cards-row { display:grid; grid-template-columns:repeat(5,1fr); gap:16px; }
+.method-card { background:var(--card-bg); border-radius:12px; border:1px solid var(--border);
+  overflow:hidden; display:flex; flex-direction:column; box-shadow:0 1px 3px rgba(0,0,0,0.04); }
+.card-header { background:var(--card-color); color:#fff; padding:14px 18px 16px; position:relative; }
+.card-index { position:absolute; top:8px; right:14px; font-size:11px; opacity:0.7; font-weight:500; }
+.card-title { font-size:18px; font-weight:700; margin:0; }
+.card-body { padding:14px 18px 16px; flex:1; display:flex; flex-direction:column; }
+.card-backend { font-size:11px; color:var(--card-color); font-weight:600; margin-bottom:10px; opacity:0.95; }
+.card-image { width:100%; border-radius:4px; margin-bottom:6px; display:block; }
+.card-image-caption { font-size:10px; color:var(--t3); margin-bottom:12px; }
+.output-label { font-size:10px; font-weight:700; color:var(--t3); letter-spacing:0.6px; margin-bottom:10px; }
+.bar-row { display:grid; grid-template-columns:1fr 75px 42px; gap:6px; align-items:center; margin-bottom:5px; }
+.bar-label { font-size:12px; color:var(--t1); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.bar-track { background:#f3f4f6; border-radius:999px; height:7px; overflow:hidden; }
+.bar-fill { height:100%; border-radius:999px; }
+.bar-value { font-size:10px; color:var(--t2); text-align:right; font-variant-numeric:tabular-nums; }
+.top-class-card { background:rgba(74,107,58,0.08); border-radius:8px; padding:11px 13px; margin-bottom:12px;
+  border-left:3px solid var(--card-color); }
+.top-class-name { font-size:14px; font-weight:700; color:var(--card-color); line-height:1.2; }
+.top-class-prob { font-size:11px; color:var(--card-color); margin-top:3px;
+  font-family:"SF Mono",ui-monospace,monospace; }
+.other-classes-h { font-size:9px; font-weight:700; color:var(--t3); margin:8px 0 5px;
+  letter-spacing:0.6px; text-transform:uppercase; }
+.det-box { background:rgba(37,99,235,0.07); padding:8px 10px; margin-bottom:5px; border-radius:5px; }
+.det-box-row { display:flex; justify-content:space-between; align-items:baseline; }
+.det-box-name { font-size:13px; font-weight:700; color:var(--card-color); }
+.det-box-conf { font-size:12px; color:var(--card-color); font-weight:600; font-variant-numeric:tabular-nums; }
+.det-box-coords { font-size:9px; color:var(--t2); font-family:"SF Mono",ui-monospace,monospace; margin-top:2px; }
+.det-stats { margin-top:10px; padding-top:10px; border-top:1px solid var(--border); }
+.det-stat-row { display:flex; justify-content:space-between; font-size:11px; margin-bottom:3px; color:var(--t1); }
+.det-stat-val { font-weight:700; color:var(--card-color); font-variant-numeric:tabular-nums; }
+.scene-summary { font-size:11px; color:var(--t1); line-height:1.55; margin-bottom:14px; }
+.hni-tag { margin-bottom:7px; border-left:3px solid; padding-left:8px; }
+.hni-tag.h { border-color:#c95960; }
+.hni-tag.n { border-color:#3b6a3b; }
+.hni-tag.a { border-color:#b07c2e; }
+.hni-tag.m { border-color:#5e6dca; }
+.hni-tag-label { font-size:9px; font-weight:700; color:var(--t3); letter-spacing:0.3px; text-transform:uppercase; }
+.hni-tag-value { font-size:12px; color:var(--t1); margin-top:1px; }
+.hni-tag-value .extra { color:var(--t3); font-size:10px; }
+.vlm-meta { font-size:10px; color:var(--t3); margin-top:10px; padding-top:8px; border-top:1px solid var(--border);
+  font-family:"SF Mono",ui-monospace,monospace; }
+.card-footer { padding:11px 18px 13px; border-top:1px solid var(--border); background:#fafafa; }
+.hni-levels-label { font-size:8px; font-weight:700; color:var(--t3); letter-spacing:0.6px; margin-bottom:6px;
+  text-transform:uppercase; }
+.hni-levels { display:flex; gap:6px; }
+.hni-pill { width:22px; height:22px; border-radius:50%; font-size:10px; font-weight:700;
+  display:inline-flex; align-items:center; justify-content:center; }
+.hni-pill.full { background:var(--card-color); color:#fff; }
+.hni-pill.partial { background:var(--card-color); opacity:0.4; color:#fff; }
+.hni-pill.empty { background:transparent; border:1.5px solid #d1d5db; color:#9ca3af; }
+.gallery-footer { margin-top:24px; padding-top:14px; border-top:2px solid #14532d;
+  display:flex; justify-content:space-between; align-items:center; font-size:11px; color:var(--t2); }
+.legend-pills { display:flex; gap:10px; align-items:center; }
+.legend-pills .lp { width:11px; height:11px; border-radius:50%; display:inline-block; margin-right:4px; vertical-align:middle; }
+.legend-pills .lp.full { background:#4b5563; }
+.legend-pills .lp.partial { background:#4b5563; opacity:0.4; }
+.legend-pills .lp.empty { background:transparent; border:1.5px solid #d1d5db; }
+</style>
+</head>
+<body>
+<div class="gallery">
+
+<header class="gallery-header">
+  <h1>Five computer vision methods on one image</h1>
+  <p>Each column shows what one method 'saw' and what it produced — same input, different outputs</p>
+</header>
+
+<div class="cards-row">
+
+  <!-- Card 1: Labeling -->
+  <article class="method-card" style="--card-color:#2D7D4F">
+    <div class="card-header"><span class="card-index">01</span><h2 class="card-title">Image labeling</h2></div>
+    <div class="card-body">
+      <div class="card-backend">Google Vision API · WordNet filter</div>
+      <img class="card-image" src="01_original.jpg" alt="">
+      <div class="card-image-caption">Input image (unchanged)</div>
+      <div class="output-label">OUTPUT</div>
+      <div class="bar-row"><span class="bar-label">Cloud</span><div class="bar-track"><div class="bar-fill" style="width:92.5%;background:#2D7D4F;"></div></div><span class="bar-value">0.92</span></div><div class="bar-row"><span class="bar-label">Leisure</span><div class="bar-track"><div class="bar-fill" style="width:84.8%;background:#2D7D4F;"></div></div><span class="bar-value">0.85</span></div><div class="bar-row"><span class="bar-label">People in nature</span><div class="bar-track"><div class="bar-fill" style="width:83.5%;background:#2D7D4F;"></div></div><span class="bar-value">0.83</span></div><div class="bar-row"><span class="bar-label">Travel</span><div class="bar-track"><div class="bar-fill" style="width:74.1%;background:#2D7D4F;"></div></div><span class="bar-value">0.74</span></div><div class="bar-row"><span class="bar-label">Vacation</span><div class="bar-track"><div class="bar-fill" style="width:70.4%;background:#2D7D4F;"></div></div><span class="bar-value">0.70</span></div><div class="bar-row"><span class="bar-label">Cumulus</span><div class="bar-track"><div class="bar-fill" style="width:68.3%;background:#2D7D4F;"></div></div><span class="bar-value">0.68</span></div><div class="bar-row"><span class="bar-label">Meteorological phenomenon</span><div class="bar-track"><div class="bar-fill" style="width:61.2%;background:#2D7D4F;"></div></div><span class="bar-value">0.61</span></div><div class="bar-row"><span class="bar-label">Walkway</span><div class="bar-track"><div class="bar-fill" style="width:61.1%;background:#2D7D4F;"></div></div><span class="bar-value">0.61</span></div>
+    </div>
+    <div class="card-footer">
+      <div class="hni-levels-label">HNI LEVELS CAPTURED</div>
+      <div class="hni-levels"><span class="hni-pill partial">H</span><span class="hni-pill partial">N</span><span class="hni-pill partial">A</span><span class="hni-pill partial">M</span></div>
+    </div>
+  </article>
+
+  <!-- Card 2: Classification -->
+  <article class="method-card" style="--card-color:#4A6B3A">
+    <div class="card-header"><span class="card-index">02</span><h2 class="card-title">Image classification</h2></div>
+    <div class="card-body">
+      <div class="card-backend">ResNet-50 fine-tuned · 7 scenario classes</div>
+      <img class="card-image" src="01_original.jpg" alt="">
+      <div class="card-image-caption">Input image (unchanged)</div>
+      <div class="output-label">OUTPUT</div>
+      <div class="top-class-card">
+        <div class="top-class-name">Garden Vegetation</div>
+        <div class="top-class-prob">p = 0.595</div>
+      </div>
+      <div class="other-classes-h">Other classes</div>
+      <div class="bar-row"><span class="bar-label">Waterscape and Built Settings</span><div class="bar-track"><div class="bar-fill" style="width:23.8%;background:#4A6B3A;"></div></div><span class="bar-value">0.24</span></div><div class="bar-row"><span class="bar-label">Woodland Settings</span><div class="bar-track"><div class="bar-fill" style="width:12.6%;background:#4A6B3A;"></div></div><span class="bar-value">0.13</span></div><div class="bar-row"><span class="bar-label">Cultural Performance</span><div class="bar-track"><div class="bar-fill" style="width:3.3%;background:#4A6B3A;"></div></div><span class="bar-value">0.03</span></div>
+    </div>
+    <div class="card-footer">
+      <div class="hni-levels-label">HNI LEVELS CAPTURED</div>
+      <div class="hni-levels"><span class="hni-pill empty">H</span><span class="hni-pill partial">N</span><span class="hni-pill partial">A</span><span class="hni-pill partial">M</span></div>
+    </div>
+  </article>
+
+  <!-- Card 3: Detection -->
+  <article class="method-card" style="--card-color:#2563EB">
+    <div class="card-header"><span class="card-index">03</span><h2 class="card-title">Object detection</h2></div>
+    <div class="card-body">
+      <div class="card-backend">YOLO11s · Ultralytics (COCO 80)</div>
+      <img class="card-image" src="detection_overlay.png" alt="">
+      <div class="card-image-caption">Output: bounding boxes drawn on input</div>
+      <div class="output-label">OUTPUT</div>
+      
+    <div class="det-box">
+      <div class="det-box-row">
+        <span class="det-box-name">person</span>
+        <span class="det-box-conf">0.81</span>
+      </div>
+      <div class="det-box-coords">bbox [404, 353, 457, 523]</div>
+    </div>
+    <div class="det-box">
+      <div class="det-box-row">
+        <span class="det-box-name">person</span>
+        <span class="det-box-conf">0.75</span>
+      </div>
+      <div class="det-box-coords">bbox [361, 366, 406, 518]</div>
+    </div>
+      <div class="det-stats">
+        <div class="det-stat-row"><span>Total person count</span><span class="det-stat-val">2</span></div>
+        <div class="det-stat-row"><span>Other classes</span><span class="det-stat-val">0</span></div>
+        <div class="det-stat-row"><span>Avg confidence</span><span class="det-stat-val">0.78</span></div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="hni-levels-label">HNI LEVELS CAPTURED</div>
+      <div class="hni-levels"><span class="hni-pill full">H</span><span class="hni-pill empty">N</span><span class="hni-pill empty">A</span><span class="hni-pill empty">M</span></div>
+    </div>
+  </article>
+
+  <!-- Card 4: Segmentation -->
+  <article class="method-card" style="--card-color:#B45309">
+    <div class="card-header"><span class="card-index">04</span><h2 class="card-title">Image segmentation</h2></div>
+    <div class="card-body">
+      <div class="card-backend">SegFormer-b0 · ADE20K · 18 classes</div>
+      <img class="card-image" src="segmentation_overlay.png" alt="">
+      <div class="card-image-caption">Output: per-pixel semantic overlay</div>
+      <div class="output-label">OUTPUT</div>
+      <div class="bar-row"><span class="bar-label">sky</span><div class="bar-track"><div class="bar-fill" style="width:91.6%;background:#b3d9f0;"></div></div><span class="bar-value">50.4%</span></div><div class="bar-row"><span class="bar-label">tree</span><div class="bar-track"><div class="bar-fill" style="width:32.6%;background:#4b7d50;"></div></div><span class="bar-value">17.9%</span></div><div class="bar-row"><span class="bar-label">bannister</span><div class="bar-track"><div class="bar-fill" style="width:14.4%;background:#d7c8af;"></div></div><span class="bar-value">7.9%</span></div><div class="bar-row"><span class="bar-label">grass</span><div class="bar-track"><div class="bar-fill" style="width:8.5%;background:#a0c364;"></div></div><span class="bar-value">4.7%</span></div><div class="bar-row"><span class="bar-label">person</span><div class="bar-track"><div class="bar-fill" style="width:6.0%;background:#9e89c8;"></div></div><span class="bar-value">3.3%</span></div><div class="bar-row"><span class="bar-label">path</span><div class="bar-track"><div class="bar-fill" style="width:5.7%;background:#b9aa91;"></div></div><span class="bar-value">3.2%</span></div><div class="bar-row"><span class="bar-label">stairs</span><div class="bar-track"><div class="bar-fill" style="width:5.0%;background:#a09682;"></div></div><span class="bar-value">2.8%</span></div><div class="bar-row"><span class="bar-label">sidewalk</span><div class="bar-track"><div class="bar-fill" style="width:4.5%;background:#afafaf;"></div></div><span class="bar-value">2.5%</span></div>
+    </div>
+    <div class="card-footer">
+      <div class="hni-levels-label">HNI LEVELS CAPTURED</div>
+      <div class="hni-levels"><span class="hni-pill full">H</span><span class="hni-pill full">N</span><span class="hni-pill empty">A</span><span class="hni-pill empty">M</span></div>
+    </div>
+  </article>
+
+  <!-- Card 5: VLM -->
+  <article class="method-card" style="--card-color:#B91C1C">
+    <div class="card-header"><span class="card-index">05</span><h2 class="card-title">Vision-LLM</h2></div>
+    <div class="card-body">
+      <div class="card-backend">Qwen3-Omni-Flash · structured prompt</div>
+      <img class="card-image" src="01_original.jpg" alt="">
+      <div class="card-image-caption">Input image + structured HNI prompt</div>
+      <div class="output-label">SCENE SUMMARY</div>
+      <div class="scene-summary">Two individuals stand at a stone balustrade overlooking a waterfront landscape with green lawn, trees, and a distant river under a cloudy sky.</div>
+      <div class="hni-tag h"><div class="hni-tag-label">human</div><div class="hni-tag-value">individual · 2-5</div></div>
+      <div class="hni-tag n"><div class="hni-tag-label">nature</div><div class="hni-tag-value">waterfront <span class="extra">+3 more</span></div></div>
+      <div class="hni-tag a"><div class="hni-tag-label">activity</div><div class="hni-tag-value">landscape viewing <span class="extra">+1 more</span></div></div>
+      <div class="hni-tag m"><div class="hni-tag-label">meaning</div><div class="hni-tag-value">aesthetic appreciation <span class="extra">+1 more</span></div></div>
+      <div class="vlm-meta">strength: moderate · conf: high · 1504 tokens</div>
+    </div>
+    <div class="card-footer">
+      <div class="hni-levels-label">HNI LEVELS CAPTURED</div>
+      <div class="hni-levels"><span class="hni-pill full">H</span><span class="hni-pill full">N</span><span class="hni-pill full">A</span><span class="hni-pill full">M</span></div>
+    </div>
+  </article>
+
+</div>
+
+<footer class="gallery-footer">
+  <div><strong>HNI levels —</strong> H human · N nature · A activity · M meaning</div>
+  <div class="legend-pills">
+    <span><span class="lp full"></span>full</span>
+    <span><span class="lp partial"></span>partial</span>
+    <span><span class="lp empty"></span>none</span>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
