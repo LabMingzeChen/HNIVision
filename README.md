@@ -262,6 +262,45 @@ A scene like *two visitors leaning on a stone balustrade, looking out over a law
 
 ---
 
+## 🖼️ Gallery
+
+A visual deep-dive into how each method actually sees an image. Below, the same photo passes through all five pipelines — see what each captures, what each misses, and how the four-level HNI framework reconciles them.
+
+---
+
+### Example 1 · Visitors at a riverside overlook
+
+**NYC Parks Event 160710 · April 2018 · Fort Tryon Park, Manhattan**
+
+<p align="center">
+  <img src="assets/gallery/01_original.jpg" alt="Two visitors looking out over the Hudson River from Fort Tryon Park" width="640">
+</p>
+
+> *Two visitors lean on a stone balustrade overlooking the Hudson River and the New Jersey Palisades beyond. Mid-spring afternoon, partly cloudy.*
+
+#### Five methods, one image
+
+![Five method outputs compared side by side](assets/gallery/01_methods.png)
+
+#### Unified HNI extraction
+
+| Level | What the framework concluded |
+|---|---|
+| 👤 **Human presence** | 2 children, side by side, standing still |
+| 🌳 **Nature detection** | lawn · woodland · **waterfront** (dominant) |
+| 🏃 **Activity evidence** | **landscape viewing** (children observing the vista) |
+| 💭 **Cultural meaning** | **aesthetic appreciation** · recreation · relaxation |
+
+*HNI present: yes · Strength: moderate · Confidence: high*
+
+#### What each method contributed
+
+This scene illustrates why HNI extraction benefits from method triangulation rather than relying on any single model. **Object detection** nailed the human count (2 visitors) with precise bounding-box localization but contributed nothing to the natural context. **Image segmentation** simultaneously quantified that ~70% of the frame is natural environment (sky 42% + tree 18% + grass 9%) versus ~27% built (bannister + sidewalk + fence + wall), giving rich spatial composition data — but with no understanding of activity. The **vision-LLM** filled in the critical gap: by reasoning about gaze direction, body posture, and the spatial relationship between humans and waterfront, it inferred *landscape viewing* as the activity and *aesthetic appreciation* as the experiential meaning. **Image labeling** tagged this generically as "Leisure" and "People in nature"; **classification** correctly placed it in the *Informal Recreation & Social Interaction* bucket but lost all spatial detail. Together, the five methods cover all four HNI levels with high confidence — but only the VLM does so in a single pass.
+
+---
+
+*More examples coming as the benchmark is finalized. Have a relevant park/HNI image you'd like analyzed and included? Open an [issue](https://github.com/LabMingzeChen/HNIVision/issues) — we welcome community contributions.*
+
 ## 📈 Benchmark
 
 Coverage of each method across the four HNI evidence levels, evaluated on the **NYC Parks Events 2018** benchmark (1,000 images, stratified 84/month).
