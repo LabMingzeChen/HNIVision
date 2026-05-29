@@ -1,0 +1,2125 @@
+{
+  "merged": {
+    "human": {
+      "present": true,
+      "count": "6-20",
+      "tags": [
+        "groups",
+        "person",
+        "individuals",
+        "individual",
+        "group",
+        "visitors"
+      ],
+      "evidence": "[detection] YOLO detected 3 'person' object(s) with confidence \u2265 0.5 | [segmentation] Detected person in SAM2 masks (2.9% pixel share) | [classification] ResNet classified scene as 'Sport and Exercise Activities' (confidence 0.37) | [vlm] Several kayakers are visible on the water, some in single kayaks and others in pairs, indicating individuals and small groups."
+    },
+    "nature": {
+      "tags": [
+        "sky",
+        "water",
+        "tree",
+        "waterfront",
+        "urban greenery"
+      ],
+      "dominant": "waterfront",
+      "evidence": "[segmentation] Top natural classes: sky 36.2%, water 33.2%, tree 2.2% | [vlm] The main natural element is the water body where kayaking occurs; some greenery is visible on the right side near the shore.",
+      "pixel_shares": {
+        "sky": 0.3622,
+        "water": 0.3321,
+        "tree": 0.0223
+      }
+    },
+    "activity": {
+      "tags": [
+        "sport",
+        "exercise",
+        "running",
+        "cycling",
+        "sports",
+        "recreation"
+      ],
+      "dominant": "sports",
+      "evidence": "[classification] ResNet classified scene as 'Sport and Exercise Activities' (confidence 0.37) | [vlm] People are actively paddling kayaks, indicating a water sport activity."
+    },
+    "meaning": {
+      "tags": [
+        "recreation",
+        "physical activity",
+        "wellbeing",
+        "social interaction",
+        "aesthetic appreciation"
+      ],
+      "dominant": "recreation",
+      "evidence": "[labeling] Google Vision tagged: recreation | [classification] ResNet classified scene as 'Sport and Exercise Activities' (confidence 0.37) | [vlm] The scene depicts leisure kayaking in an urban waterfront setting, suggesting recreational use and social engagement."
+    },
+    "summary": "The image shows multiple people kayaking on a waterfront with an urban skyline and a bridge in the background.",
+    "hni_present": "yes",
+    "hni_strength": "strong",
+    "confidence": "high",
+    "source_method": "merged(classification,detection,labeling,segmentation,vlm)",
+    "raw_output": null
+  },
+  "per_method": {
+    "detection": {
+      "human": {
+        "present": true,
+        "count": "2-5",
+        "tags": [
+          "groups"
+        ],
+        "evidence": "YOLO detected 3 'person' object(s) with confidence \u2265 0.5"
+      },
+      "nature": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null,
+        "pixel_shares": {}
+      },
+      "activity": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "meaning": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "summary": null,
+      "hni_present": null,
+      "hni_strength": null,
+      "confidence": null,
+      "source_method": "detection",
+      "raw_output": {
+        "boxes": [
+          {
+            "class_name": "boat",
+            "class_id": 8,
+            "confidence": 0.8971021175384521,
+            "x1": 230.35133361816406,
+            "y1": 249.59283447265625,
+            "x2": 351.3075866699219,
+            "y2": 327.1734313964844
+          },
+          {
+            "class_name": "person",
+            "class_id": 0,
+            "confidence": 0.881674587726593,
+            "x1": 249.15130615234375,
+            "y1": 213.27928161621094,
+            "x2": 310.6465148925781,
+            "y2": 291.4981384277344
+          },
+          {
+            "class_name": "person",
+            "class_id": 0,
+            "confidence": 0.7946915030479431,
+            "x1": 447.53460693359375,
+            "y1": 191.58139038085938,
+            "x2": 492.3132629394531,
+            "y2": 231.90045166015625
+          },
+          {
+            "class_name": "boat",
+            "class_id": 8,
+            "confidence": 0.6602027416229248,
+            "x1": 88.39460754394531,
+            "y1": 200.23043823242188,
+            "x2": 199.274658203125,
+            "y2": 212.8648681640625
+          },
+          {
+            "class_name": "boat",
+            "class_id": 8,
+            "confidence": 0.5885189771652222,
+            "x1": 416.0823974609375,
+            "y1": 219.2185821533203,
+            "x2": 563.892333984375,
+            "y2": 242.73660278320312
+          },
+          {
+            "class_name": "boat",
+            "class_id": 8,
+            "confidence": 0.5546666979789734,
+            "x1": 65.44796752929688,
+            "y1": 190.65765380859375,
+            "x2": 145.81271362304688,
+            "y2": 200.9434051513672
+          },
+          {
+            "class_name": "person",
+            "class_id": 0,
+            "confidence": 0.5519949793815613,
+            "x1": 491.3966979980469,
+            "y1": 192.1477813720703,
+            "x2": 540.2863159179688,
+            "y2": 231.0124969482422
+          },
+          {
+            "class_name": "person",
+            "class_id": 0,
+            "confidence": 0.43744489550590515,
+            "x1": 138.07546997070312,
+            "y1": 168.59420776367188,
+            "x2": 150.0174560546875,
+            "y2": 182.28770446777344
+          },
+          {
+            "class_name": "boat",
+            "class_id": 8,
+            "confidence": 0.3783370554447174,
+            "x1": 191.97576904296875,
+            "y1": 178.18983459472656,
+            "x2": 220.99603271484375,
+            "y2": 182.24024963378906
+          },
+          {
+            "class_name": "person",
+            "class_id": 0,
+            "confidence": 0.36604782938957214,
+            "x1": 148.25125122070312,
+            "y1": 185.88436889648438,
+            "x2": 162.15440368652344,
+            "y2": 207.24722290039062
+          },
+          {
+            "class_name": "boat",
+            "class_id": 8,
+            "confidence": 0.3574216365814209,
+            "x1": 398.2770080566406,
+            "y1": 174.6672821044922,
+            "x2": 429.5690002441406,
+            "y2": 180.34642028808594
+          },
+          {
+            "class_name": "person",
+            "class_id": 0,
+            "confidence": 0.2848103940486908,
+            "x1": 516.72900390625,
+            "y1": 177.69796752929688,
+            "x2": 531.3892211914062,
+            "y2": 193.51353454589844
+          },
+          {
+            "class_name": "person",
+            "class_id": 0,
+            "confidence": 0.2772459089756012,
+            "x1": 87.12494659423828,
+            "y1": 178.67828369140625,
+            "x2": 103.05341339111328,
+            "y2": 193.19125366210938
+          }
+        ],
+        "image_size": [
+          594,
+          375
+        ]
+      }
+    },
+    "labeling": {
+      "human": {
+        "present": false,
+        "count": null,
+        "tags": [],
+        "evidence": null
+      },
+      "nature": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null,
+        "pixel_shares": {}
+      },
+      "activity": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "meaning": {
+        "tags": [
+          "recreation"
+        ],
+        "dominant": "recreation",
+        "evidence": "Google Vision tagged: recreation"
+      },
+      "summary": null,
+      "hni_present": null,
+      "hni_strength": null,
+      "confidence": null,
+      "source_method": "labeling",
+      "raw_output": {
+        "labels": [
+          {
+            "description": "Boat",
+            "confidence": 0.9847,
+            "rank_original": 1,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Kayaking",
+            "confidence": 0.9677,
+            "rank_original": 2,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Kayak",
+            "confidence": 0.9609,
+            "rank_original": 3,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Recreation",
+            "confidence": 0.9546,
+            "rank_original": 4,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Watercraft",
+            "confidence": 0.9532,
+            "rank_original": 5,
+            "kept_by_filter": true
+          },
+          {
+            "description": "City",
+            "confidence": 0.9518,
+            "rank_original": 6,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Sea kayak",
+            "confidence": 0.9497,
+            "rank_original": 7,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Waterway",
+            "confidence": 0.9474,
+            "rank_original": 8,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Paddle",
+            "confidence": 0.9328,
+            "rank_original": 9,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Water sport",
+            "confidence": 0.9325,
+            "rank_original": 10,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Outdoor recreation",
+            "confidence": 0.9295,
+            "rank_original": 11,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Sports",
+            "confidence": 0.9097,
+            "rank_original": 12,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Boats and boating--Equipment and supplies",
+            "confidence": 0.9059,
+            "rank_original": 13,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Canoeing",
+            "confidence": 0.8921,
+            "rank_original": 14,
+            "kept_by_filter": true
+          },
+          {
+            "description": "High-rise building",
+            "confidence": 0.862,
+            "rank_original": 15,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Channel",
+            "confidence": 0.8569,
+            "rank_original": 16,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Lake",
+            "confidence": 0.8236,
+            "rank_original": 17,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Boating",
+            "confidence": 0.8155,
+            "rank_original": 18,
+            "kept_by_filter": true
+          },
+          {
+            "description": "River",
+            "confidence": 0.7862,
+            "rank_original": 19,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Tower",
+            "confidence": 0.7673,
+            "rank_original": 20,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Leisure",
+            "confidence": 0.7627,
+            "rank_original": 21,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Condominium",
+            "confidence": 0.7594,
+            "rank_original": 22,
+            "kept_by_filter": true
+          },
+          {
+            "description": "List of surface water sports",
+            "confidence": 0.7562,
+            "rank_original": 23,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Canoe",
+            "confidence": 0.7532,
+            "rank_original": 24,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Travel",
+            "confidence": 0.7381,
+            "rank_original": 25,
+            "kept_by_filter": false
+          },
+          {
+            "description": "Skyscraper",
+            "confidence": 0.7206,
+            "rank_original": 26,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Bridge",
+            "confidence": 0.7201,
+            "rank_original": 27,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Vacation",
+            "confidence": 0.6985,
+            "rank_original": 28,
+            "kept_by_filter": false
+          },
+          {
+            "description": "Quadrathlon",
+            "confidence": 0.6933,
+            "rank_original": 29,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Skyline",
+            "confidence": 0.6419,
+            "rank_original": 30,
+            "kept_by_filter": true
+          },
+          {
+            "description": "List of nonbuilding structure types",
+            "confidence": 0.633,
+            "rank_original": 31,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Cityscape",
+            "confidence": 0.6,
+            "rank_original": 32,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Adventure",
+            "confidence": 0.5924,
+            "rank_original": 33,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Aleutian kayak",
+            "confidence": 0.5789,
+            "rank_original": 34,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Rowing",
+            "confidence": 0.5555,
+            "rank_original": 35,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Oar",
+            "confidence": 0.5166,
+            "rank_original": 36,
+            "kept_by_filter": true
+          }
+        ]
+      }
+    },
+    "segmentation": {
+      "human": {
+        "present": true,
+        "count": null,
+        "tags": [
+          "person"
+        ],
+        "evidence": "Detected person in SAM2 masks (2.9% pixel share)"
+      },
+      "nature": {
+        "tags": [
+          "sky",
+          "water",
+          "tree"
+        ],
+        "dominant": "sky",
+        "evidence": "Top natural classes: sky 36.2%, water 33.2%, tree 2.2%",
+        "pixel_shares": {
+          "sky": 0.3622,
+          "water": 0.3321,
+          "tree": 0.0223
+        }
+      },
+      "activity": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "meaning": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "summary": null,
+      "hni_present": null,
+      "hni_strength": null,
+      "confidence": null,
+      "source_method": "base",
+      "raw_output": {
+        "masks": [
+          {
+            "mask_id": 0,
+            "area": 100339,
+            "pixel_share": 0.45045566778900115,
+            "bbox": [
+              0,
+              163,
+              593,
+              211
+            ],
+            "sam2_iou": 0.9921190738677979,
+            "sam2_stability": 0.9447569847106934,
+            "ade20k_label": "water",
+            "ade20k_label_idx": 21,
+            "ade20k_confidence": 0.9254527152951495
+          },
+          {
+            "mask_id": 1,
+            "area": 51744,
+            "pixel_share": 0.2322962962962963,
+            "bbox": [
+              0,
+              0,
+              593,
+              118
+            ],
+            "sam2_iou": 0.9850436449050903,
+            "sam2_stability": 0.9521572589874268,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 0.9913033395176253
+          },
+          {
+            "mask_id": 2,
+            "area": 4730,
+            "pixel_share": 0.02123456790123457,
+            "bbox": [
+              157,
+              35,
+              50,
+              101
+            ],
+            "sam2_iou": 0.9462830424308777,
+            "sam2_stability": 0.9644564390182495,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9974630021141649
+          },
+          {
+            "mask_id": 3,
+            "area": 1422,
+            "pixel_share": 0.006383838383838384,
+            "bbox": [
+              218,
+              79,
+              35,
+              42
+            ],
+            "sam2_iou": 0.9435946345329285,
+            "sam2_stability": 0.9491409063339233,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9592123769338959
+          },
+          {
+            "mask_id": 4,
+            "area": 51830,
+            "pixel_share": 0.232682379349046,
+            "bbox": [
+              0,
+              0,
+              593,
+              289
+            ],
+            "sam2_iou": 0.9432039856910706,
+            "sam2_stability": 0.9279154539108276,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 0.9905846035114798
+          },
+          {
+            "mask_id": 5,
+            "area": 2808,
+            "pixel_share": 0.012606060606060607,
+            "bbox": [
+              317,
+              73,
+              41,
+              78
+            ],
+            "sam2_iou": 0.9429299235343933,
+            "sam2_stability": 0.9450397491455078,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9957264957264957
+          },
+          {
+            "mask_id": 6,
+            "area": 486,
+            "pixel_share": 0.002181818181818182,
+            "bbox": [
+              0,
+              99,
+              15,
+              35
+            ],
+            "sam2_iou": 0.9264950156211853,
+            "sam2_stability": 0.9737903475761414,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9567901234567902
+          },
+          {
+            "mask_id": 7,
+            "area": 2672,
+            "pixel_share": 0.01199551066217733,
+            "bbox": [
+              291,
+              25,
+              158,
+              24
+            ],
+            "sam2_iou": 0.9222087264060974,
+            "sam2_stability": 0.9204750061035156,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 8,
+            "area": 3644,
+            "pixel_share": 0.016359147025813692,
+            "bbox": [
+              231,
+              250,
+              119,
+              75
+            ],
+            "sam2_iou": 0.906848669052124,
+            "sam2_stability": 0.9123724699020386,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.9377058177826564
+          },
+          {
+            "mask_id": 9,
+            "area": 1871,
+            "pixel_share": 0.008399551066217733,
+            "bbox": [
+              89,
+              67,
+              54,
+              67
+            ],
+            "sam2_iou": 0.8979718685150146,
+            "sam2_stability": 0.897243082523346,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9786210582576162
+          },
+          {
+            "mask_id": 10,
+            "area": 1303,
+            "pixel_share": 0.005849607182940517,
+            "bbox": [
+              290,
+              0,
+              113,
+              16
+            ],
+            "sam2_iou": 0.8927727341651917,
+            "sam2_stability": 0.9154302477836609,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 11,
+            "area": 1901,
+            "pixel_share": 0.008534231200897868,
+            "bbox": [
+              415,
+              219,
+              148,
+              23
+            ],
+            "sam2_iou": 0.8856058120727539,
+            "sam2_stability": 0.9198588728904724,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.9826407154129405
+          },
+          {
+            "mask_id": 12,
+            "area": 874,
+            "pixel_share": 0.00392368125701459,
+            "bbox": [
+              88,
+              201,
+              111,
+              11
+            ],
+            "sam2_iou": 0.8563379645347595,
+            "sam2_stability": 0.917672872543335,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.9908466819221968
+          },
+          {
+            "mask_id": 13,
+            "area": 5446,
+            "pixel_share": 0.024448933782267115,
+            "bbox": [
+              427,
+              107,
+              166,
+              54
+            ],
+            "sam2_iou": 0.8511816263198853,
+            "sam2_stability": 0.8905285000801086,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9471171502019831
+          },
+          {
+            "mask_id": 14,
+            "area": 2037,
+            "pixel_share": 0.009144781144781145,
+            "bbox": [
+              292,
+              25,
+              118,
+              22
+            ],
+            "sam2_iou": 0.8464029431343079,
+            "sam2_stability": 0.8474114537239075,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 15,
+            "area": 678,
+            "pixel_share": 0.003043771043771044,
+            "bbox": [
+              407,
+              127,
+              53,
+              23
+            ],
+            "sam2_iou": 0.841698169708252,
+            "sam2_stability": 0.9008380174636841,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.5870206489675516
+          },
+          {
+            "mask_id": 16,
+            "area": 1770,
+            "pixel_share": 0.007946127946127946,
+            "bbox": [
+              50,
+              93,
+              49,
+              44
+            ],
+            "sam2_iou": 0.8407605886459351,
+            "sam2_stability": 0.9096809029579163,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 17,
+            "area": 1749,
+            "pixel_share": 0.007851851851851851,
+            "bbox": [
+              26,
+              92,
+              72,
+              45
+            ],
+            "sam2_iou": 0.8383017182350159,
+            "sam2_stability": 0.9158066511154175,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 18,
+            "area": 227,
+            "pixel_share": 0.0010190796857463525,
+            "bbox": [
+              500,
+              211,
+              15,
+              17
+            ],
+            "sam2_iou": 0.8365098834037781,
+            "sam2_stability": 0.947826087474823,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 19,
+            "area": 492,
+            "pixel_share": 0.0022087542087542086,
+            "bbox": [
+              65,
+              190,
+              79,
+              9
+            ],
+            "sam2_iou": 0.8342816233634949,
+            "sam2_stability": 0.924271821975708,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.9898373983739838
+          },
+          {
+            "mask_id": 20,
+            "area": 227,
+            "pixel_share": 0.0010190796857463525,
+            "bbox": [
+              148,
+              186,
+              15,
+              21
+            ],
+            "sam2_iou": 0.8341594934463501,
+            "sam2_stability": 0.9353448152542114,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.9559471365638766
+          },
+          {
+            "mask_id": 21,
+            "area": 615,
+            "pixel_share": 0.002760942760942761,
+            "bbox": [
+              450,
+              85,
+              32,
+              27
+            ],
+            "sam2_iou": 0.833209216594696,
+            "sam2_stability": 0.9158878326416016,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9886178861788618
+          },
+          {
+            "mask_id": 22,
+            "area": 434,
+            "pixel_share": 0.0019483726150392817,
+            "bbox": [
+              65,
+              55,
+              18,
+              24
+            ],
+            "sam2_iou": 0.8254019021987915,
+            "sam2_stability": 0.9298245906829834,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9631336405529954
+          },
+          {
+            "mask_id": 23,
+            "area": 997,
+            "pixel_share": 0.004475869809203142,
+            "bbox": [
+              421,
+              192,
+              69,
+              38
+            ],
+            "sam2_iou": 0.8210672736167908,
+            "sam2_stability": 0.9192606806755066,
+            "ade20k_label": "person",
+            "ade20k_label_idx": 12,
+            "ade20k_confidence": 0.5035105315947843
+          },
+          {
+            "mask_id": 24,
+            "area": 1002,
+            "pixel_share": 0.004498316498316498,
+            "bbox": [
+              448,
+              192,
+              42,
+              38
+            ],
+            "sam2_iou": 0.8208813071250916,
+            "sam2_stability": 0.923882007598877,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.501996007984032
+          },
+          {
+            "mask_id": 25,
+            "area": 2032,
+            "pixel_share": 0.00912233445566779,
+            "bbox": [
+              415,
+              204,
+              164,
+              38
+            ],
+            "sam2_iou": 0.817962110042572,
+            "sam2_stability": 0.8753964900970459,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.9753937007874016
+          },
+          {
+            "mask_id": 26,
+            "area": 683,
+            "pixel_share": 0.0030662177328843994,
+            "bbox": [
+              383,
+              123,
+              24,
+              29
+            ],
+            "sam2_iou": 0.807255208492279,
+            "sam2_stability": 0.9518413543701172,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 27,
+            "area": 4588,
+            "pixel_share": 0.020597081930415265,
+            "bbox": [
+              176,
+              97,
+              417,
+              57
+            ],
+            "sam2_iou": 0.7971530556678772,
+            "sam2_stability": 0.6933618187904358,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.999128160418483
+          },
+          {
+            "mask_id": 28,
+            "area": 362,
+            "pixel_share": 0.0016251402918069585,
+            "bbox": [
+              415,
+              144,
+              28,
+              14
+            ],
+            "sam2_iou": 0.7893791794776917,
+            "sam2_stability": 0.9055117964744568,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 29,
+            "area": 71,
+            "pixel_share": 0.0003187429854096521,
+            "bbox": [
+              486,
+              174,
+              8,
+              9
+            ],
+            "sam2_iou": 0.7840016484260559,
+            "sam2_stability": 0.9452054500579834,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.8591549295774648
+          },
+          {
+            "mask_id": 30,
+            "area": 853,
+            "pixel_share": 0.003829405162738496,
+            "bbox": [
+              567,
+              107,
+              26,
+              54
+            ],
+            "sam2_iou": 0.7834106087684631,
+            "sam2_stability": 0.9233371019363403,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9331770222743259
+          },
+          {
+            "mask_id": 31,
+            "area": 242,
+            "pixel_share": 0.0010864197530864198,
+            "bbox": [
+              63,
+              129,
+              30,
+              10
+            ],
+            "sam2_iou": 0.7794721722602844,
+            "sam2_stability": 0.8599221706390381,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 32,
+            "area": 427,
+            "pixel_share": 0.0019169472502805836,
+            "bbox": [
+              81,
+              137,
+              36,
+              15
+            ],
+            "sam2_iou": 0.778407871723175,
+            "sam2_stability": 0.8779443502426147,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9016393442622951
+          },
+          {
+            "mask_id": 33,
+            "area": 480,
+            "pixel_share": 0.0021548821548821547,
+            "bbox": [
+              289,
+              161,
+              37,
+              46
+            ],
+            "sam2_iou": 0.7684746384620667,
+            "sam2_stability": 0.9341317415237427,
+            "ade20k_label": "person",
+            "ade20k_label_idx": 12,
+            "ade20k_confidence": 0.9083333333333333
+          },
+          {
+            "mask_id": 34,
+            "area": 466,
+            "pixel_share": 0.002092031425364759,
+            "bbox": [
+              358,
+              80,
+              88,
+              23
+            ],
+            "sam2_iou": 0.7671347856521606,
+            "sam2_stability": 0.8866799473762512,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 0.8927038626609443
+          },
+          {
+            "mask_id": 35,
+            "area": 1084,
+            "pixel_share": 0.004866442199775533,
+            "bbox": [
+              299,
+              157,
+              141,
+              9
+            ],
+            "sam2_iou": 0.765343189239502,
+            "sam2_stability": 0.8633646368980408,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9621771217712177
+          },
+          {
+            "mask_id": 36,
+            "area": 1156,
+            "pixel_share": 0.005189674523007857,
+            "bbox": [
+              84,
+              89,
+              39,
+              46
+            ],
+            "sam2_iou": 0.763242244720459,
+            "sam2_stability": 0.9040066599845886,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 37,
+            "area": 524,
+            "pixel_share": 0.0023524130190796856,
+            "bbox": [
+              417,
+              128,
+              41,
+              18
+            ],
+            "sam2_iou": 0.7630395293235779,
+            "sam2_stability": 0.8974359035491943,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.5114503816793893
+          },
+          {
+            "mask_id": 38,
+            "area": 168,
+            "pixel_share": 0.0007542087542087542,
+            "bbox": [
+              319,
+              174,
+              15,
+              17
+            ],
+            "sam2_iou": 0.7596019506454468,
+            "sam2_stability": 0.9367815852165222,
+            "ade20k_label": "person",
+            "ade20k_label_idx": 12,
+            "ade20k_confidence": 0.9047619047619048
+          },
+          {
+            "mask_id": 39,
+            "area": 114,
+            "pixel_share": 0.0005117845117845117,
+            "bbox": [
+              137,
+              169,
+              12,
+              13
+            ],
+            "sam2_iou": 0.7585875988006592,
+            "sam2_stability": 0.9411764740943909,
+            "ade20k_label": "person",
+            "ade20k_label_idx": 12,
+            "ade20k_confidence": 0.6052631578947368
+          },
+          {
+            "mask_id": 40,
+            "area": 2514,
+            "pixel_share": 0.011286195286195287,
+            "bbox": [
+              60,
+              56,
+              83,
+              79
+            ],
+            "sam2_iou": 0.7559560537338257,
+            "sam2_stability": 0.71002197265625,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9713603818615751
+          },
+          {
+            "mask_id": 41,
+            "area": 517,
+            "pixel_share": 0.0023209876543209876,
+            "bbox": [
+              22,
+              112,
+              27,
+              26
+            ],
+            "sam2_iou": 0.7539878487586975,
+            "sam2_stability": 0.820244312286377,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 42,
+            "area": 5798,
+            "pixel_share": 0.02602918069584736,
+            "bbox": [
+              91,
+              164,
+              259,
+              161
+            ],
+            "sam2_iou": 0.7531871199607849,
+            "sam2_stability": 0.7042464017868042,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.6886857537081752
+          },
+          {
+            "mask_id": 43,
+            "area": 151,
+            "pixel_share": 0.0006778900112233445,
+            "bbox": [
+              118,
+              177,
+              13,
+              14
+            ],
+            "sam2_iou": 0.7461369633674622,
+            "sam2_stability": 0.9166666865348816,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.9072847682119205
+          },
+          {
+            "mask_id": 44,
+            "area": 1255,
+            "pixel_share": 0.005634118967452301,
+            "bbox": [
+              297,
+              156,
+              145,
+              14
+            ],
+            "sam2_iou": 0.7450437545776367,
+            "sam2_stability": 0.864805281162262,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9362549800796812
+          },
+          {
+            "mask_id": 45,
+            "area": 2420,
+            "pixel_share": 0.010864197530864197,
+            "bbox": [
+              253,
+              213,
+              53,
+              75
+            ],
+            "sam2_iou": 0.7394154667854309,
+            "sam2_stability": 0.8407180905342102,
+            "ade20k_label": "person",
+            "ade20k_label_idx": 12,
+            "ade20k_confidence": 0.8037190082644629
+          },
+          {
+            "mask_id": 46,
+            "area": 1410,
+            "pixel_share": 0.00632996632996633,
+            "bbox": [
+              297,
+              145,
+              146,
+              22
+            ],
+            "sam2_iou": 0.7389617562294006,
+            "sam2_stability": 0.7392358779907227,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.951063829787234
+          },
+          {
+            "mask_id": 47,
+            "area": 81,
+            "pixel_share": 0.0003636363636363636,
+            "bbox": [
+              469,
+              171,
+              10,
+              12
+            ],
+            "sam2_iou": 0.7378406524658203,
+            "sam2_stability": 0.8941176533699036,
+            "ade20k_label": "water",
+            "ade20k_label_idx": 21,
+            "ade20k_confidence": 0.5308641975308642
+          },
+          {
+            "mask_id": 48,
+            "area": 4325,
+            "pixel_share": 0.01941638608305275,
+            "bbox": [
+              176,
+              75,
+              417,
+              76
+            ],
+            "sam2_iou": 0.736812174320221,
+            "sam2_stability": 0.7120107412338257,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9997687861271676
+          },
+          {
+            "mask_id": 49,
+            "area": 479,
+            "pixel_share": 0.0021503928170594835,
+            "bbox": [
+              299,
+              161,
+              27,
+              32
+            ],
+            "sam2_iou": 0.7351440191268921,
+            "sam2_stability": 0.9372469782829285,
+            "ade20k_label": "person",
+            "ade20k_label_idx": 12,
+            "ade20k_confidence": 0.9144050104384134
+          },
+          {
+            "mask_id": 50,
+            "area": 187,
+            "pixel_share": 0.0008395061728395062,
+            "bbox": [
+              418,
+              205,
+              31,
+              8
+            ],
+            "sam2_iou": 0.7333741188049316,
+            "sam2_stability": 0.8871794939041138,
+            "ade20k_label": "water",
+            "ade20k_label_idx": 21,
+            "ade20k_confidence": 0.6577540106951871
+          },
+          {
+            "mask_id": 51,
+            "area": 528,
+            "pixel_share": 0.0023703703703703703,
+            "bbox": [
+              339,
+              65,
+              109,
+              39
+            ],
+            "sam2_iou": 0.7320560812950134,
+            "sam2_stability": 0.8426573276519775,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 0.8693181818181818
+          },
+          {
+            "mask_id": 52,
+            "area": 1908,
+            "pixel_share": 0.008565656565656566,
+            "bbox": [
+              49,
+              91,
+              67,
+              46
+            ],
+            "sam2_iou": 0.7318800091743469,
+            "sam2_stability": 0.790243923664093,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 53,
+            "area": 277,
+            "pixel_share": 0.0012435465768799103,
+            "bbox": [
+              359,
+              141,
+              23,
+              12
+            ],
+            "sam2_iou": 0.7313900589942932,
+            "sam2_stability": 0.9397163391113281,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 54,
+            "area": 1282,
+            "pixel_share": 0.005755331088664422,
+            "bbox": [
+              297,
+              154,
+              146,
+              13
+            ],
+            "sam2_iou": 0.7259551286697388,
+            "sam2_stability": 0.8579626679420471,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9329173166926678
+          },
+          {
+            "mask_id": 55,
+            "area": 500,
+            "pixel_share": 0.002244668911335578,
+            "bbox": [
+              149,
+              75,
+              9,
+              58
+            ],
+            "sam2_iou": 0.7213756442070007,
+            "sam2_stability": 0.9223300814628601,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.996
+          },
+          {
+            "mask_id": 56,
+            "area": 3113,
+            "pixel_share": 0.013975308641975309,
+            "bbox": [
+              157,
+              37,
+              34,
+              98
+            ],
+            "sam2_iou": 0.7193009853363037,
+            "sam2_stability": 0.9370542764663696,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9980725987793125
+          },
+          {
+            "mask_id": 57,
+            "area": 287,
+            "pixel_share": 0.0012884399551066218,
+            "bbox": [
+              252,
+              140,
+              28,
+              12
+            ],
+            "sam2_iou": 0.7172492146492004,
+            "sam2_stability": 0.8741722106933594,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 58,
+            "area": 663,
+            "pixel_share": 0.0029764309764309764,
+            "bbox": [
+              261,
+              161,
+              65,
+              87
+            ],
+            "sam2_iou": 0.7168641686439514,
+            "sam2_stability": 0.8545706272125244,
+            "ade20k_label": "person",
+            "ade20k_label_idx": 12,
+            "ade20k_confidence": 0.7254901960784313
+          },
+          {
+            "mask_id": 59,
+            "area": 183,
+            "pixel_share": 0.0008215488215488216,
+            "bbox": [
+              525,
+              104,
+              38,
+              21
+            ],
+            "sam2_iou": 0.7118241786956787,
+            "sam2_stability": 0.7627906799316406,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9562841530054644
+          },
+          {
+            "mask_id": 60,
+            "area": 107,
+            "pixel_share": 0.0004803591470258137,
+            "bbox": [
+              192,
+              177,
+              27,
+              5
+            ],
+            "sam2_iou": 0.7116289138793945,
+            "sam2_stability": 0.9285714030265808,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.6542056074766355
+          },
+          {
+            "mask_id": 61,
+            "area": 29,
+            "pixel_share": 0.00013019079685746353,
+            "bbox": [
+              338,
+              63,
+              4,
+              6
+            ],
+            "sam2_iou": 0.7099138498306274,
+            "sam2_stability": 0.9333333373069763,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 62,
+            "area": 6649,
+            "pixel_share": 0.029849607182940517,
+            "bbox": [
+              231,
+              162,
+              119,
+              162
+            ],
+            "sam2_iou": 0.7059115171432495,
+            "sam2_stability": 0.7121665477752686,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.6065573770491803
+          },
+          {
+            "mask_id": 63,
+            "area": 169,
+            "pixel_share": 0.0007586980920314254,
+            "bbox": [
+              82,
+              179,
+              20,
+              13
+            ],
+            "sam2_iou": 0.7043207287788391,
+            "sam2_stability": 0.8956043720245361,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.9467455621301775
+          },
+          {
+            "mask_id": 64,
+            "area": 176,
+            "pixel_share": 0.0007901234567901234,
+            "bbox": [
+              192,
+              171,
+              28,
+              11
+            ],
+            "sam2_iou": 0.7038345336914062,
+            "sam2_stability": 0.8586387634277344,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.6477272727272727
+          },
+          {
+            "mask_id": 65,
+            "area": 68,
+            "pixel_share": 0.00030527497194163863,
+            "bbox": [
+              18,
+              165,
+              15,
+              8
+            ],
+            "sam2_iou": 0.70006263256073,
+            "sam2_stability": 0.8399999737739563,
+            "ade20k_label": "water",
+            "ade20k_label_idx": 21,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 66,
+            "area": 659,
+            "pixel_share": 0.0029584736251402916,
+            "bbox": [
+              233,
+              161,
+              93,
+              125
+            ],
+            "sam2_iou": 0.6991133689880371,
+            "sam2_stability": 0.8090040683746338,
+            "ade20k_label": "person",
+            "ade20k_label_idx": 12,
+            "ade20k_confidence": 0.6949924127465857
+          },
+          {
+            "mask_id": 67,
+            "area": 119,
+            "pixel_share": 0.0005342312008978676,
+            "bbox": [
+              288,
+              112,
+              14,
+              9
+            ],
+            "sam2_iou": 0.698631763458252,
+            "sam2_stability": 0.9435483813285828,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9915966386554622
+          },
+          {
+            "mask_id": 68,
+            "area": 552,
+            "pixel_share": 0.002478114478114478,
+            "bbox": [
+              65,
+              186,
+              79,
+              13
+            ],
+            "sam2_iou": 0.6932076215744019,
+            "sam2_stability": 0.6951048970222473,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.9836956521739131
+          },
+          {
+            "mask_id": 69,
+            "area": 19,
+            "pixel_share": 8.529741863075196e-05,
+            "bbox": [
+              212,
+              165,
+              2,
+              6
+            ],
+            "sam2_iou": 0.6882635354995728,
+            "sam2_stability": 0.8500000238418579,
+            "ade20k_label": "water",
+            "ade20k_label_idx": 21,
+            "ade20k_confidence": 0.7368421052631579
+          },
+          {
+            "mask_id": 70,
+            "area": 39,
+            "pixel_share": 0.0001750841750841751,
+            "bbox": [
+              527,
+              167,
+              5,
+              6
+            ],
+            "sam2_iou": 0.6813479065895081,
+            "sam2_stability": 0.9268292784690857,
+            "ade20k_label": "water",
+            "ade20k_label_idx": 21,
+            "ade20k_confidence": 0.8205128205128205
+          },
+          {
+            "mask_id": 71,
+            "area": 40,
+            "pixel_share": 0.00017957351290684624,
+            "bbox": [
+              229,
+              167,
+              7,
+              6
+            ],
+            "sam2_iou": 0.678713321685791,
+            "sam2_stability": 0.8666666746139526,
+            "ade20k_label": "water",
+            "ade20k_label_idx": 21,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 72,
+            "area": 733,
+            "pixel_share": 0.0032906846240179574,
+            "bbox": [
+              449,
+              84,
+              34,
+              38
+            ],
+            "sam2_iou": 0.6699520945549011,
+            "sam2_stability": 0.7336292862892151,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9836289222373806
+          },
+          {
+            "mask_id": 73,
+            "area": 3152,
+            "pixel_share": 0.014150392817059484,
+            "bbox": [
+              223,
+              97,
+              370,
+              39
+            ],
+            "sam2_iou": 0.6649208068847656,
+            "sam2_stability": 0.6869907975196838,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9980964467005076
+          },
+          {
+            "mask_id": 74,
+            "area": 856,
+            "pixel_share": 0.0038428731762065096,
+            "bbox": [
+              271,
+              113,
+              44,
+              39
+            ],
+            "sam2_iou": 0.6614505648612976,
+            "sam2_stability": 0.8203208446502686,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 75,
+            "area": 110,
+            "pixel_share": 0.0004938271604938272,
+            "bbox": [
+              562,
+              90,
+              5,
+              24
+            ],
+            "sam2_iou": 0.6562970280647278,
+            "sam2_stability": 0.8278688788414001,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.6545454545454545
+          },
+          {
+            "mask_id": 76,
+            "area": 662,
+            "pixel_share": 0.002971941638608305,
+            "bbox": [
+              65,
+              177,
+              79,
+              22
+            ],
+            "sam2_iou": 0.6478698253631592,
+            "sam2_stability": 0.803814709186554,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.9697885196374623
+          },
+          {
+            "mask_id": 77,
+            "area": 173,
+            "pixel_share": 0.0007766554433221099,
+            "bbox": [
+              515,
+              177,
+              16,
+              15
+            ],
+            "sam2_iou": 0.6478087902069092,
+            "sam2_stability": 0.9189189076423645,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.5606936416184971
+          },
+          {
+            "mask_id": 78,
+            "area": 970,
+            "pixel_share": 0.004354657687991021,
+            "bbox": [
+              218,
+              79,
+              24,
+              42
+            ],
+            "sam2_iou": 0.6453308463096619,
+            "sam2_stability": 0.8697813153266907,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9783505154639175
+          },
+          {
+            "mask_id": 79,
+            "area": 232,
+            "pixel_share": 0.0010415263748597082,
+            "bbox": [
+              398,
+              170,
+              31,
+              10
+            ],
+            "sam2_iou": 0.6436874270439148,
+            "sam2_stability": 0.9163179993629456,
+            "ade20k_label": "water",
+            "ade20k_label_idx": 21,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 80,
+            "area": 102,
+            "pixel_share": 0.0004579124579124579,
+            "bbox": [
+              548,
+              91,
+              19,
+              31
+            ],
+            "sam2_iou": 0.6355493068695068,
+            "sam2_stability": 0.9245283007621765,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.6666666666666666
+          },
+          {
+            "mask_id": 81,
+            "area": 1653,
+            "pixel_share": 0.007420875420875421,
+            "bbox": [
+              188,
+              35,
+              19,
+              97
+            ],
+            "sam2_iou": 0.6353375911712646,
+            "sam2_stability": 0.9390171766281128,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 0.9951603145795523
+          },
+          {
+            "mask_id": 82,
+            "area": 1605,
+            "pixel_share": 0.007205387205387205,
+            "bbox": [
+              357,
+              123,
+              101,
+              29
+            ],
+            "sam2_iou": 0.6347271800041199,
+            "sam2_stability": 0.7863436341285706,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 83,
+            "area": 25,
+            "pixel_share": 0.0001122334455667789,
+            "bbox": [
+              267,
+              165,
+              5,
+              5
+            ],
+            "sam2_iou": 0.6314365267753601,
+            "sam2_stability": 0.8461538553237915,
+            "ade20k_label": "water",
+            "ade20k_label_idx": 21,
+            "ade20k_confidence": 0.72
+          },
+          {
+            "mask_id": 84,
+            "area": 242,
+            "pixel_share": 0.0010864197530864198,
+            "bbox": [
+              38,
+              176,
+              40,
+              6
+            ],
+            "sam2_iou": 0.6141596436500549,
+            "sam2_stability": 0.8522727489471436,
+            "ade20k_label": "water",
+            "ade20k_label_idx": 21,
+            "ade20k_confidence": 0.8884297520661157
+          },
+          {
+            "mask_id": 85,
+            "area": 148,
+            "pixel_share": 0.000664421997755331,
+            "bbox": [
+              398,
+              175,
+              30,
+              5
+            ],
+            "sam2_iou": 0.6088871359825134,
+            "sam2_stability": 0.8544303774833679,
+            "ade20k_label": "water",
+            "ade20k_label_idx": 21,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 86,
+            "area": 2877,
+            "pixel_share": 0.012915824915824915,
+            "bbox": [
+              236,
+              179,
+              73,
+              121
+            ],
+            "sam2_iou": 0.6074405312538147,
+            "sam2_stability": 0.6462002992630005,
+            "ade20k_label": "person",
+            "ade20k_label_idx": 12,
+            "ade20k_confidence": 0.7208898157803267
+          },
+          {
+            "mask_id": 87,
+            "area": 144,
+            "pixel_share": 0.0006464646464646465,
+            "bbox": [
+              514,
+              190,
+              27,
+              8
+            ],
+            "sam2_iou": 0.6061672568321228,
+            "sam2_stability": 0.9133333563804626,
+            "ade20k_label": "boat",
+            "ade20k_label_idx": 76,
+            "ade20k_confidence": 0.6180555555555556
+          },
+          {
+            "mask_id": 88,
+            "area": 268,
+            "pixel_share": 0.0012031425364758697,
+            "bbox": [
+              208,
+              117,
+              27,
+              15
+            ],
+            "sam2_iou": 0.6036132574081421,
+            "sam2_stability": 0.7873753905296326,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 89,
+            "area": 351,
+            "pixel_share": 0.0015757575757575758,
+            "bbox": [
+              359,
+              127,
+              22,
+              23
+            ],
+            "sam2_iou": 0.6016522645950317,
+            "sam2_stability": 0.8307692408561707,
+            "ade20k_label": "building",
+            "ade20k_label_idx": 1,
+            "ade20k_confidence": 1.0
+          }
+        ],
+        "n_masks": 90,
+        "image_size": [
+          594,
+          375
+        ],
+        "pixel_shares": {
+          "shares": {
+            "sky": 0.3622308460644168,
+            "water": 0.33213800330762555,
+            "building": 0.17224214438931731,
+            "boat": 0.08203893828494703,
+            "person": 0.0290055836649146,
+            "tree": 0.022344484288778634
+          },
+          "image_size": [
+            594,
+            375
+          ]
+        },
+        "n_classes_detected": 6,
+        "coverage_ratio": 1.3708417508417508,
+        "method_meta": {
+          "sam2_model": "facebook/sam2.1-hiera-small",
+          "ade20k_model": "nvidia/segformer-b0-finetuned-ade-512-512"
+        }
+      }
+    },
+    "classification": {
+      "human": {
+        "present": true,
+        "count": null,
+        "tags": [
+          "individuals"
+        ],
+        "evidence": "ResNet classified scene as 'Sport and Exercise Activities' (confidence 0.37)"
+      },
+      "nature": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null,
+        "pixel_shares": {}
+      },
+      "activity": {
+        "tags": [
+          "sport",
+          "exercise",
+          "running",
+          "cycling"
+        ],
+        "dominant": "sport",
+        "evidence": "ResNet classified scene as 'Sport and Exercise Activities' (confidence 0.37)"
+      },
+      "meaning": {
+        "tags": [
+          "physical activity",
+          "wellbeing"
+        ],
+        "dominant": "physical activity",
+        "evidence": "ResNet classified scene as 'Sport and Exercise Activities' (confidence 0.37)"
+      },
+      "summary": null,
+      "hni_present": null,
+      "hni_strength": null,
+      "confidence": "low",
+      "source_method": "classification",
+      "raw_output": {
+        "predicted_class": "Sport and Exercise Activities",
+        "predicted_class_idx": 3,
+        "confidence": 0.37112143635749817,
+        "all_probs": {
+          "Cultural Performance": 0.03753554821014404,
+          "Garden Vegetation": 0.0033778552897274494,
+          "Social and Informal Recreation": 0.2805466055870056,
+          "Sport and Exercise Activities": 0.37112143635749817,
+          "Waterscape and Built Settings": 0.30497506260871887,
+          "Wildlife Encounters": 0.0021000090055167675,
+          "Woodland Settings": 0.0003435713006183505
+        }
+      }
+    },
+    "vlm": {
+      "human": {
+        "present": true,
+        "count": "6-20",
+        "tags": [
+          "individual",
+          "group",
+          "visitors"
+        ],
+        "evidence": "Several kayakers are visible on the water, some in single kayaks and others in pairs, indicating individuals and small groups."
+      },
+      "nature": {
+        "tags": [
+          "waterfront",
+          "urban greenery"
+        ],
+        "dominant": "waterfront",
+        "evidence": "The main natural element is the water body where kayaking occurs; some greenery is visible on the right side near the shore.",
+        "pixel_shares": {}
+      },
+      "activity": {
+        "tags": [
+          "sports",
+          "recreation"
+        ],
+        "dominant": "sports",
+        "evidence": "People are actively paddling kayaks, indicating a water sport activity."
+      },
+      "meaning": {
+        "tags": [
+          "recreation",
+          "social interaction",
+          "aesthetic appreciation"
+        ],
+        "dominant": "recreation",
+        "evidence": "The scene depicts leisure kayaking in an urban waterfront setting, suggesting recreational use and social engagement."
+      },
+      "summary": "The image shows multiple people kayaking on a waterfront with an urban skyline and a bridge in the background.",
+      "hni_present": "yes",
+      "hni_strength": "strong",
+      "confidence": "high",
+      "source_method": "vlm",
+      "raw_output": {
+        "raw_response": "{\n  \"image_level_summary\": \"The image shows multiple people kayaking on a waterfront with an urban skyline and a bridge in the background.\",\n  \"human_presence\": {\n    \"visible\": \"yes\",\n    \"presence_type\": [\"individual\", \"group\", \"visitors\"],\n    \"estimated_people_count\": \"6-20\",\n    \"visual_evidence\": \"Several kayakers are visible on the water, some in single kayaks and others in pairs, indicating individuals and small groups.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"waterfront\", \"urban greenery\"],\n    \"dominant_nature_type\": \"waterfront\",\n    \"visual_evidence\": \"The main natural element is the water body where kayaking occurs; some greenery is visible on the right side near the shore.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"sports\", \"recreation\"],\n    \"dominant_activity\": \"sports\",\n    \"visual_evidence\": \"People are actively paddling kayaks, indicating a water sport activity.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"recreation\", \"social interaction\", \"aesthetic appreciation\"],\n    \"dominant_meaning\": \"recreation\",\n    \"visual_evidence\": \"The scene depicts leisure kayaking in an urban waterfront setting, suggesting recreational use and social engagement.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"yes\",\n    \"hni_strength\": \"strong\",\n    \"reason\": \"Clear human interaction with a natural waterfront environment through active recreational kayaking.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"None; all observations are visually supported.\"\n}",
+        "parsed": {
+          "image_level_summary": "The image shows multiple people kayaking on a waterfront with an urban skyline and a bridge in the background.",
+          "human_presence": {
+            "visible": "yes",
+            "presence_type": [
+              "individual",
+              "group",
+              "visitors"
+            ],
+            "estimated_people_count": "6-20",
+            "visual_evidence": "Several kayakers are visible on the water, some in single kayaks and others in pairs, indicating individuals and small groups."
+          },
+          "nature_detection": {
+            "nature_types": [
+              "waterfront",
+              "urban greenery"
+            ],
+            "dominant_nature_type": "waterfront",
+            "visual_evidence": "The main natural element is the water body where kayaking occurs; some greenery is visible on the right side near the shore."
+          },
+          "activity_evidence": {
+            "activity_types": [
+              "sports",
+              "recreation"
+            ],
+            "dominant_activity": "sports",
+            "visual_evidence": "People are actively paddling kayaks, indicating a water sport activity."
+          },
+          "cultural_experiential_meaning": {
+            "meaning_types": [
+              "recreation",
+              "social interaction",
+              "aesthetic appreciation"
+            ],
+            "dominant_meaning": "recreation",
+            "visual_evidence": "The scene depicts leisure kayaking in an urban waterfront setting, suggesting recreational use and social engagement."
+          },
+          "hni_overall_interpretation": {
+            "is_hni_present": "yes",
+            "hni_strength": "strong",
+            "reason": "Clear human interaction with a natural waterfront environment through active recreational kayaking."
+          },
+          "confidence": "high",
+          "uncertainty_notes": "None; all observations are visually supported."
+        },
+        "parse_error": null,
+        "tokens_used": 1431
+      }
+    }
+  }
+}

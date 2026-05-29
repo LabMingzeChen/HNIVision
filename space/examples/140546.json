@@ -1,0 +1,1449 @@
+{
+  "merged": {
+    "human": {
+      "present": false,
+      "count": "0",
+      "tags": [
+        "none"
+      ],
+      "evidence": "[vlm] No individuals, groups, or any people are visible in the image."
+    },
+    "nature": {
+      "tags": [
+        "tree",
+        "sky",
+        "earth",
+        "woodland",
+        "forest",
+        "trees",
+        "park path",
+        "urban greenery"
+      ],
+      "dominant": "park path",
+      "evidence": "[labeling] Google Vision tagged: tree | [segmentation] Top natural classes: tree 52.9%, sky 30.6%, earth 16.4% | [classification] ResNet classified scene as 'Woodland Settings' (confidence 0.96) | [vlm] A paved path runs through the scene, bordered by leafless trees and snow-covered shrubs, indicating a park environment.",
+      "pixel_shares": {
+        "tree": 0.5295,
+        "sky": 0.3065,
+        "earth": 0.1639
+      }
+    },
+    "activity": {
+      "tags": [
+        "walking",
+        "hiking",
+        "none"
+      ],
+      "dominant": "none",
+      "evidence": "[classification] ResNet classified scene as 'Woodland Settings' (confidence 0.96) | [vlm] No visible human activity such as walking, resting, or playing is present."
+    },
+    "meaning": {
+      "tags": [
+        "nature immersion",
+        "restoration",
+        "aesthetic appreciation",
+        "relaxation"
+      ],
+      "dominant": "aesthetic appreciation",
+      "evidence": "[classification] ResNet classified scene as 'Woodland Settings' (confidence 0.96) | [vlm] The snow-covered landscape and orderly tree alignment suggest a scene that could be appreciated for its visual beauty and tranquility."
+    },
+    "summary": "A snow-covered park path lined with leafless trees and some snow-covered shrubs and benches, with no visible people or activities.",
+    "hni_present": "no",
+    "hni_strength": null,
+    "confidence": "high",
+    "source_method": "merged(classification,detection,labeling,segmentation,vlm)",
+    "raw_output": null
+  },
+  "per_method": {
+    "detection": {
+      "human": {
+        "present": false,
+        "count": null,
+        "tags": [],
+        "evidence": null
+      },
+      "nature": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null,
+        "pixel_shares": {}
+      },
+      "activity": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "meaning": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "summary": null,
+      "hni_present": null,
+      "hni_strength": null,
+      "confidence": null,
+      "source_method": "detection",
+      "raw_output": {
+        "boxes": [
+          {
+            "class_name": "bench",
+            "class_id": 13,
+            "confidence": 0.6075908541679382,
+            "x1": 284.8746643066406,
+            "y1": 374.53936767578125,
+            "x2": 329.60791015625,
+            "y2": 395.7388610839844
+          },
+          {
+            "class_name": "bench",
+            "class_id": 13,
+            "confidence": 0.2834825813770294,
+            "x1": 201.97470092773438,
+            "y1": 367.6488037109375,
+            "x2": 228.8778839111328,
+            "y2": 385.31634521484375
+          }
+        ],
+        "image_size": [
+          640,
+          427
+        ]
+      }
+    },
+    "labeling": {
+      "human": {
+        "present": false,
+        "count": null,
+        "tags": [],
+        "evidence": null
+      },
+      "nature": {
+        "tags": [
+          "tree"
+        ],
+        "dominant": "tree",
+        "evidence": "Google Vision tagged: tree",
+        "pixel_shares": {}
+      },
+      "activity": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "meaning": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "summary": null,
+      "hni_present": null,
+      "hni_strength": null,
+      "confidence": null,
+      "source_method": "labeling",
+      "raw_output": {
+        "labels": [
+          {
+            "description": "Snow",
+            "confidence": 0.9892,
+            "rank_original": 1,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Branch",
+            "confidence": 0.9847,
+            "rank_original": 2,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Winter",
+            "confidence": 0.9825,
+            "rank_original": 3,
+            "kept_by_filter": false
+          },
+          {
+            "description": "Tree",
+            "confidence": 0.9766,
+            "rank_original": 4,
+            "kept_by_filter": true
+          },
+          {
+            "description": "White",
+            "confidence": 0.9679,
+            "rank_original": 5,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Twig",
+            "confidence": 0.9493,
+            "rank_original": 6,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Freezing",
+            "confidence": 0.9021,
+            "rank_original": 7,
+            "kept_by_filter": false
+          },
+          {
+            "description": "atmospheric phenomenon",
+            "confidence": 0.873,
+            "rank_original": 8,
+            "kept_by_filter": false
+          },
+          {
+            "description": "Trunk",
+            "confidence": 0.8654,
+            "rank_original": 9,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Monochrome photography",
+            "confidence": 0.8645,
+            "rank_original": 10,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Frost",
+            "confidence": 0.8458,
+            "rank_original": 11,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Winter storm",
+            "confidence": 0.8434,
+            "rank_original": 12,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Morning",
+            "confidence": 0.8352,
+            "rank_original": 13,
+            "kept_by_filter": false
+          },
+          {
+            "description": "Grey",
+            "confidence": 0.8294,
+            "rank_original": 14,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Monochrome",
+            "confidence": 0.8071,
+            "rank_original": 15,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Precipitation",
+            "confidence": 0.7999,
+            "rank_original": 16,
+            "kept_by_filter": false
+          },
+          {
+            "description": "Ice",
+            "confidence": 0.7428,
+            "rank_original": 17,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Blizzard",
+            "confidence": 0.7302,
+            "rank_original": 18,
+            "kept_by_filter": true
+          }
+        ]
+      }
+    },
+    "segmentation": {
+      "human": {
+        "present": false,
+        "count": null,
+        "tags": [],
+        "evidence": null
+      },
+      "nature": {
+        "tags": [
+          "tree",
+          "sky",
+          "earth"
+        ],
+        "dominant": "tree",
+        "evidence": "Top natural classes: tree 52.9%, sky 30.6%, earth 16.4%",
+        "pixel_shares": {
+          "tree": 0.5295,
+          "sky": 0.3065,
+          "earth": 0.1639
+        }
+      },
+      "activity": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "meaning": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "summary": null,
+      "hni_present": null,
+      "hni_strength": null,
+      "confidence": null,
+      "source_method": "base",
+      "raw_output": {
+        "masks": [
+          {
+            "mask_id": 0,
+            "area": 50711,
+            "pixel_share": 0.18556425644028102,
+            "bbox": [
+              0,
+              0,
+              639,
+              323
+            ],
+            "sam2_iou": 0.9777260422706604,
+            "sam2_stability": 0.9055301547050476,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 0.9999802804125337
+          },
+          {
+            "mask_id": 1,
+            "area": 12203,
+            "pixel_share": 0.04465383489461358,
+            "bbox": [
+              0,
+              384,
+              442,
+              42
+            ],
+            "sam2_iou": 0.9401958584785461,
+            "sam2_stability": 0.9341416954994202,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 2,
+            "area": 12439,
+            "pixel_share": 0.04551741803278689,
+            "bbox": [
+              0,
+              372,
+              521,
+              54
+            ],
+            "sam2_iou": 0.9255141019821167,
+            "sam2_stability": 0.9211414456367493,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 3,
+            "area": 41054,
+            "pixel_share": 0.15022687353629977,
+            "bbox": [
+              0,
+              0,
+              275,
+              296
+            ],
+            "sam2_iou": 0.9246343970298767,
+            "sam2_stability": 0.9580064415931702,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 4,
+            "area": 687,
+            "pixel_share": 0.002513905152224824,
+            "bbox": [
+              0,
+              295,
+              25,
+              40
+            ],
+            "sam2_iou": 0.9223612546920776,
+            "sam2_stability": 0.9382889270782471,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9839883551673945
+          },
+          {
+            "mask_id": 5,
+            "area": 3879,
+            "pixel_share": 0.014194233021077283,
+            "bbox": [
+              0,
+              311,
+              90,
+              54
+            ],
+            "sam2_iou": 0.9121407270431519,
+            "sam2_stability": 0.9220296740531921,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9963908223769012
+          },
+          {
+            "mask_id": 6,
+            "area": 2524,
+            "pixel_share": 0.009235948477751756,
+            "bbox": [
+              419,
+              303,
+              59,
+              57
+            ],
+            "sam2_iou": 0.9114875793457031,
+            "sam2_stability": 0.9297977685928345,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9829635499207607
+          },
+          {
+            "mask_id": 7,
+            "area": 2047,
+            "pixel_share": 0.007490485948477752,
+            "bbox": [
+              565,
+              345,
+              56,
+              54
+            ],
+            "sam2_iou": 0.9082301259040833,
+            "sam2_stability": 0.9301780462265015,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.6531509526135808
+          },
+          {
+            "mask_id": 8,
+            "area": 446,
+            "pixel_share": 0.0016320257611241217,
+            "bbox": [
+              626,
+              346,
+              13,
+              41
+            ],
+            "sam2_iou": 0.9053668975830078,
+            "sam2_stability": 0.9628821015357971,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.6704035874439462
+          },
+          {
+            "mask_id": 9,
+            "area": 1283,
+            "pixel_share": 0.0046948185011709605,
+            "bbox": [
+              0,
+              366,
+              94,
+              18
+            ],
+            "sam2_iou": 0.892129123210907,
+            "sam2_stability": 0.8971344828605652,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 10,
+            "area": 6650,
+            "pixel_share": 0.024334016393442622,
+            "bbox": [
+              499,
+              269,
+              140,
+              83
+            ],
+            "sam2_iou": 0.8794558644294739,
+            "sam2_stability": 0.8776111006736755,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9581954887218045
+          },
+          {
+            "mask_id": 11,
+            "area": 2864,
+            "pixel_share": 0.010480093676814989,
+            "bbox": [
+              415,
+              407,
+              224,
+              19
+            ],
+            "sam2_iou": 0.8776374459266663,
+            "sam2_stability": 0.9197469353675842,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 12,
+            "area": 623,
+            "pixel_share": 0.002279713114754098,
+            "bbox": [
+              536,
+              357,
+              25,
+              29
+            ],
+            "sam2_iou": 0.8674288988113403,
+            "sam2_stability": 0.9305555820465088,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 0.666131621187801
+          },
+          {
+            "mask_id": 13,
+            "area": 2777,
+            "pixel_share": 0.01016173887587822,
+            "bbox": [
+              381,
+              303,
+              102,
+              58
+            ],
+            "sam2_iou": 0.8405700325965881,
+            "sam2_stability": 0.7938838005065918,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.981274756931941
+          },
+          {
+            "mask_id": 14,
+            "area": 430,
+            "pixel_share": 0.0015734777517564403,
+            "bbox": [
+              108,
+              314,
+              13,
+              55
+            ],
+            "sam2_iou": 0.8326196670532227,
+            "sam2_stability": 0.9365079402923584,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.986046511627907
+          },
+          {
+            "mask_id": 15,
+            "area": 1723,
+            "pixel_share": 0.006304888758782202,
+            "bbox": [
+              215,
+              339,
+              54,
+              39
+            ],
+            "sam2_iou": 0.8240426778793335,
+            "sam2_stability": 0.8691844344139099,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9413813116656994
+          },
+          {
+            "mask_id": 16,
+            "area": 807,
+            "pixel_share": 0.0029530152224824355,
+            "bbox": [
+              286,
+              372,
+              43,
+              22
+            ],
+            "sam2_iou": 0.8163259029388428,
+            "sam2_stability": 0.9151943325996399,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 17,
+            "area": 1002,
+            "pixel_share": 0.0036665690866510537,
+            "bbox": [
+              511,
+              279,
+              19,
+              124
+            ],
+            "sam2_iou": 0.8142662048339844,
+            "sam2_stability": 0.8865784406661987,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.5558882235528942
+          },
+          {
+            "mask_id": 18,
+            "area": 974,
+            "pixel_share": 0.003564110070257611,
+            "bbox": [
+              166,
+              280,
+              17,
+              99
+            ],
+            "sam2_iou": 0.8107886910438538,
+            "sam2_stability": 0.8925459980964661,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9845995893223819
+          },
+          {
+            "mask_id": 19,
+            "area": 38903,
+            "pixel_share": 0.14235582552693207,
+            "bbox": [
+              431,
+              0,
+              208,
+              263
+            ],
+            "sam2_iou": 0.8059741258621216,
+            "sam2_stability": 0.7825007438659668,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 0.6115209623936457
+          },
+          {
+            "mask_id": 20,
+            "area": 2155,
+            "pixel_share": 0.007885685011709602,
+            "bbox": [
+              538,
+              345,
+              83,
+              55
+            ],
+            "sam2_iou": 0.7987732291221619,
+            "sam2_stability": 0.8830205202102661,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.6296983758700696
+          },
+          {
+            "mask_id": 21,
+            "area": 6955,
+            "pixel_share": 0.02545008782201405,
+            "bbox": [
+              178,
+              380,
+              461,
+              39
+            ],
+            "sam2_iou": 0.7973613142967224,
+            "sam2_stability": 0.858323335647583,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 22,
+            "area": 1294,
+            "pixel_share": 0.0047350702576112414,
+            "bbox": [
+              355,
+              342,
+              44,
+              41
+            ],
+            "sam2_iou": 0.7855377793312073,
+            "sam2_stability": 0.8715328574180603,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.7272024729520865
+          },
+          {
+            "mask_id": 23,
+            "area": 554,
+            "pixel_share": 0.0020272248243559717,
+            "bbox": [
+              177,
+              331,
+              19,
+              41
+            ],
+            "sam2_iou": 0.7815375328063965,
+            "sam2_stability": 0.8809523582458496,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9981949458483754
+          },
+          {
+            "mask_id": 24,
+            "area": 625,
+            "pixel_share": 0.0022870316159250585,
+            "bbox": [
+              311,
+              337,
+              23,
+              36
+            ],
+            "sam2_iou": 0.7792611718177795,
+            "sam2_stability": 0.9070464968681335,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9152
+          },
+          {
+            "mask_id": 25,
+            "area": 1569,
+            "pixel_share": 0.005741364168618267,
+            "bbox": [
+              285,
+              313,
+              47,
+              49
+            ],
+            "sam2_iou": 0.7754334211349487,
+            "sam2_stability": 0.8817910552024841,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9974506054811982
+          },
+          {
+            "mask_id": 26,
+            "area": 7131,
+            "pixel_share": 0.026094115925058548,
+            "bbox": [
+              103,
+              371,
+              536,
+              48
+            ],
+            "sam2_iou": 0.7669645547866821,
+            "sam2_stability": 0.8097015023231506,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 27,
+            "area": 2798,
+            "pixel_share": 0.010238583138173302,
+            "bbox": [
+              394,
+              195,
+              26,
+              197
+            ],
+            "sam2_iou": 0.7638295292854309,
+            "sam2_stability": 0.8866328001022339,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9681915654038599
+          },
+          {
+            "mask_id": 28,
+            "area": 389,
+            "pixel_share": 0.0014234484777517565,
+            "bbox": [
+              374,
+              327,
+              24,
+              26
+            ],
+            "sam2_iou": 0.7547465562820435,
+            "sam2_stability": 0.8943489193916321,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 29,
+            "area": 1319,
+            "pixel_share": 0.004826551522248244,
+            "bbox": [
+              600,
+              214,
+              39,
+              53
+            ],
+            "sam2_iou": 0.7542256712913513,
+            "sam2_stability": 0.8654391169548035,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 0.890068233510235
+          },
+          {
+            "mask_id": 30,
+            "area": 7323,
+            "pixel_share": 0.026796692037470725,
+            "bbox": [
+              91,
+              352,
+              548,
+              66
+            ],
+            "sam2_iou": 0.7476059198379517,
+            "sam2_stability": 0.7820512652397156,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 0.9990441076061723
+          },
+          {
+            "mask_id": 31,
+            "area": 560,
+            "pixel_share": 0.0020491803278688526,
+            "bbox": [
+              167,
+              287,
+              11,
+              91
+            ],
+            "sam2_iou": 0.7457122802734375,
+            "sam2_stability": 0.8809917569160461,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9875
+          },
+          {
+            "mask_id": 32,
+            "area": 948,
+            "pixel_share": 0.0034689695550351287,
+            "bbox": [
+              363,
+              346,
+              35,
+              36
+            ],
+            "sam2_iou": 0.7434461712837219,
+            "sam2_stability": 0.8848063349723816,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.6824894514767933
+          },
+          {
+            "mask_id": 33,
+            "area": 808,
+            "pixel_share": 0.002956674473067916,
+            "bbox": [
+              198,
+              275,
+              12,
+              104
+            ],
+            "sam2_iou": 0.737092137336731,
+            "sam2_stability": 0.90727698802948,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9888613861386139
+          },
+          {
+            "mask_id": 34,
+            "area": 27490,
+            "pixel_share": 0.10059279859484778,
+            "bbox": [
+              199,
+              38,
+              239,
+              345
+            ],
+            "sam2_iou": 0.7324864268302917,
+            "sam2_stability": 0.6403084397315979,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.8700982175336486
+          },
+          {
+            "mask_id": 35,
+            "area": 27865,
+            "pixel_share": 0.10196501756440281,
+            "bbox": [
+              154,
+              38,
+              224,
+              345
+            ],
+            "sam2_iou": 0.7308979630470276,
+            "sam2_stability": 0.6443526744842529,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9052574914767629
+          },
+          {
+            "mask_id": 36,
+            "area": 2958,
+            "pixel_share": 0.010824063231850117,
+            "bbox": [
+              346,
+              402,
+              293,
+              24
+            ],
+            "sam2_iou": 0.7285246849060059,
+            "sam2_stability": 0.749649167060852,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 37,
+            "area": 32311,
+            "pixel_share": 0.1182340456674473,
+            "bbox": [
+              285,
+              0,
+              221,
+              392
+            ],
+            "sam2_iou": 0.7255624532699585,
+            "sam2_stability": 0.6867539286613464,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.8540435145925536
+          },
+          {
+            "mask_id": 38,
+            "area": 548,
+            "pixel_share": 0.0020052693208430913,
+            "bbox": [
+              371,
+              327,
+              29,
+              38
+            ],
+            "sam2_iou": 0.716580867767334,
+            "sam2_stability": 0.8313659429550171,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 39,
+            "area": 440,
+            "pixel_share": 0.0016100702576112413,
+            "bbox": [
+              468,
+              316,
+              24,
+              28
+            ],
+            "sam2_iou": 0.7161821126937866,
+            "sam2_stability": 0.8995726704597473,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.8454545454545455
+          },
+          {
+            "mask_id": 40,
+            "area": 1040,
+            "pixel_share": 0.0038056206088992973,
+            "bbox": [
+              197,
+              251,
+              17,
+              128
+            ],
+            "sam2_iou": 0.7066435217857361,
+            "sam2_stability": 0.8516873717308044,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9884615384615385
+          },
+          {
+            "mask_id": 41,
+            "area": 26657,
+            "pixel_share": 0.09754464285714286,
+            "bbox": [
+              54,
+              97,
+              204,
+              277
+            ],
+            "sam2_iou": 0.7065454721450806,
+            "sam2_stability": 0.6409946084022522,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9610233709719773
+          },
+          {
+            "mask_id": 42,
+            "area": 6031,
+            "pixel_share": 0.022068940281030444,
+            "bbox": [
+              251,
+              372,
+              388,
+              46
+            ],
+            "sam2_iou": 0.7048323154449463,
+            "sam2_stability": 0.77732914686203,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 43,
+            "area": 1812,
+            "pixel_share": 0.00663056206088993,
+            "bbox": [
+              138,
+              384,
+              277,
+              37
+            ],
+            "sam2_iou": 0.7015432715415955,
+            "sam2_stability": 0.8151898980140686,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 44,
+            "area": 427,
+            "pixel_share": 0.0015625,
+            "bbox": [
+              419,
+              354,
+              24,
+              21
+            ],
+            "sam2_iou": 0.6975213885307312,
+            "sam2_stability": 0.9054054021835327,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.8548009367681498
+          },
+          {
+            "mask_id": 45,
+            "area": 190,
+            "pixel_share": 0.0006952576112412178,
+            "bbox": [
+              185,
+              363,
+              12,
+              18
+            ],
+            "sam2_iou": 0.693893551826477,
+            "sam2_stability": 0.8905472755432129,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.6052631578947368
+          },
+          {
+            "mask_id": 46,
+            "area": 961,
+            "pixel_share": 0.00351653981264637,
+            "bbox": [
+              217,
+              340,
+              42,
+              29
+            ],
+            "sam2_iou": 0.6936725378036499,
+            "sam2_stability": 0.8280802369117737,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 47,
+            "area": 3059,
+            "pixel_share": 0.011193647540983606,
+            "bbox": [
+              251,
+              398,
+              388,
+              28
+            ],
+            "sam2_iou": 0.6902682185173035,
+            "sam2_stability": 0.7155792117118835,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 48,
+            "area": 65095,
+            "pixel_share": 0.2381989168618267,
+            "bbox": [
+              285,
+              0,
+              354,
+              337
+            ],
+            "sam2_iou": 0.6792234182357788,
+            "sam2_stability": 0.6936820149421692,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.5758967662646901
+          },
+          {
+            "mask_id": 49,
+            "area": 1646,
+            "pixel_share": 0.006023126463700234,
+            "bbox": [
+              285,
+              313,
+              71,
+              50
+            ],
+            "sam2_iou": 0.6775158047676086,
+            "sam2_stability": 0.7699434161186218,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9987849331713244
+          },
+          {
+            "mask_id": 50,
+            "area": 1022,
+            "pixel_share": 0.0037397540983606556,
+            "bbox": [
+              293,
+              313,
+              37,
+              43
+            ],
+            "sam2_iou": 0.6693057417869568,
+            "sam2_stability": 0.7337278127670288,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.99706457925636
+          },
+          {
+            "mask_id": 51,
+            "area": 396,
+            "pixel_share": 0.001449063231850117,
+            "bbox": [
+              179,
+              332,
+              17,
+              32
+            ],
+            "sam2_iou": 0.668793261051178,
+            "sam2_stability": 0.8726415038108826,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 52,
+            "area": 1518,
+            "pixel_share": 0.005554742388758782,
+            "bbox": [
+              593,
+              204,
+              46,
+              65
+            ],
+            "sam2_iou": 0.6644471883773804,
+            "sam2_stability": 0.8333333134651184,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 0.9025032938076416
+          },
+          {
+            "mask_id": 53,
+            "area": 1066,
+            "pixel_share": 0.0039007611241217797,
+            "bbox": [
+              309,
+              336,
+              44,
+              40
+            ],
+            "sam2_iou": 0.6557227969169617,
+            "sam2_stability": 0.7036423683166504,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.8227016885553471
+          },
+          {
+            "mask_id": 54,
+            "area": 803,
+            "pixel_share": 0.0029383782201405154,
+            "bbox": [
+              176,
+              320,
+              21,
+              58
+            ],
+            "sam2_iou": 0.6536170840263367,
+            "sam2_stability": 0.7523910999298096,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9937733499377335
+          },
+          {
+            "mask_id": 55,
+            "area": 2578,
+            "pixel_share": 0.009433548009367682,
+            "bbox": [
+              481,
+              0,
+              158,
+              114
+            ],
+            "sam2_iou": 0.6517914533615112,
+            "sam2_stability": 0.6497696042060852,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9806051202482544
+          },
+          {
+            "mask_id": 56,
+            "area": 990,
+            "pixel_share": 0.003622658079625293,
+            "bbox": [
+              568,
+              362,
+              54,
+              37
+            ],
+            "sam2_iou": 0.6406723856925964,
+            "sam2_stability": 0.6038022637367249,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.6191919191919192
+          },
+          {
+            "mask_id": 57,
+            "area": 120,
+            "pixel_share": 0.00043911007025761124,
+            "bbox": [
+              100,
+              364,
+              32,
+              8
+            ],
+            "sam2_iou": 0.6386953592300415,
+            "sam2_stability": 0.847328245639801,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.6166666666666667
+          },
+          {
+            "mask_id": 58,
+            "area": 980,
+            "pixel_share": 0.003586065573770492,
+            "bbox": [
+              236,
+              345,
+              95,
+              50
+            ],
+            "sam2_iou": 0.6331933736801147,
+            "sam2_stability": 0.7957371473312378,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 0.9938775510204082
+          },
+          {
+            "mask_id": 59,
+            "area": 3613,
+            "pixel_share": 0.013220872365339578,
+            "bbox": [
+              497,
+              279,
+              97,
+              73
+            ],
+            "sam2_iou": 0.6309987902641296,
+            "sam2_stability": 0.6989492774009705,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9656794907279269
+          },
+          {
+            "mask_id": 60,
+            "area": 4938,
+            "pixel_share": 0.018069379391100704,
+            "bbox": [
+              340,
+              386,
+              299,
+              33
+            ],
+            "sam2_iou": 0.630014181137085,
+            "sam2_stability": 0.7109414935112,
+            "ade20k_label": "earth",
+            "ade20k_label_idx": 13,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 61,
+            "area": 545,
+            "pixel_share": 0.001994291569086651,
+            "bbox": [
+              563,
+              323,
+              26,
+              30
+            ],
+            "sam2_iou": 0.6170638799667358,
+            "sam2_stability": 0.855195939540863,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          }
+        ],
+        "n_masks": 62,
+        "image_size": [
+          640,
+          427
+        ],
+        "pixel_shares": {
+          "shares": {
+            "tree": 0.529538311066621,
+            "sky": 0.3065183800823321,
+            "earth": 0.16394330885104683
+          },
+          "image_size": [
+            640,
+            427
+          ]
+        },
+        "n_classes_detected": 3,
+        "coverage_ratio": 1.5937975702576113,
+        "method_meta": {
+          "sam2_model": "facebook/sam2.1-hiera-small",
+          "ade20k_model": "nvidia/segformer-b0-finetuned-ade-512-512"
+        }
+      }
+    },
+    "classification": {
+      "human": {
+        "present": false,
+        "count": null,
+        "tags": [],
+        "evidence": null
+      },
+      "nature": {
+        "tags": [
+          "woodland",
+          "forest",
+          "trees"
+        ],
+        "dominant": "woodland",
+        "evidence": "ResNet classified scene as 'Woodland Settings' (confidence 0.96)",
+        "pixel_shares": {}
+      },
+      "activity": {
+        "tags": [
+          "walking",
+          "hiking"
+        ],
+        "dominant": "walking",
+        "evidence": "ResNet classified scene as 'Woodland Settings' (confidence 0.96)"
+      },
+      "meaning": {
+        "tags": [
+          "nature immersion",
+          "restoration"
+        ],
+        "dominant": "nature immersion",
+        "evidence": "ResNet classified scene as 'Woodland Settings' (confidence 0.96)"
+      },
+      "summary": null,
+      "hni_present": null,
+      "hni_strength": null,
+      "confidence": "high",
+      "source_method": "classification",
+      "raw_output": {
+        "predicted_class": "Woodland Settings",
+        "predicted_class_idx": 6,
+        "confidence": 0.9631668329238892,
+        "all_probs": {
+          "Cultural Performance": 0.00015351195179391652,
+          "Garden Vegetation": 0.0032945580314844847,
+          "Social and Informal Recreation": 0.0012125862995162606,
+          "Sport and Exercise Activities": 0.003060051938518882,
+          "Waterscape and Built Settings": 0.02859075553715229,
+          "Wildlife Encounters": 0.0005217852885834873,
+          "Woodland Settings": 0.9631668329238892
+        }
+      }
+    },
+    "vlm": {
+      "human": {
+        "present": false,
+        "count": "0",
+        "tags": [
+          "none"
+        ],
+        "evidence": "No individuals, groups, or any people are visible in the image."
+      },
+      "nature": {
+        "tags": [
+          "park path",
+          "urban greenery"
+        ],
+        "dominant": "park path",
+        "evidence": "A paved path runs through the scene, bordered by leafless trees and snow-covered shrubs, indicating a park environment.",
+        "pixel_shares": {}
+      },
+      "activity": {
+        "tags": [
+          "none"
+        ],
+        "dominant": "none",
+        "evidence": "No visible human activity such as walking, resting, or playing is present."
+      },
+      "meaning": {
+        "tags": [
+          "aesthetic appreciation",
+          "relaxation"
+        ],
+        "dominant": "aesthetic appreciation",
+        "evidence": "The snow-covered landscape and orderly tree alignment suggest a scene that could be appreciated for its visual beauty and tranquility."
+      },
+      "summary": "A snow-covered park path lined with leafless trees and some snow-covered shrubs and benches, with no visible people or activities.",
+      "hni_present": "no",
+      "hni_strength": null,
+      "confidence": "high",
+      "source_method": "vlm",
+      "raw_output": {
+        "raw_response": "{\n  \"image_level_summary\": \"A snow-covered park path lined with leafless trees and some snow-covered shrubs and benches, with no visible people or activities.\",\n  \"human_presence\": {\n    \"visible\": \"no\",\n    \"presence_type\": [\"none\"],\n    \"estimated_people_count\": \"0\",\n    \"visual_evidence\": \"No individuals, groups, or any people are visible in the image.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"park path\", \"urban greenery\"],\n    \"dominant_nature_type\": \"park path\",\n    \"visual_evidence\": \"A paved path runs through the scene, bordered by leafless trees and snow-covered shrubs, indicating a park environment.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"none\"],\n    \"dominant_activity\": \"none\",\n    \"visual_evidence\": \"No visible human activity such as walking, resting, or playing is present.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"aesthetic appreciation\", \"relaxation\"],\n    \"dominant_meaning\": \"aesthetic appreciation\",\n    \"visual_evidence\": \"The snow-covered landscape and orderly tree alignment suggest a scene that could be appreciated for its visual beauty and tranquility.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"no\",\n    \"hni_strength\": \"none\",\n    \"reason\": \"No visible human presence or activity interacting with the natural environment is evident.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"None, the image clearly shows no people or activities.\"\n}",
+        "parsed": {
+          "image_level_summary": "A snow-covered park path lined with leafless trees and some snow-covered shrubs and benches, with no visible people or activities.",
+          "human_presence": {
+            "visible": "no",
+            "presence_type": [
+              "none"
+            ],
+            "estimated_people_count": "0",
+            "visual_evidence": "No individuals, groups, or any people are visible in the image."
+          },
+          "nature_detection": {
+            "nature_types": [
+              "park path",
+              "urban greenery"
+            ],
+            "dominant_nature_type": "park path",
+            "visual_evidence": "A paved path runs through the scene, bordered by leafless trees and snow-covered shrubs, indicating a park environment."
+          },
+          "activity_evidence": {
+            "activity_types": [
+              "none"
+            ],
+            "dominant_activity": "none",
+            "visual_evidence": "No visible human activity such as walking, resting, or playing is present."
+          },
+          "cultural_experiential_meaning": {
+            "meaning_types": [
+              "aesthetic appreciation",
+              "relaxation"
+            ],
+            "dominant_meaning": "aesthetic appreciation",
+            "visual_evidence": "The snow-covered landscape and orderly tree alignment suggest a scene that could be appreciated for its visual beauty and tranquility."
+          },
+          "hni_overall_interpretation": {
+            "is_hni_present": "no",
+            "hni_strength": "none",
+            "reason": "No visible human presence or activity interacting with the natural environment is evident."
+          },
+          "confidence": "high",
+          "uncertainty_notes": "None, the image clearly shows no people or activities."
+        },
+        "parse_error": null,
+        "tokens_used": 1502
+      }
+    }
+  }
+}

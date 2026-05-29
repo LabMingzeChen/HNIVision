@@ -1,0 +1,1513 @@
+{
+  "merged": {
+    "human": {
+      "present": true,
+      "count": "2-5",
+      "tags": [
+        "groups",
+        "people in nature",
+        "person",
+        "children"
+      ],
+      "evidence": "[detection] YOLO detected 2 'person' object(s) with confidence \u2265 0.5 | [labeling] Google Vision tagged: people in nature | [segmentation] Detected person in SAM2 masks (1.4% pixel share) | [vlm] Two children are visible standing side by side facing away from the camera."
+    },
+    "nature": {
+      "tags": [
+        "cloud",
+        "cumulus",
+        "meteorological phenomenon",
+        "park",
+        "sky",
+        "tree",
+        "grass",
+        "garden",
+        "flowers",
+        "plants",
+        "manicured vegetation",
+        "lawn",
+        "woodland",
+        "waterfront"
+      ],
+      "dominant": "waterfront",
+      "evidence": "[labeling] Google Vision tagged: cloud, cumulus, meteorological phenomenon, park | [segmentation] Top natural classes: sky 43.2%, tree 18.8%, grass 11.5% | [classification] ResNet classified scene as 'Garden Vegetation' (confidence 0.61) | [vlm] A large body of water is visible beyond a grassy lawn and trees, indicating a waterfront setting with adjacent woodland and lawn areas.",
+      "pixel_shares": {
+        "sky": 0.432,
+        "tree": 0.1879,
+        "grass": 0.1147
+      }
+    },
+    "activity": {
+      "tags": [
+        "walking",
+        "watching",
+        "landscape viewing"
+      ],
+      "dominant": "landscape viewing",
+      "evidence": "[labeling] Google Vision tagged: walking | [vlm] The children are standing still and looking out over the natural scene, suggesting they are observing or viewing the landscape."
+    },
+    "meaning": {
+      "tags": [
+        "leisure",
+        "aesthetic appreciation",
+        "recreation",
+        "relaxation"
+      ],
+      "dominant": "aesthetic appreciation",
+      "evidence": "[labeling] Google Vision tagged: leisure | [classification] ResNet classified scene as 'Garden Vegetation' (confidence 0.61) | [vlm] The setting and posture of the children imply appreciation of the natural scenery, which is consistent with aesthetic enjoyment and recreational relaxation."
+    },
+    "summary": "Two children stand on a paved area looking over a stone balustrade at a natural landscape featuring a lawn, trees, and a waterfront under a partly cloudy sky.",
+    "hni_present": "yes",
+    "hni_strength": "moderate",
+    "confidence": "high",
+    "source_method": "merged(classification,detection,labeling,segmentation,vlm)",
+    "raw_output": null
+  },
+  "per_method": {
+    "detection": {
+      "human": {
+        "present": true,
+        "count": "2-5",
+        "tags": [
+          "groups"
+        ],
+        "evidence": "YOLO detected 2 'person' object(s) with confidence \u2265 0.5"
+      },
+      "nature": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null,
+        "pixel_shares": {}
+      },
+      "activity": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "meaning": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "summary": null,
+      "hni_present": null,
+      "hni_strength": null,
+      "confidence": null,
+      "source_method": "detection",
+      "raw_output": {
+        "boxes": [
+          {
+            "class_name": "person",
+            "class_id": 0,
+            "confidence": 0.8968237042427063,
+            "x1": 264.1493225097656,
+            "y1": 230.96568298339844,
+            "x2": 300.9723205566406,
+            "y2": 342.3010559082031
+          },
+          {
+            "class_name": "person",
+            "class_id": 0,
+            "confidence": 0.7865123748779297,
+            "x1": 236.20135498046875,
+            "y1": 237.9204864501953,
+            "x2": 265.6833801269531,
+            "y2": 339.0294189453125
+          }
+        ],
+        "image_size": [
+          524,
+          349
+        ]
+      }
+    },
+    "labeling": {
+      "human": {
+        "present": true,
+        "count": null,
+        "tags": [
+          "people in nature"
+        ],
+        "evidence": "Google Vision tagged: people in nature"
+      },
+      "nature": {
+        "tags": [
+          "cloud",
+          "cumulus",
+          "meteorological phenomenon",
+          "park"
+        ],
+        "dominant": "cloud",
+        "evidence": "Google Vision tagged: cloud, cumulus, meteorological phenomenon, park",
+        "pixel_shares": {}
+      },
+      "activity": {
+        "tags": [
+          "walking"
+        ],
+        "dominant": "walking",
+        "evidence": "Google Vision tagged: walking"
+      },
+      "meaning": {
+        "tags": [
+          "leisure"
+        ],
+        "dominant": "leisure",
+        "evidence": "Google Vision tagged: leisure"
+      },
+      "summary": null,
+      "hni_present": null,
+      "hni_strength": null,
+      "confidence": null,
+      "source_method": "labeling",
+      "raw_output": {
+        "labels": [
+          {
+            "description": "Cloud",
+            "confidence": 0.9201,
+            "rank_original": 1,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Leisure",
+            "confidence": 0.8528,
+            "rank_original": 2,
+            "kept_by_filter": true
+          },
+          {
+            "description": "People in nature",
+            "confidence": 0.8367,
+            "rank_original": 3,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Travel",
+            "confidence": 0.7441,
+            "rank_original": 4,
+            "kept_by_filter": false
+          },
+          {
+            "description": "Vacation",
+            "confidence": 0.7152,
+            "rank_original": 5,
+            "kept_by_filter": false
+          },
+          {
+            "description": "Cumulus",
+            "confidence": 0.6656,
+            "rank_original": 6,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Walkway",
+            "confidence": 0.6043,
+            "rank_original": 7,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Meteorological phenomenon",
+            "confidence": 0.5979,
+            "rank_original": 8,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Fence",
+            "confidence": 0.5839,
+            "rank_original": 9,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Park",
+            "confidence": 0.5821,
+            "rank_original": 10,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Lake District",
+            "confidence": 0.5689,
+            "rank_original": 11,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Walking",
+            "confidence": 0.5398,
+            "rank_original": 12,
+            "kept_by_filter": true
+          },
+          {
+            "description": "Holiday",
+            "confidence": 0.5239,
+            "rank_original": 13,
+            "kept_by_filter": false
+          }
+        ]
+      }
+    },
+    "segmentation": {
+      "human": {
+        "present": true,
+        "count": null,
+        "tags": [
+          "person"
+        ],
+        "evidence": "Detected person in SAM2 masks (1.4% pixel share)"
+      },
+      "nature": {
+        "tags": [
+          "sky",
+          "tree",
+          "grass"
+        ],
+        "dominant": "sky",
+        "evidence": "Top natural classes: sky 43.2%, tree 18.8%, grass 11.5%",
+        "pixel_shares": {
+          "sky": 0.432,
+          "tree": 0.1879,
+          "grass": 0.1147
+        }
+      },
+      "activity": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "meaning": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "summary": null,
+      "hni_present": null,
+      "hni_strength": null,
+      "confidence": null,
+      "source_method": "base",
+      "raw_output": {
+        "masks": [
+          {
+            "mask_id": 0,
+            "area": 90695,
+            "pixel_share": 0.49593713773267134,
+            "bbox": [
+              0,
+              0,
+              523,
+              190
+            ],
+            "sam2_iou": 0.9943562150001526,
+            "sam2_stability": 0.9858161211013794,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 1,
+            "area": 3206,
+            "pixel_share": 0.017531004615149063,
+            "bbox": [
+              32,
+              92,
+              99,
+              44
+            ],
+            "sam2_iou": 0.9559070467948914,
+            "sam2_stability": 0.9476248621940613,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 2,
+            "area": 1197,
+            "pixel_share": 0.006545418753691025,
+            "bbox": [
+              135,
+              98,
+              58,
+              35
+            ],
+            "sam2_iou": 0.929534375667572,
+            "sam2_stability": 0.9502447247505188,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 3,
+            "area": 14791,
+            "pixel_share": 0.08087994050613531,
+            "bbox": [
+              0,
+              0,
+              361,
+              76
+            ],
+            "sam2_iou": 0.9295023083686829,
+            "sam2_stability": 0.9225113987922668,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 4,
+            "area": 4851,
+            "pixel_share": 0.026526170738642576,
+            "bbox": [
+              0,
+              186,
+              306,
+              22
+            ],
+            "sam2_iou": 0.9225348830223083,
+            "sam2_stability": 0.9319579601287842,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9029066171923315
+          },
+          {
+            "mask_id": 5,
+            "area": 4896,
+            "pixel_share": 0.02677223911284149,
+            "bbox": [
+              0,
+              187,
+              306,
+              38
+            ],
+            "sam2_iou": 0.912516176700592,
+            "sam2_stability": 0.9351979494094849,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9058415032679739
+          },
+          {
+            "mask_id": 6,
+            "area": 1837,
+            "pixel_share": 0.010045057853408867,
+            "bbox": [
+              236,
+              243,
+              26,
+              95
+            ],
+            "sam2_iou": 0.9122116565704346,
+            "sam2_stability": 0.9283456206321716,
+            "ade20k_label": "person",
+            "ade20k_label_idx": 12,
+            "ade20k_confidence": 0.9972781709308656
+          },
+          {
+            "mask_id": 7,
+            "area": 7503,
+            "pixel_share": 0.041027800258098386,
+            "bbox": [
+              0,
+              229,
+              523,
+              34
+            ],
+            "sam2_iou": 0.9087814688682556,
+            "sam2_stability": 0.852580189704895,
+            "ade20k_label": "grass",
+            "ade20k_label_idx": 9,
+            "ade20k_confidence": 0.9155004664800747
+          },
+          {
+            "mask_id": 8,
+            "area": 2312,
+            "pixel_share": 0.012642446247730702,
+            "bbox": [
+              263,
+              232,
+              32,
+              108
+            ],
+            "sam2_iou": 0.9025468230247498,
+            "sam2_stability": 0.9256644248962402,
+            "ade20k_label": "person",
+            "ade20k_label_idx": 12,
+            "ade20k_confidence": 0.9788062283737025
+          },
+          {
+            "mask_id": 9,
+            "area": 4958,
+            "pixel_share": 0.027111266650626655,
+            "bbox": [
+              0,
+              186,
+              523,
+              45
+            ],
+            "sam2_iou": 0.8917723298072815,
+            "sam2_stability": 0.6477987170219421,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.8979427188382412
+          },
+          {
+            "mask_id": 10,
+            "area": 7964,
+            "pixel_share": 0.04354863404711389,
+            "bbox": [
+              309,
+              127,
+              130,
+              107
+            ],
+            "sam2_iou": 0.8834188580513,
+            "sam2_stability": 0.7927767038345337,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9702410848819688
+          },
+          {
+            "mask_id": 11,
+            "area": 1107,
+            "pixel_share": 0.006053282005293204,
+            "bbox": [
+              443,
+              227,
+              53,
+              34
+            ],
+            "sam2_iou": 0.8820576071739197,
+            "sam2_stability": 0.9170984625816345,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.982836495031617
+          },
+          {
+            "mask_id": 12,
+            "area": 7378,
+            "pixel_share": 0.040344276996434746,
+            "bbox": [
+              0,
+              230,
+              523,
+              66
+            ],
+            "sam2_iou": 0.8817605972290039,
+            "sam2_stability": 0.7068063020706177,
+            "ade20k_label": "grass",
+            "ade20k_label_idx": 9,
+            "ade20k_confidence": 0.8934670642450528
+          },
+          {
+            "mask_id": 13,
+            "area": 1807,
+            "pixel_share": 0.009881012270609594,
+            "bbox": [
+              234,
+              192,
+              60,
+              41
+            ],
+            "sam2_iou": 0.8795121312141418,
+            "sam2_stability": 0.9263771176338196,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 14,
+            "area": 284,
+            "pixel_share": 0.0015529648504997921,
+            "bbox": [
+              15,
+              219,
+              21,
+              16
+            ],
+            "sam2_iou": 0.8744196891784668,
+            "sam2_stability": 0.9584774971008301,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 15,
+            "area": 7259,
+            "pixel_share": 0.03969356285133096,
+            "bbox": [
+              0,
+              239,
+              521,
+              27
+            ],
+            "sam2_iou": 0.8738710284233093,
+            "sam2_stability": 0.84097820520401,
+            "ade20k_label": "grass",
+            "ade20k_label_idx": 9,
+            "ade20k_confidence": 0.9370436699269872
+          },
+          {
+            "mask_id": 16,
+            "area": 7140,
+            "pixel_share": 0.03904284870622717,
+            "bbox": [
+              0,
+              239,
+              521,
+              46
+            ],
+            "sam2_iou": 0.8721606135368347,
+            "sam2_stability": 0.8608260750770569,
+            "ade20k_label": "grass",
+            "ade20k_label_idx": 9,
+            "ade20k_confidence": 0.9495798319327731
+          },
+          {
+            "mask_id": 17,
+            "area": 22034,
+            "pixel_share": 0.12048601237997332,
+            "bbox": [
+              0,
+              262,
+              523,
+              66
+            ],
+            "sam2_iou": 0.8698945641517639,
+            "sam2_stability": 0.6539778113365173,
+            "ade20k_label": "bannister",
+            "ade20k_label_idx": 95,
+            "ade20k_confidence": 0.5420713442861033
+          },
+          {
+            "mask_id": 18,
+            "area": 227,
+            "pixel_share": 0.001241278243181172,
+            "bbox": [
+              514,
+              274,
+              9,
+              27
+            ],
+            "sam2_iou": 0.869159460067749,
+            "sam2_stability": 0.9563318490982056,
+            "ade20k_label": "bannister",
+            "ade20k_label_idx": 95,
+            "ade20k_confidence": 0.947136563876652
+          },
+          {
+            "mask_id": 19,
+            "area": 718,
+            "pixel_share": 0.003926157614995954,
+            "bbox": [
+              199,
+              215,
+              51,
+              18
+            ],
+            "sam2_iou": 0.8673715591430664,
+            "sam2_stability": 0.9176626801490784,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9832869080779945
+          },
+          {
+            "mask_id": 20,
+            "area": 3330,
+            "pixel_share": 0.018209059690719395,
+            "bbox": [
+              32,
+              91,
+              157,
+              45
+            ],
+            "sam2_iou": 0.8631260395050049,
+            "sam2_stability": 0.7742092609405518,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 21,
+            "area": 8539,
+            "pixel_share": 0.04669284105076664,
+            "bbox": [
+              0,
+              330,
+              523,
+              18
+            ],
+            "sam2_iou": 0.8556793332099915,
+            "sam2_stability": 0.8579527139663696,
+            "ade20k_label": "sidewalk",
+            "ade20k_label_idx": 11,
+            "ade20k_confidence": 0.33774446656517154
+          },
+          {
+            "mask_id": 22,
+            "area": 13091,
+            "pixel_share": 0.07158402414750979,
+            "bbox": [
+              0,
+              318,
+              523,
+              30
+            ],
+            "sam2_iou": 0.8383881449699402,
+            "sam2_stability": 0.7271488904953003,
+            "ade20k_label": "sidewalk",
+            "ade20k_label_idx": 11,
+            "ade20k_confidence": 0.36009472156443356
+          },
+          {
+            "mask_id": 23,
+            "area": 317,
+            "pixel_share": 0.0017334149915789934,
+            "bbox": [
+              108,
+              213,
+              20,
+              19
+            ],
+            "sam2_iou": 0.8299145698547363,
+            "sam2_stability": 0.9184290170669556,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 24,
+            "area": 293,
+            "pixel_share": 0.0016021785253395743,
+            "bbox": [
+              419,
+              127,
+              27,
+              14
+            ],
+            "sam2_iou": 0.8238321542739868,
+            "sam2_stability": 0.9177631735801697,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 25,
+            "area": 1642,
+            "pixel_share": 0.008978761565213588,
+            "bbox": [
+              487,
+              171,
+              36,
+              60
+            ],
+            "sam2_iou": 0.821794331073761,
+            "sam2_stability": 0.9051774144172668,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 26,
+            "area": 264,
+            "pixel_share": 0.0014436011286336097,
+            "bbox": [
+              70,
+              273,
+              10,
+              29
+            ],
+            "sam2_iou": 0.8168237805366516,
+            "sam2_stability": 0.8892857432365417,
+            "ade20k_label": "bannister",
+            "ade20k_label_idx": 95,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 27,
+            "area": 90,
+            "pixel_share": 0.0004921367483978215,
+            "bbox": [
+              52,
+              239,
+              9,
+              10
+            ],
+            "sam2_iou": 0.8115766644477844,
+            "sam2_stability": 0.945652186870575,
+            "ade20k_label": "grass",
+            "ade20k_label_idx": 9,
+            "ade20k_confidence": 0.6888888888888889
+          },
+          {
+            "mask_id": 28,
+            "area": 285,
+            "pixel_share": 0.0015584330365931013,
+            "bbox": [
+              163,
+              228,
+              29,
+              10
+            ],
+            "sam2_iou": 0.8107022047042847,
+            "sam2_stability": 0.9484536051750183,
+            "ade20k_label": "fence",
+            "ade20k_label_idx": 32,
+            "ade20k_confidence": 0.3684210526315789
+          },
+          {
+            "mask_id": 29,
+            "area": 435,
+            "pixel_share": 0.0023786609505894703,
+            "bbox": [
+              250,
+              0,
+              35,
+              16
+            ],
+            "sam2_iou": 0.8094030618667603,
+            "sam2_stability": 0.9377777576446533,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 30,
+            "area": 2635,
+            "pixel_share": 0.014408670355869551,
+            "bbox": [
+              202,
+              192,
+              102,
+              42
+            ],
+            "sam2_iou": 0.8078343868255615,
+            "sam2_stability": 0.6968516707420349,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 31,
+            "area": 12205,
+            "pixel_share": 0.0667392112688379,
+            "bbox": [
+              0,
+              304,
+              523,
+              44
+            ],
+            "sam2_iou": 0.8076982498168945,
+            "sam2_stability": 0.6280649304389954,
+            "ade20k_label": "sidewalk",
+            "ade20k_label_idx": 11,
+            "ade20k_confidence": 0.33396149119213436
+          },
+          {
+            "mask_id": 32,
+            "area": 65,
+            "pixel_share": 0.0003554320960650933,
+            "bbox": [
+              250,
+              328,
+              7,
+              9
+            ],
+            "sam2_iou": 0.803896427154541,
+            "sam2_stability": 0.9264705777168274,
+            "ade20k_label": "person",
+            "ade20k_label_idx": 12,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 33,
+            "area": 324,
+            "pixel_share": 0.0017716922942321574,
+            "bbox": [
+              497,
+              274,
+              15,
+              27
+            ],
+            "sam2_iou": 0.7935760021209717,
+            "sam2_stability": 0.8941176533699036,
+            "ade20k_label": "bannister",
+            "ade20k_label_idx": 95,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 34,
+            "area": 213,
+            "pixel_share": 0.0011647236378748442,
+            "bbox": [
+              337,
+              307,
+              18,
+              12
+            ],
+            "sam2_iou": 0.7891997694969177,
+            "sam2_stability": 0.9140271544456482,
+            "ade20k_label": "wall",
+            "ade20k_label_idx": 0,
+            "ade20k_confidence": 0.6901408450704225
+          },
+          {
+            "mask_id": 35,
+            "area": 186,
+            "pixel_share": 0.0010170826133554978,
+            "bbox": [
+              263,
+              168,
+              20,
+              11
+            ],
+            "sam2_iou": 0.7859196662902832,
+            "sam2_stability": 0.9025641083717346,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 36,
+            "area": 295,
+            "pixel_share": 0.0016131148975261926,
+            "bbox": [
+              481,
+              274,
+              14,
+              27
+            ],
+            "sam2_iou": 0.7783059477806091,
+            "sam2_stability": 0.933993399143219,
+            "ade20k_label": "bannister",
+            "ade20k_label_idx": 95,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 37,
+            "area": 4993,
+            "pixel_share": 0.027302653163892472,
+            "bbox": [
+              433,
+              166,
+              90,
+              67
+            ],
+            "sam2_iou": 0.7765355706214905,
+            "sam2_stability": 0.8762788772583008,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 38,
+            "area": 163,
+            "pixel_share": 0.0008913143332093877,
+            "bbox": [
+              372,
+              232,
+              15,
+              14
+            ],
+            "sam2_iou": 0.7700144052505493,
+            "sam2_stability": 0.9464285969734192,
+            "ade20k_label": "grass",
+            "ade20k_label_idx": 9,
+            "ade20k_confidence": 0.6134969325153374
+          },
+          {
+            "mask_id": 39,
+            "area": 1335,
+            "pixel_share": 0.007300028434567685,
+            "bbox": [
+              0,
+              208,
+              242,
+              22
+            ],
+            "sam2_iou": 0.7696083784103394,
+            "sam2_stability": 0.8282417058944702,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.700374531835206
+          },
+          {
+            "mask_id": 40,
+            "area": 204,
+            "pixel_share": 0.001115509963035062,
+            "bbox": [
+              43,
+              219,
+              16,
+              16
+            ],
+            "sam2_iou": 0.7690678834915161,
+            "sam2_stability": 0.8853210806846619,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 41,
+            "area": 172,
+            "pixel_share": 0.0009405280080491699,
+            "bbox": [
+              209,
+              307,
+              15,
+              11
+            ],
+            "sam2_iou": 0.7686994671821594,
+            "sam2_stability": 0.8994413614273071,
+            "ade20k_label": "wall",
+            "ade20k_label_idx": 0,
+            "ade20k_confidence": 0.7965116279069767
+          },
+          {
+            "mask_id": 42,
+            "area": 260,
+            "pixel_share": 0.0014217283842603732,
+            "bbox": [
+              101,
+              272,
+              10,
+              28
+            ],
+            "sam2_iou": 0.765641987323761,
+            "sam2_stability": 0.9032257795333862,
+            "ade20k_label": "bannister",
+            "ade20k_label_idx": 95,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 43,
+            "area": 447,
+            "pixel_share": 0.00244427918370918,
+            "bbox": [
+              250,
+              0,
+              64,
+              17
+            ],
+            "sam2_iou": 0.7627469897270203,
+            "sam2_stability": 0.9308855533599854,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 44,
+            "area": 156,
+            "pixel_share": 0.0008530370305562238,
+            "bbox": [
+              120,
+              238,
+              16,
+              10
+            ],
+            "sam2_iou": 0.7482675313949585,
+            "sam2_stability": 0.9329268336296082,
+            "ade20k_label": "grass",
+            "ade20k_label_idx": 9,
+            "ade20k_confidence": 0.967948717948718
+          },
+          {
+            "mask_id": 45,
+            "area": 83,
+            "pixel_share": 0.0004538594457446576,
+            "bbox": [
+              515,
+              139,
+              8,
+              12
+            ],
+            "sam2_iou": 0.7402138710021973,
+            "sam2_stability": 0.8764045238494873,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 46,
+            "area": 237,
+            "pixel_share": 0.0012959601041142633,
+            "bbox": [
+              87,
+              272,
+              8,
+              28
+            ],
+            "sam2_iou": 0.7217749953269958,
+            "sam2_stability": 0.9306122660636902,
+            "ade20k_label": "bannister",
+            "ade20k_label_idx": 95,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 47,
+            "area": 11173,
+            "pixel_share": 0.06109604322054288,
+            "bbox": [
+              299,
+              127,
+              208,
+              107
+            ],
+            "sam2_iou": 0.720637857913971,
+            "sam2_stability": 0.6599676609039307,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9781616396670545
+          },
+          {
+            "mask_id": 48,
+            "area": 230,
+            "pixel_share": 0.0012576828014610993,
+            "bbox": [
+              117,
+              271,
+              10,
+              28
+            ],
+            "sam2_iou": 0.7163692712783813,
+            "sam2_stability": 0.902953565120697,
+            "ade20k_label": "bannister",
+            "ade20k_label_idx": 95,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 49,
+            "area": 159,
+            "pixel_share": 0.0008694415888361513,
+            "bbox": [
+              70,
+              0,
+              32,
+              5
+            ],
+            "sam2_iou": 0.7159649133682251,
+            "sam2_stability": 0.9506173133850098,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 50,
+            "area": 118,
+            "pixel_share": 0.0006452459590104771,
+            "bbox": [
+              0,
+              228,
+              14,
+              7
+            ],
+            "sam2_iou": 0.7156550288200378,
+            "sam2_stability": 0.9200000166893005,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 51,
+            "area": 30,
+            "pixel_share": 0.00016404558279927383,
+            "bbox": [
+              135,
+              329,
+              8,
+              4
+            ],
+            "sam2_iou": 0.7005093693733215,
+            "sam2_stability": 0.7878788113594055,
+            "ade20k_label": "sidewalk",
+            "ade20k_label_idx": 11,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 52,
+            "area": 2678,
+            "pixel_share": 0.014643802357881843,
+            "bbox": [
+              0,
+              300,
+              199,
+              17
+            ],
+            "sam2_iou": 0.6889805793762207,
+            "sam2_stability": 0.8039411902427673,
+            "ade20k_label": "bannister",
+            "ade20k_label_idx": 95,
+            "ade20k_confidence": 0.38722927557879017
+          },
+          {
+            "mask_id": 53,
+            "area": 240,
+            "pixel_share": 0.0013123646623941906,
+            "bbox": [
+              133,
+              271,
+              9,
+              28
+            ],
+            "sam2_iou": 0.6791048049926758,
+            "sam2_stability": 0.9039999842643738,
+            "ade20k_label": "bannister",
+            "ade20k_label_idx": 95,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 54,
+            "area": 93,
+            "pixel_share": 0.0005085413066777489,
+            "bbox": [
+              12,
+              239,
+              11,
+              9
+            ],
+            "sam2_iou": 0.6755639314651489,
+            "sam2_stability": 0.9052631855010986,
+            "ade20k_label": "grass",
+            "ade20k_label_idx": 9,
+            "ade20k_confidence": 0.5698924731182796
+          },
+          {
+            "mask_id": 55,
+            "area": 2286,
+            "pixel_share": 0.012500273409304666,
+            "bbox": [
+              234,
+              192,
+              84,
+              42
+            ],
+            "sam2_iou": 0.6730173826217651,
+            "sam2_stability": 0.77579665184021,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 56,
+            "area": 14792,
+            "pixel_share": 0.08088540869222861,
+            "bbox": [
+              0,
+              0,
+              523,
+              76
+            ],
+            "sam2_iou": 0.6628779768943787,
+            "sam2_stability": 0.908751368522644,
+            "ade20k_label": "sky",
+            "ade20k_label_idx": 2,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 57,
+            "area": 1098,
+            "pixel_share": 0.006004068330453422,
+            "bbox": [
+              143,
+              208,
+              57,
+              21
+            ],
+            "sam2_iou": 0.6563957929611206,
+            "sam2_stability": 0.8748928904533386,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.9972677595628415
+          },
+          {
+            "mask_id": 58,
+            "area": 1853,
+            "pixel_share": 0.010132548830901813,
+            "bbox": [
+              0,
+              229,
+              367,
+              16
+            ],
+            "sam2_iou": 0.652439296245575,
+            "sam2_stability": 0.6698858737945557,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.43335132218024824
+          },
+          {
+            "mask_id": 59,
+            "area": 287,
+            "pixel_share": 0.0015693694087797196,
+            "bbox": [
+              449,
+              274,
+              13,
+              26
+            ],
+            "sam2_iou": 0.648118257522583,
+            "sam2_stability": 0.920265793800354,
+            "ade20k_label": "bannister",
+            "ade20k_label_idx": 95,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 60,
+            "area": 4640,
+            "pixel_share": 0.02537238347295435,
+            "bbox": [
+              0,
+              239,
+              387,
+              23
+            ],
+            "sam2_iou": 0.6448993682861328,
+            "sam2_stability": 0.6338375806808472,
+            "ade20k_label": "grass",
+            "ade20k_label_idx": 9,
+            "ade20k_confidence": 0.9672413793103448
+          },
+          {
+            "mask_id": 61,
+            "area": 11177,
+            "pixel_share": 0.06111791596491612,
+            "bbox": [
+              0,
+              261,
+              523,
+              44
+            ],
+            "sam2_iou": 0.6447466611862183,
+            "sam2_stability": 0.6076890826225281,
+            "ade20k_label": "bannister",
+            "ade20k_label_idx": 95,
+            "ade20k_confidence": 0.5727833944707882
+          },
+          {
+            "mask_id": 62,
+            "area": 1069,
+            "pixel_share": 0.005845490933747457,
+            "bbox": [
+              0,
+              207,
+              236,
+              16
+            ],
+            "sam2_iou": 0.6314085721969604,
+            "sam2_stability": 0.6805877685546875,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 0.6314312441534145
+          },
+          {
+            "mask_id": 63,
+            "area": 2653,
+            "pixel_share": 0.014507097705549116,
+            "bbox": [
+              0,
+              300,
+              523,
+              20
+            ],
+            "sam2_iou": 0.6287875771522522,
+            "sam2_stability": 0.7006678581237793,
+            "ade20k_label": "bannister",
+            "ade20k_label_idx": 95,
+            "ade20k_confidence": 0.3660007538635507
+          },
+          {
+            "mask_id": 64,
+            "area": 828,
+            "pixel_share": 0.0045276580852599575,
+            "bbox": [
+              233,
+              192,
+              59,
+              19
+            ],
+            "sam2_iou": 0.6138895750045776,
+            "sam2_stability": 0.9034482836723328,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          },
+          {
+            "mask_id": 65,
+            "area": 235,
+            "pixel_share": 0.001285023731927645,
+            "bbox": [
+              82,
+              208,
+              14,
+              26
+            ],
+            "sam2_iou": 0.6103206872940063,
+            "sam2_stability": 0.8893280625343323,
+            "ade20k_label": "tree",
+            "ade20k_label_idx": 4,
+            "ade20k_confidence": 1.0
+          }
+        ],
+        "n_masks": 66,
+        "image_size": [
+          524,
+          349
+        ],
+        "pixel_shares": {
+          "shares": {
+            "sky": 0.43195739547160256,
+            "tree": 0.18786450800167961,
+            "bannister": 0.13632515946704343,
+            "grass": 0.11471629196632693,
+            "sidewalk": 0.11286000893148747,
+            "person": 0.01404376428871366,
+            "wall": 0.0012830681659123779,
+            "fence": 0.000949803707233838
+          },
+          "image_size": [
+            524,
+            349
+          ]
+        },
+        "n_classes_detected": 8,
+        "coverage_ratio": 1.6407948555305234,
+        "method_meta": {
+          "sam2_model": "facebook/sam2.1-hiera-small",
+          "ade20k_model": "nvidia/segformer-b0-finetuned-ade-512-512"
+        }
+      }
+    },
+    "classification": {
+      "human": {
+        "present": false,
+        "count": null,
+        "tags": [],
+        "evidence": null
+      },
+      "nature": {
+        "tags": [
+          "garden",
+          "flowers",
+          "plants",
+          "manicured vegetation"
+        ],
+        "dominant": "garden",
+        "evidence": "ResNet classified scene as 'Garden Vegetation' (confidence 0.61)",
+        "pixel_shares": {}
+      },
+      "activity": {
+        "tags": [],
+        "dominant": null,
+        "evidence": null
+      },
+      "meaning": {
+        "tags": [
+          "aesthetic appreciation"
+        ],
+        "dominant": "aesthetic appreciation",
+        "evidence": "ResNet classified scene as 'Garden Vegetation' (confidence 0.61)"
+      },
+      "summary": null,
+      "hni_present": null,
+      "hni_strength": null,
+      "confidence": "medium",
+      "source_method": "classification",
+      "raw_output": {
+        "predicted_class": "Garden Vegetation",
+        "predicted_class_idx": 1,
+        "confidence": 0.6078799366950989,
+        "all_probs": {
+          "Cultural Performance": 0.02940448373556137,
+          "Garden Vegetation": 0.6078799366950989,
+          "Social and Informal Recreation": 0.003936419729143381,
+          "Sport and Exercise Activities": 0.0021129236556589603,
+          "Waterscape and Built Settings": 0.22470790147781372,
+          "Wildlife Encounters": 0.0014671219978481531,
+          "Woodland Settings": 0.1304912567138672
+        }
+      }
+    },
+    "vlm": {
+      "human": {
+        "present": true,
+        "count": "2-5",
+        "tags": [
+          "children"
+        ],
+        "evidence": "Two children are visible standing side by side facing away from the camera."
+      },
+      "nature": {
+        "tags": [
+          "lawn",
+          "woodland",
+          "waterfront"
+        ],
+        "dominant": "waterfront",
+        "evidence": "A large body of water is visible beyond a grassy lawn and trees, indicating a waterfront setting with adjacent woodland and lawn areas.",
+        "pixel_shares": {}
+      },
+      "activity": {
+        "tags": [
+          "watching",
+          "landscape viewing"
+        ],
+        "dominant": "landscape viewing",
+        "evidence": "The children are standing still and looking out over the natural scene, suggesting they are observing or viewing the landscape."
+      },
+      "meaning": {
+        "tags": [
+          "aesthetic appreciation",
+          "recreation",
+          "relaxation"
+        ],
+        "dominant": "aesthetic appreciation",
+        "evidence": "The setting and posture of the children imply appreciation of the natural scenery, which is consistent with aesthetic enjoyment and recreational relaxation."
+      },
+      "summary": "Two children stand on a paved area looking over a stone balustrade at a natural landscape featuring a lawn, trees, and a waterfront under a partly cloudy sky.",
+      "hni_present": "yes",
+      "hni_strength": "moderate",
+      "confidence": "high",
+      "source_method": "vlm",
+      "raw_output": {
+        "raw_response": "{\n  \"image_level_summary\": \"Two children stand on a paved area looking over a stone balustrade at a natural landscape featuring a lawn, trees, and a waterfront under a partly cloudy sky.\",\n  \"human_presence\": {\n    \"visible\": \"yes\",\n    \"presence_type\": [\"children\"],\n    \"estimated_people_count\": \"2-5\",\n    \"visual_evidence\": \"Two children are visible standing side by side facing away from the camera.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"lawn\", \"woodland\", \"waterfront\"],\n    \"dominant_nature_type\": \"waterfront\",\n    \"visual_evidence\": \"A large body of water is visible beyond a grassy lawn and trees, indicating a waterfront setting with adjacent woodland and lawn areas.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"watching\", \"landscape viewing\"],\n    \"dominant_activity\": \"landscape viewing\",\n    \"visual_evidence\": \"The children are standing still and looking out over the natural scene, suggesting they are observing or viewing the landscape.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"aesthetic appreciation\", \"recreation\", \"relaxation\"],\n    \"dominant_meaning\": \"aesthetic appreciation\",\n    \"visual_evidence\": \"The setting and posture of the children imply appreciation of the natural scenery, which is consistent with aesthetic enjoyment and recreational relaxation.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"yes\",\n    \"hni_strength\": \"moderate\",\n    \"reason\": \"Human presence is clear with children engaging visually with a natural waterfront landscape, indicating interaction with nature primarily through observation and appreciation.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"No visible activities beyond standing and looking; emotional or social context is not visually evident.\"\n}",
+        "parsed": {
+          "image_level_summary": "Two children stand on a paved area looking over a stone balustrade at a natural landscape featuring a lawn, trees, and a waterfront under a partly cloudy sky.",
+          "human_presence": {
+            "visible": "yes",
+            "presence_type": [
+              "children"
+            ],
+            "estimated_people_count": "2-5",
+            "visual_evidence": "Two children are visible standing side by side facing away from the camera."
+          },
+          "nature_detection": {
+            "nature_types": [
+              "lawn",
+              "woodland",
+              "waterfront"
+            ],
+            "dominant_nature_type": "waterfront",
+            "visual_evidence": "A large body of water is visible beyond a grassy lawn and trees, indicating a waterfront setting with adjacent woodland and lawn areas."
+          },
+          "activity_evidence": {
+            "activity_types": [
+              "watching",
+              "landscape viewing"
+            ],
+            "dominant_activity": "landscape viewing",
+            "visual_evidence": "The children are standing still and looking out over the natural scene, suggesting they are observing or viewing the landscape."
+          },
+          "cultural_experiential_meaning": {
+            "meaning_types": [
+              "aesthetic appreciation",
+              "recreation",
+              "relaxation"
+            ],
+            "dominant_meaning": "aesthetic appreciation",
+            "visual_evidence": "The setting and posture of the children imply appreciation of the natural scenery, which is consistent with aesthetic enjoyment and recreational relaxation."
+          },
+          "hni_overall_interpretation": {
+            "is_hni_present": "yes",
+            "hni_strength": "moderate",
+            "reason": "Human presence is clear with children engaging visually with a natural waterfront landscape, indicating interaction with nature primarily through observation and appreciation."
+          },
+          "confidence": "high",
+          "uncertainty_notes": "No visible activities beyond standing and looking; emotional or social context is not visually evident."
+        },
+        "parse_error": null,
+        "tokens_used": 1405
+      }
+    }
+  }
+}

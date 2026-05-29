@@ -102,6 +102,39 @@ CLASS_TO_HNI: Dict[str, Dict] = {
 # --- Default weights location ---
 DEFAULT_WEIGHTS_PATH = Path.home() / ".cache" / "hnivision" / "resnet" / "best_resnet50_model.pth"
 
+# HF Hub fallback (used when local cache missing, e.g. on HF Space deployments)
+HF_REPO_ID = "Mingze/HNIVision-ResNet50"
+HF_WEIGHTS_FILENAME = "best_resnet50_model.pth"
+
+
+def _resolve_weights_path(weights_path: Optional[str]) -> Path:
+    """Resolve ResNet weights path with HF Hub fallback.
+
+    Resolution order:
+      1. If `weights_path` explicitly passed, use it (must exist).
+      2. If DEFAULT_WEIGHTS_PATH exists locally, use it.
+      3. Otherwise download from HF Hub repo Mingze/HNIVision-ResNet50.
+    """
+    if weights_path is not None:
+        wp = Path(weights_path)
+        if not wp.exists():
+            raise FileNotFoundError(f"ResNet weights not found at explicit path: {wp}")
+        return wp
+
+    if DEFAULT_WEIGHTS_PATH.exists():
+        return DEFAULT_WEIGHTS_PATH
+
+    try:
+        from huggingface_hub import hf_hub_download
+    except ImportError as e:
+        raise RuntimeError(
+            f"ResNet weights not in local cache ({DEFAULT_WEIGHTS_PATH}) and "
+            "huggingface_hub is not installed. Install: pip install huggingface_hub"
+        ) from e
+
+    print(f"  ResNet weights not in local cache; downloading from {HF_REPO_ID}...")
+    return Path(hf_hub_download(repo_id=HF_REPO_ID, filename=HF_WEIGHTS_FILENAME))
+
 
 # --- Output schemas ---
 
@@ -167,12 +200,7 @@ class Classification(BaseHNIMethod):
         self.model_name = "resnet50-finetuned-hni-7class"
 
         # Resolve weights path
-        wp = Path(weights_path) if weights_path else DEFAULT_WEIGHTS_PATH
-        if not wp.exists():
-            raise FileNotFoundError(
-                f"ResNet weights not found at:\n  {wp}\n"
-                f"Place your .pth file there (or symlink), or pass weights_path= explicitly."
-            )
+        wp = _resolve_weights_path(weights_path)
         self.weights_path = str(wp)
 
         # Lazy imports
