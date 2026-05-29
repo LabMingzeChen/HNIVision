@@ -22,7 +22,7 @@
         "lawn"
       ],
       "dominant": "woodland",
-      "evidence": "[labeling] Google Vision tagged: tree, natural environment, vegetation, garden | [segmentation] Top natural classes: tree 69.3%, grass 18.4%, sky 10.6% | [classification] ResNet classified scene as 'Woodland Settings' (confidence 0.87) | [vlm] A large tree with dense foliage dominates the scene, surrounded by green grass lawn and other trees in the background.",
+      "evidence": "[labeling] Google Vision tagged: tree, natural environment, vegetation, garden | [segmentation] Top natural classes: tree 69.3%, grass 18.4%, sky 10.6% | [classification] ResNet classified scene as 'Woodland Settings' (confidence 0.87) | [vlm] A large tree with dense foliage dominates the scene, surrounded by other trees and a grassy lawn area.",
       "pixel_shares": {
         "tree": 0.6928,
         "grass": 0.1839,
@@ -46,9 +46,9 @@
         "aesthetic appreciation"
       ],
       "dominant": "relaxation",
-      "evidence": "[classification] ResNet classified scene as 'Woodland Settings' (confidence 0.87) | [vlm] Presence of a bench under a large tree in a natural setting suggests a place for resting or relaxation and appreciation of nature."
+      "evidence": "[classification] ResNet classified scene as 'Woodland Settings' (confidence 0.87) | [vlm] The presence of a bench under a large tree in a natural setting suggests a place for rest and enjoyment of nature."
     },
-    "summary": "The image shows a natural park-like setting with a large tree, green lawn, and a wooden bench under the tree. There are no people visible in the scene.",
+    "summary": "The image shows a natural park-like setting with a large tree and a wooden bench on a grassy lawn under a partly cloudy sky. No people are visible.",
     "hni_present": "no",
     "hni_strength": null,
     "confidence": "high",
@@ -998,7 +998,7 @@
           "lawn"
         ],
         "dominant": "woodland",
-        "evidence": "A large tree with dense foliage dominates the scene, surrounded by green grass lawn and other trees in the background.",
+        "evidence": "A large tree with dense foliage dominates the scene, surrounded by other trees and a grassy lawn area.",
         "pixel_shares": {}
       },
       "activity": {
@@ -1014,17 +1014,17 @@
           "aesthetic appreciation"
         ],
         "dominant": "relaxation",
-        "evidence": "Presence of a bench under a large tree in a natural setting suggests a place for resting or relaxation and appreciation of nature."
+        "evidence": "The presence of a bench under a large tree in a natural setting suggests a place for rest and enjoyment of nature."
       },
-      "summary": "The image shows a natural park-like setting with a large tree, green lawn, and a wooden bench under the tree. There are no people visible in the scene.",
+      "summary": "The image shows a natural park-like setting with a large tree and a wooden bench on a grassy lawn under a partly cloudy sky. No people are visible.",
       "hni_present": "no",
       "hni_strength": null,
       "confidence": "high",
       "source_method": "vlm",
       "raw_output": {
-        "raw_response": "{\n  \"image_level_summary\": \"The image shows a natural park-like setting with a large tree, green lawn, and a wooden bench under the tree. There are no people visible in the scene.\",\n  \"human_presence\": {\n    \"visible\": \"no\",\n    \"presence_type\": [\"none\"],\n    \"estimated_people_count\": \"0\",\n    \"visual_evidence\": \"No individuals, groups, or any people are visible in the image.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"woodland\", \"lawn\"],\n    \"dominant_nature_type\": \"woodland\",\n    \"visual_evidence\": \"A large tree with dense foliage dominates the scene, surrounded by green grass lawn and other trees in the background.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"none\"],\n    \"dominant_activity\": \"none\",\n    \"visual_evidence\": \"No visible human activity or events are taking place in the image.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"relaxation\", \"aesthetic appreciation\"],\n    \"dominant_meaning\": \"relaxation\",\n    \"visual_evidence\": \"Presence of a bench under a large tree in a natural setting suggests a place for resting or relaxation and appreciation of nature.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"no\",\n    \"hni_strength\": \"none\",\n    \"reason\": \"No human presence or activity is visible, so no direct human\u2013nature interaction is evident.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"None\"\n}",
+        "raw_response": "{\n  \"image_level_summary\": \"The image shows a natural park-like setting with a large tree and a wooden bench on a grassy lawn under a partly cloudy sky. No people are visible.\",\n  \"human_presence\": {\n    \"visible\": \"no\",\n    \"presence_type\": [\"none\"],\n    \"estimated_people_count\": \"0\",\n    \"visual_evidence\": \"No individuals, groups, or any people are visible in the image.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"woodland\", \"lawn\"],\n    \"dominant_nature_type\": \"woodland\",\n    \"visual_evidence\": \"A large tree with dense foliage dominates the scene, surrounded by other trees and a grassy lawn area.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"none\"],\n    \"dominant_activity\": \"none\",\n    \"visual_evidence\": \"No visible human activity or events are taking place in the image.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"relaxation\", \"aesthetic appreciation\"],\n    \"dominant_meaning\": \"relaxation\",\n    \"visual_evidence\": \"The presence of a bench under a large tree in a natural setting suggests a place for rest and enjoyment of nature.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"no\",\n    \"hni_strength\": \"none\",\n    \"reason\": \"No human presence or activity is visible, so no direct human-nature interaction is evident.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"None, as all observations are visually supported.\"\n}",
         "parsed": {
-          "image_level_summary": "The image shows a natural park-like setting with a large tree, green lawn, and a wooden bench under the tree. There are no people visible in the scene.",
+          "image_level_summary": "The image shows a natural park-like setting with a large tree and a wooden bench on a grassy lawn under a partly cloudy sky. No people are visible.",
           "human_presence": {
             "visible": "no",
             "presence_type": [
@@ -1039,7 +1039,7 @@
               "lawn"
             ],
             "dominant_nature_type": "woodland",
-            "visual_evidence": "A large tree with dense foliage dominates the scene, surrounded by green grass lawn and other trees in the background."
+            "visual_evidence": "A large tree with dense foliage dominates the scene, surrounded by other trees and a grassy lawn area."
           },
           "activity_evidence": {
             "activity_types": [
@@ -1054,18 +1054,18 @@
               "aesthetic appreciation"
             ],
             "dominant_meaning": "relaxation",
-            "visual_evidence": "Presence of a bench under a large tree in a natural setting suggests a place for resting or relaxation and appreciation of nature."
+            "visual_evidence": "The presence of a bench under a large tree in a natural setting suggests a place for rest and enjoyment of nature."
           },
           "hni_overall_interpretation": {
             "is_hni_present": "no",
             "hni_strength": "none",
-            "reason": "No human presence or activity is visible, so no direct human\u2013nature interaction is evident."
+            "reason": "No human presence or activity is visible, so no direct human-nature interaction is evident."
           },
           "confidence": "high",
-          "uncertainty_notes": "None"
+          "uncertainty_notes": "None, as all observations are visually supported."
         },
         "parse_error": null,
-        "tokens_used": 1504
+        "tokens_used": 1506
       }
     }
   }

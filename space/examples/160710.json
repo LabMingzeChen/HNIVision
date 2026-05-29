@@ -9,7 +9,7 @@
         "person",
         "children"
       ],
-      "evidence": "[detection] YOLO detected 2 'person' object(s) with confidence \u2265 0.5 | [labeling] Google Vision tagged: people in nature | [segmentation] Detected person in SAM2 masks (1.4% pixel share) | [vlm] Two children are visible standing side by side facing away from the camera."
+      "evidence": "[detection] YOLO detected 2 'person' object(s) with confidence \u2265 0.5 | [labeling] Google Vision tagged: people in nature | [segmentation] Detected person in SAM2 masks (1.4% pixel share) | [vlm] Two children are visible standing side by side facing the waterfront."
     },
     "nature": {
       "tags": [
@@ -24,12 +24,12 @@
         "flowers",
         "plants",
         "manicured vegetation",
+        "waterfront",
         "lawn",
-        "woodland",
-        "waterfront"
+        "woodland"
       ],
       "dominant": "waterfront",
-      "evidence": "[labeling] Google Vision tagged: cloud, cumulus, meteorological phenomenon, park | [segmentation] Top natural classes: sky 43.2%, tree 18.8%, grass 11.5% | [classification] ResNet classified scene as 'Garden Vegetation' (confidence 0.61) | [vlm] A large body of water is visible beyond a grassy lawn and trees, indicating a waterfront setting with adjacent woodland and lawn areas.",
+      "evidence": "[labeling] Google Vision tagged: cloud, cumulus, meteorological phenomenon, park | [segmentation] Top natural classes: sky 43.2%, tree 18.8%, grass 11.5% | [classification] ResNet classified scene as 'Garden Vegetation' (confidence 0.61) | [vlm] A large body of water is visible beyond the lawn and trees, with a grassy area and scattered trees in the foreground.",
       "pixel_shares": {
         "sky": 0.432,
         "tree": 0.1879,
@@ -43,7 +43,7 @@
         "landscape viewing"
       ],
       "dominant": "landscape viewing",
-      "evidence": "[labeling] Google Vision tagged: walking | [vlm] The children are standing still and looking out over the natural scene, suggesting they are observing or viewing the landscape."
+      "evidence": "[labeling] Google Vision tagged: walking | [vlm] The children are standing still and looking out over the water and landscape."
     },
     "meaning": {
       "tags": [
@@ -53,9 +53,9 @@
         "relaxation"
       ],
       "dominant": "aesthetic appreciation",
-      "evidence": "[labeling] Google Vision tagged: leisure | [classification] ResNet classified scene as 'Garden Vegetation' (confidence 0.61) | [vlm] The setting and posture of the children imply appreciation of the natural scenery, which is consistent with aesthetic enjoyment and recreational relaxation."
+      "evidence": "[labeling] Google Vision tagged: leisure | [classification] ResNet classified scene as 'Garden Vegetation' (confidence 0.61) | [vlm] The scene suggests appreciation of the natural landscape and a recreational outdoor setting."
     },
-    "summary": "Two children stand on a paved area looking over a stone balustrade at a natural landscape featuring a lawn, trees, and a waterfront under a partly cloudy sky.",
+    "summary": "Two children stand by a stone balustrade overlooking a waterfront with trees and lawn under a partly cloudy sky.",
     "hni_present": "yes",
     "hni_strength": "moderate",
     "confidence": "high",
@@ -1425,16 +1425,16 @@
         "tags": [
           "children"
         ],
-        "evidence": "Two children are visible standing side by side facing away from the camera."
+        "evidence": "Two children are visible standing side by side facing the waterfront."
       },
       "nature": {
         "tags": [
+          "waterfront",
           "lawn",
-          "woodland",
-          "waterfront"
+          "woodland"
         ],
         "dominant": "waterfront",
-        "evidence": "A large body of water is visible beyond a grassy lawn and trees, indicating a waterfront setting with adjacent woodland and lawn areas.",
+        "evidence": "A large body of water is visible beyond the lawn and trees, with a grassy area and scattered trees in the foreground.",
         "pixel_shares": {}
       },
       "activity": {
@@ -1443,7 +1443,7 @@
           "landscape viewing"
         ],
         "dominant": "landscape viewing",
-        "evidence": "The children are standing still and looking out over the natural scene, suggesting they are observing or viewing the landscape."
+        "evidence": "The children are standing still and looking out over the water and landscape."
       },
       "meaning": {
         "tags": [
@@ -1452,33 +1452,33 @@
           "relaxation"
         ],
         "dominant": "aesthetic appreciation",
-        "evidence": "The setting and posture of the children imply appreciation of the natural scenery, which is consistent with aesthetic enjoyment and recreational relaxation."
+        "evidence": "The scene suggests appreciation of the natural landscape and a recreational outdoor setting."
       },
-      "summary": "Two children stand on a paved area looking over a stone balustrade at a natural landscape featuring a lawn, trees, and a waterfront under a partly cloudy sky.",
+      "summary": "Two children stand by a stone balustrade overlooking a waterfront with trees and lawn under a partly cloudy sky.",
       "hni_present": "yes",
       "hni_strength": "moderate",
       "confidence": "high",
       "source_method": "vlm",
       "raw_output": {
-        "raw_response": "{\n  \"image_level_summary\": \"Two children stand on a paved area looking over a stone balustrade at a natural landscape featuring a lawn, trees, and a waterfront under a partly cloudy sky.\",\n  \"human_presence\": {\n    \"visible\": \"yes\",\n    \"presence_type\": [\"children\"],\n    \"estimated_people_count\": \"2-5\",\n    \"visual_evidence\": \"Two children are visible standing side by side facing away from the camera.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"lawn\", \"woodland\", \"waterfront\"],\n    \"dominant_nature_type\": \"waterfront\",\n    \"visual_evidence\": \"A large body of water is visible beyond a grassy lawn and trees, indicating a waterfront setting with adjacent woodland and lawn areas.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"watching\", \"landscape viewing\"],\n    \"dominant_activity\": \"landscape viewing\",\n    \"visual_evidence\": \"The children are standing still and looking out over the natural scene, suggesting they are observing or viewing the landscape.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"aesthetic appreciation\", \"recreation\", \"relaxation\"],\n    \"dominant_meaning\": \"aesthetic appreciation\",\n    \"visual_evidence\": \"The setting and posture of the children imply appreciation of the natural scenery, which is consistent with aesthetic enjoyment and recreational relaxation.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"yes\",\n    \"hni_strength\": \"moderate\",\n    \"reason\": \"Human presence is clear with children engaging visually with a natural waterfront landscape, indicating interaction with nature primarily through observation and appreciation.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"No visible activities beyond standing and looking; emotional or social context is not visually evident.\"\n}",
+        "raw_response": "{\n  \"image_level_summary\": \"Two children stand by a stone balustrade overlooking a waterfront with trees and lawn under a partly cloudy sky.\",\n  \"human_presence\": {\n    \"visible\": \"yes\",\n    \"presence_type\": [\"children\"],\n    \"estimated_people_count\": \"2-5\",\n    \"visual_evidence\": \"Two children are visible standing side by side facing the waterfront.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"waterfront\", \"lawn\", \"woodland\"],\n    \"dominant_nature_type\": \"waterfront\",\n    \"visual_evidence\": \"A large body of water is visible beyond the lawn and trees, with a grassy area and scattered trees in the foreground.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"watching\", \"landscape viewing\"],\n    \"dominant_activity\": \"landscape viewing\",\n    \"visual_evidence\": \"The children are standing still and looking out over the water and landscape.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"aesthetic appreciation\", \"recreation\", \"relaxation\"],\n    \"dominant_meaning\": \"aesthetic appreciation\",\n    \"visual_evidence\": \"The scene suggests appreciation of the natural landscape and a recreational outdoor setting.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"yes\",\n    \"hni_strength\": \"moderate\",\n    \"reason\": \"Visible human presence interacting with a natural waterfront landscape, engaging in landscape viewing and appreciation.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"None\"\n}",
         "parsed": {
-          "image_level_summary": "Two children stand on a paved area looking over a stone balustrade at a natural landscape featuring a lawn, trees, and a waterfront under a partly cloudy sky.",
+          "image_level_summary": "Two children stand by a stone balustrade overlooking a waterfront with trees and lawn under a partly cloudy sky.",
           "human_presence": {
             "visible": "yes",
             "presence_type": [
               "children"
             ],
             "estimated_people_count": "2-5",
-            "visual_evidence": "Two children are visible standing side by side facing away from the camera."
+            "visual_evidence": "Two children are visible standing side by side facing the waterfront."
           },
           "nature_detection": {
             "nature_types": [
+              "waterfront",
               "lawn",
-              "woodland",
-              "waterfront"
+              "woodland"
             ],
             "dominant_nature_type": "waterfront",
-            "visual_evidence": "A large body of water is visible beyond a grassy lawn and trees, indicating a waterfront setting with adjacent woodland and lawn areas."
+            "visual_evidence": "A large body of water is visible beyond the lawn and trees, with a grassy area and scattered trees in the foreground."
           },
           "activity_evidence": {
             "activity_types": [
@@ -1486,7 +1486,7 @@
               "landscape viewing"
             ],
             "dominant_activity": "landscape viewing",
-            "visual_evidence": "The children are standing still and looking out over the natural scene, suggesting they are observing or viewing the landscape."
+            "visual_evidence": "The children are standing still and looking out over the water and landscape."
           },
           "cultural_experiential_meaning": {
             "meaning_types": [
@@ -1495,18 +1495,18 @@
               "relaxation"
             ],
             "dominant_meaning": "aesthetic appreciation",
-            "visual_evidence": "The setting and posture of the children imply appreciation of the natural scenery, which is consistent with aesthetic enjoyment and recreational relaxation."
+            "visual_evidence": "The scene suggests appreciation of the natural landscape and a recreational outdoor setting."
           },
           "hni_overall_interpretation": {
             "is_hni_present": "yes",
             "hni_strength": "moderate",
-            "reason": "Human presence is clear with children engaging visually with a natural waterfront landscape, indicating interaction with nature primarily through observation and appreciation."
+            "reason": "Visible human presence interacting with a natural waterfront landscape, engaging in landscape viewing and appreciation."
           },
           "confidence": "high",
-          "uncertainty_notes": "No visible activities beyond standing and looking; emotional or social context is not visually evident."
+          "uncertainty_notes": "None"
         },
         "parse_error": null,
-        "tokens_used": 1405
+        "tokens_used": 1351
       }
     }
   }

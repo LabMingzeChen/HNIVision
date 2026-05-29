@@ -13,7 +13,7 @@
         "group",
         "individual"
       ],
-      "evidence": "[detection] YOLO detected 10 'person' object(s) with confidence \u2265 0.5 | [labeling] Google Vision tagged: people, crowd | [segmentation] Detected person in SAM2 masks (8.3% pixel share) | [classification] ResNet classified scene as 'Social and Informal Recreation' (confidence 0.67) | [vlm] Several people are visible walking along the path, including a pair walking together in the foreground, and others scattered along the path and sitting on benches."
+      "evidence": "[detection] YOLO detected 10 'person' object(s) with confidence \u2265 0.5 | [labeling] Google Vision tagged: people, crowd | [segmentation] Detected person in SAM2 masks (8.3% pixel share) | [classification] ResNet classified scene as 'Social and Informal Recreation' (confidence 0.67) | [vlm] Multiple people are visible walking along the path, some in pairs or small groups, and others sitting on benches."
     },
     "nature": {
       "tags": [
@@ -24,7 +24,7 @@
         "woodland"
       ],
       "dominant": "park path",
-      "evidence": "[labeling] Google Vision tagged: tree | [segmentation] Top natural classes: tree 55.1% | [classification] ResNet classified scene as 'Social and Informal Recreation' (confidence 0.67) | [vlm] The scene is dominated by a wide paved path lined with large trees forming a canopy overhead, characteristic of a park path within a woodland-like setting.",
+      "evidence": "[labeling] Google Vision tagged: tree | [segmentation] Top natural classes: tree 55.1% | [classification] ResNet classified scene as 'Social and Informal Recreation' (confidence 0.67) | [vlm] The scene is dominated by a wide paved path flanked by large trees forming a canopy overhead, typical of a park path environment.",
       "pixel_shares": {
         "tree": 0.5508
       }
@@ -38,7 +38,7 @@
         "resting"
       ],
       "dominant": "walking",
-      "evidence": "[labeling] Google Vision tagged: walking | [classification] ResNet classified scene as 'Social and Informal Recreation' (confidence 0.67) | [vlm] Most people are walking along the path, while a few individuals are sitting on benches along the side."
+      "evidence": "[labeling] Google Vision tagged: walking | [classification] ResNet classified scene as 'Social and Informal Recreation' (confidence 0.67) | [vlm] Most people are walking along the path, while a few are sitting on benches along the side."
     },
     "meaning": {
       "tags": [
@@ -50,9 +50,9 @@
         "aesthetic appreciation"
       ],
       "dominant": "recreation",
-      "evidence": "[labeling] Google Vision tagged: recreation, leisure | [classification] ResNet classified scene as 'Social and Informal Recreation' (confidence 0.67) | [vlm] The presence of visitors walking, sitting, and engaging in casual social interaction in a green, shaded environment suggests recreational use and relaxation, with aesthetic appreciation of the natural surroundings."
+      "evidence": "[labeling] Google Vision tagged: recreation, leisure | [classification] ResNet classified scene as 'Social and Informal Recreation' (confidence 0.67) | [vlm] The presence of visitors walking, sitting, and engaging in casual social interaction in a green, shaded park setting suggests recreational use."
     },
-    "summary": "The image shows a tree-lined park path with multiple people walking and some sitting on benches, indicating a natural urban park environment with human activity focused on walking and resting.",
+    "summary": "The image shows a park path lined with large trees and several people walking or sitting on benches, indicating a natural urban setting with human activity focused on walking and resting.",
     "hni_present": "yes",
     "hni_strength": "strong",
     "confidence": "high",
@@ -2044,7 +2044,7 @@
           "group",
           "individual"
         ],
-        "evidence": "Several people are visible walking along the path, including a pair walking together in the foreground, and others scattered along the path and sitting on benches."
+        "evidence": "Multiple people are visible walking along the path, some in pairs or small groups, and others sitting on benches."
       },
       "nature": {
         "tags": [
@@ -2052,7 +2052,7 @@
           "woodland"
         ],
         "dominant": "park path",
-        "evidence": "The scene is dominated by a wide paved path lined with large trees forming a canopy overhead, characteristic of a park path within a woodland-like setting.",
+        "evidence": "The scene is dominated by a wide paved path flanked by large trees forming a canopy overhead, typical of a park path environment.",
         "pixel_shares": {}
       },
       "activity": {
@@ -2061,7 +2061,7 @@
           "resting"
         ],
         "dominant": "walking",
-        "evidence": "Most people are walking along the path, while a few individuals are sitting on benches along the side."
+        "evidence": "Most people are walking along the path, while a few are sitting on benches along the side."
       },
       "meaning": {
         "tags": [
@@ -2071,17 +2071,17 @@
           "aesthetic appreciation"
         ],
         "dominant": "recreation",
-        "evidence": "The presence of visitors walking, sitting, and engaging in casual social interaction in a green, shaded environment suggests recreational use and relaxation, with aesthetic appreciation of the natural surroundings."
+        "evidence": "The presence of visitors walking, sitting, and engaging in casual social interaction in a green, shaded park setting suggests recreational use."
       },
-      "summary": "The image shows a tree-lined park path with multiple people walking and some sitting on benches, indicating a natural urban park environment with human activity focused on walking and resting.",
+      "summary": "The image shows a park path lined with large trees and several people walking or sitting on benches, indicating a natural urban setting with human activity focused on walking and resting.",
       "hni_present": "yes",
       "hni_strength": "strong",
       "confidence": "high",
       "source_method": "vlm",
       "raw_output": {
-        "raw_response": "{\n  \"image_level_summary\": \"The image shows a tree-lined park path with multiple people walking and some sitting on benches, indicating a natural urban park environment with human activity focused on walking and resting.\",\n  \"human_presence\": {\n    \"visible\": \"yes\",\n    \"presence_type\": [\"visitors\", \"group\", \"individual\"],\n    \"estimated_people_count\": \"6-20\",\n    \"visual_evidence\": \"Several people are visible walking along the path, including a pair walking together in the foreground, and others scattered along the path and sitting on benches.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"park path\", \"woodland\"],\n    \"dominant_nature_type\": \"park path\",\n    \"visual_evidence\": \"The scene is dominated by a wide paved path lined with large trees forming a canopy overhead, characteristic of a park path within a woodland-like setting.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"walking\", \"resting\"],\n    \"dominant_activity\": \"walking\",\n    \"visual_evidence\": \"Most people are walking along the path, while a few individuals are sitting on benches along the side.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"recreation\", \"relaxation\", \"social interaction\", \"aesthetic appreciation\"],\n    \"dominant_meaning\": \"recreation\",\n    \"visual_evidence\": \"The presence of visitors walking, sitting, and engaging in casual social interaction in a green, shaded environment suggests recreational use and relaxation, with aesthetic appreciation of the natural surroundings.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"yes\",\n    \"hni_strength\": \"strong\",\n    \"reason\": \"Clear human presence interacting with a natural park environment through walking and resting activities, indicating a strong human-nature interaction.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"None; all observations are visually supported.\"\n}",
+        "raw_response": "{\n  \"image_level_summary\": \"The image shows a park path lined with large trees and several people walking or sitting on benches, indicating a natural urban setting with human activity focused on walking and resting.\",\n  \"human_presence\": {\n    \"visible\": \"yes\",\n    \"presence_type\": [\"visitors\", \"group\", \"individual\"],\n    \"estimated_people_count\": \"6-20\",\n    \"visual_evidence\": \"Multiple people are visible walking along the path, some in pairs or small groups, and others sitting on benches.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"park path\", \"woodland\"],\n    \"dominant_nature_type\": \"park path\",\n    \"visual_evidence\": \"The scene is dominated by a wide paved path flanked by large trees forming a canopy overhead, typical of a park path environment.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"walking\", \"resting\"],\n    \"dominant_activity\": \"walking\",\n    \"visual_evidence\": \"Most people are walking along the path, while a few are sitting on benches along the side.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"recreation\", \"relaxation\", \"social interaction\", \"aesthetic appreciation\"],\n    \"dominant_meaning\": \"recreation\",\n    \"visual_evidence\": \"The presence of visitors walking, sitting, and engaging in casual social interaction in a green, shaded park setting suggests recreational use.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"yes\",\n    \"hni_strength\": \"strong\",\n    \"reason\": \"Clear human presence interacting with a natural park environment through walking and resting activities, indicating strong human-nature interaction.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"None\"\n}",
         "parsed": {
-          "image_level_summary": "The image shows a tree-lined park path with multiple people walking and some sitting on benches, indicating a natural urban park environment with human activity focused on walking and resting.",
+          "image_level_summary": "The image shows a park path lined with large trees and several people walking or sitting on benches, indicating a natural urban setting with human activity focused on walking and resting.",
           "human_presence": {
             "visible": "yes",
             "presence_type": [
@@ -2090,7 +2090,7 @@
               "individual"
             ],
             "estimated_people_count": "6-20",
-            "visual_evidence": "Several people are visible walking along the path, including a pair walking together in the foreground, and others scattered along the path and sitting on benches."
+            "visual_evidence": "Multiple people are visible walking along the path, some in pairs or small groups, and others sitting on benches."
           },
           "nature_detection": {
             "nature_types": [
@@ -2098,7 +2098,7 @@
               "woodland"
             ],
             "dominant_nature_type": "park path",
-            "visual_evidence": "The scene is dominated by a wide paved path lined with large trees forming a canopy overhead, characteristic of a park path within a woodland-like setting."
+            "visual_evidence": "The scene is dominated by a wide paved path flanked by large trees forming a canopy overhead, typical of a park path environment."
           },
           "activity_evidence": {
             "activity_types": [
@@ -2106,7 +2106,7 @@
               "resting"
             ],
             "dominant_activity": "walking",
-            "visual_evidence": "Most people are walking along the path, while a few individuals are sitting on benches along the side."
+            "visual_evidence": "Most people are walking along the path, while a few are sitting on benches along the side."
           },
           "cultural_experiential_meaning": {
             "meaning_types": [
@@ -2116,18 +2116,18 @@
               "aesthetic appreciation"
             ],
             "dominant_meaning": "recreation",
-            "visual_evidence": "The presence of visitors walking, sitting, and engaging in casual social interaction in a green, shaded environment suggests recreational use and relaxation, with aesthetic appreciation of the natural surroundings."
+            "visual_evidence": "The presence of visitors walking, sitting, and engaging in casual social interaction in a green, shaded park setting suggests recreational use."
           },
           "hni_overall_interpretation": {
             "is_hni_present": "yes",
             "hni_strength": "strong",
-            "reason": "Clear human presence interacting with a natural park environment through walking and resting activities, indicating a strong human-nature interaction."
+            "reason": "Clear human presence interacting with a natural park environment through walking and resting activities, indicating strong human-nature interaction."
           },
           "confidence": "high",
-          "uncertainty_notes": "None; all observations are visually supported."
+          "uncertainty_notes": "None"
         },
         "parse_error": null,
-        "tokens_used": 1406
+        "tokens_used": 1379
       }
     }
   }

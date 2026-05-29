@@ -157,6 +157,7 @@ class Segmentation(BaseHNIMethod):
 
         # === Stage 1: SAM2 instance masks ===
         sam2_masks = self._sam2_gen.generate(img_np)
+        self._last_raw_masks = sam2_masks  # cache for overlay rendering
 
         # === Stage 2: SegFormer per-pixel ADE20K labels ===
         pil_img = Image.fromarray(img_np)

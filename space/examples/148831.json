@@ -11,7 +11,7 @@
         "group",
         "visitors"
       ],
-      "evidence": "[detection] YOLO detected 3 'person' object(s) with confidence \u2265 0.5 | [segmentation] Detected person in SAM2 masks (2.9% pixel share) | [classification] ResNet classified scene as 'Sport and Exercise Activities' (confidence 0.37) | [vlm] Several kayakers are visible on the water, some in single kayaks and others in pairs, indicating individuals and small groups."
+      "evidence": "[detection] YOLO detected 3 'person' object(s) with confidence \u2265 0.5 | [segmentation] Detected person in SAM2 masks (2.9% pixel share) | [classification] ResNet classified scene as 'Sport and Exercise Activities' (confidence 0.37) | [vlm] Several kayaks with one or two people each are visible on the water."
     },
     "nature": {
       "tags": [
@@ -22,7 +22,7 @@
         "urban greenery"
       ],
       "dominant": "waterfront",
-      "evidence": "[segmentation] Top natural classes: sky 36.2%, water 33.2%, tree 2.2% | [vlm] The main natural element is the water body where kayaking occurs; some greenery is visible on the right side near the shore.",
+      "evidence": "[segmentation] Top natural classes: sky 36.2%, water 33.2%, tree 2.2% | [vlm] The water body where kayaking occurs is the main natural element, with some trees and greenery visible near the shore.",
       "pixel_shares": {
         "sky": 0.3622,
         "water": 0.3321,
@@ -39,18 +39,17 @@
         "recreation"
       ],
       "dominant": "sports",
-      "evidence": "[classification] ResNet classified scene as 'Sport and Exercise Activities' (confidence 0.37) | [vlm] People are actively paddling kayaks, indicating a water sport activity."
+      "evidence": "[classification] ResNet classified scene as 'Sport and Exercise Activities' (confidence 0.37) | [vlm] People are actively paddling kayaks on the water."
     },
     "meaning": {
       "tags": [
         "recreation",
         "physical activity",
         "wellbeing",
-        "social interaction",
-        "aesthetic appreciation"
+        "social interaction"
       ],
       "dominant": "recreation",
-      "evidence": "[labeling] Google Vision tagged: recreation | [classification] ResNet classified scene as 'Sport and Exercise Activities' (confidence 0.37) | [vlm] The scene depicts leisure kayaking in an urban waterfront setting, suggesting recreational use and social engagement."
+      "evidence": "[labeling] Google Vision tagged: recreation | [classification] ResNet classified scene as 'Sport and Exercise Activities' (confidence 0.37) | [vlm] The scene depicts leisure activity on the water, likely for enjoyment and social engagement."
     },
     "summary": "The image shows multiple people kayaking on a waterfront with an urban skyline and a bridge in the background.",
     "hni_present": "yes",
@@ -2037,7 +2036,7 @@
           "group",
           "visitors"
         ],
-        "evidence": "Several kayakers are visible on the water, some in single kayaks and others in pairs, indicating individuals and small groups."
+        "evidence": "Several kayaks with one or two people each are visible on the water."
       },
       "nature": {
         "tags": [
@@ -2045,7 +2044,7 @@
           "urban greenery"
         ],
         "dominant": "waterfront",
-        "evidence": "The main natural element is the water body where kayaking occurs; some greenery is visible on the right side near the shore.",
+        "evidence": "The water body where kayaking occurs is the main natural element, with some trees and greenery visible near the shore.",
         "pixel_shares": {}
       },
       "activity": {
@@ -2054,16 +2053,15 @@
           "recreation"
         ],
         "dominant": "sports",
-        "evidence": "People are actively paddling kayaks, indicating a water sport activity."
+        "evidence": "People are actively paddling kayaks on the water."
       },
       "meaning": {
         "tags": [
           "recreation",
-          "social interaction",
-          "aesthetic appreciation"
+          "social interaction"
         ],
         "dominant": "recreation",
-        "evidence": "The scene depicts leisure kayaking in an urban waterfront setting, suggesting recreational use and social engagement."
+        "evidence": "The scene depicts leisure activity on the water, likely for enjoyment and social engagement."
       },
       "summary": "The image shows multiple people kayaking on a waterfront with an urban skyline and a bridge in the background.",
       "hni_present": "yes",
@@ -2071,7 +2069,7 @@
       "confidence": "high",
       "source_method": "vlm",
       "raw_output": {
-        "raw_response": "{\n  \"image_level_summary\": \"The image shows multiple people kayaking on a waterfront with an urban skyline and a bridge in the background.\",\n  \"human_presence\": {\n    \"visible\": \"yes\",\n    \"presence_type\": [\"individual\", \"group\", \"visitors\"],\n    \"estimated_people_count\": \"6-20\",\n    \"visual_evidence\": \"Several kayakers are visible on the water, some in single kayaks and others in pairs, indicating individuals and small groups.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"waterfront\", \"urban greenery\"],\n    \"dominant_nature_type\": \"waterfront\",\n    \"visual_evidence\": \"The main natural element is the water body where kayaking occurs; some greenery is visible on the right side near the shore.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"sports\", \"recreation\"],\n    \"dominant_activity\": \"sports\",\n    \"visual_evidence\": \"People are actively paddling kayaks, indicating a water sport activity.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"recreation\", \"social interaction\", \"aesthetic appreciation\"],\n    \"dominant_meaning\": \"recreation\",\n    \"visual_evidence\": \"The scene depicts leisure kayaking in an urban waterfront setting, suggesting recreational use and social engagement.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"yes\",\n    \"hni_strength\": \"strong\",\n    \"reason\": \"Clear human interaction with a natural waterfront environment through active recreational kayaking.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"None; all observations are visually supported.\"\n}",
+        "raw_response": "{\n  \"image_level_summary\": \"The image shows multiple people kayaking on a waterfront with an urban skyline and a bridge in the background.\",\n  \"human_presence\": {\n    \"visible\": \"yes\",\n    \"presence_type\": [\"individual\", \"group\", \"visitors\"],\n    \"estimated_people_count\": \"6-20\",\n    \"visual_evidence\": \"Several kayaks with one or two people each are visible on the water.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"waterfront\", \"urban greenery\"],\n    \"dominant_nature_type\": \"waterfront\",\n    \"visual_evidence\": \"The water body where kayaking occurs is the main natural element, with some trees and greenery visible near the shore.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"sports\", \"recreation\"],\n    \"dominant_activity\": \"sports\",\n    \"visual_evidence\": \"People are actively paddling kayaks on the water.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"recreation\", \"social interaction\"],\n    \"dominant_meaning\": \"recreation\",\n    \"visual_evidence\": \"The scene depicts leisure activity on the water, likely for enjoyment and social engagement.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"yes\",\n    \"hni_strength\": \"strong\",\n    \"reason\": \"Clear human interaction with a natural waterfront environment through active recreational kayaking.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"\"\n}",
         "parsed": {
           "image_level_summary": "The image shows multiple people kayaking on a waterfront with an urban skyline and a bridge in the background.",
           "human_presence": {
@@ -2082,7 +2080,7 @@
               "visitors"
             ],
             "estimated_people_count": "6-20",
-            "visual_evidence": "Several kayakers are visible on the water, some in single kayaks and others in pairs, indicating individuals and small groups."
+            "visual_evidence": "Several kayaks with one or two people each are visible on the water."
           },
           "nature_detection": {
             "nature_types": [
@@ -2090,7 +2088,7 @@
               "urban greenery"
             ],
             "dominant_nature_type": "waterfront",
-            "visual_evidence": "The main natural element is the water body where kayaking occurs; some greenery is visible on the right side near the shore."
+            "visual_evidence": "The water body where kayaking occurs is the main natural element, with some trees and greenery visible near the shore."
           },
           "activity_evidence": {
             "activity_types": [
@@ -2098,16 +2096,15 @@
               "recreation"
             ],
             "dominant_activity": "sports",
-            "visual_evidence": "People are actively paddling kayaks, indicating a water sport activity."
+            "visual_evidence": "People are actively paddling kayaks on the water."
           },
           "cultural_experiential_meaning": {
             "meaning_types": [
               "recreation",
-              "social interaction",
-              "aesthetic appreciation"
+              "social interaction"
             ],
             "dominant_meaning": "recreation",
-            "visual_evidence": "The scene depicts leisure kayaking in an urban waterfront setting, suggesting recreational use and social engagement."
+            "visual_evidence": "The scene depicts leisure activity on the water, likely for enjoyment and social engagement."
           },
           "hni_overall_interpretation": {
             "is_hni_present": "yes",
@@ -2115,10 +2112,10 @@
             "reason": "Clear human interaction with a natural waterfront environment through active recreational kayaking."
           },
           "confidence": "high",
-          "uncertainty_notes": "None; all observations are visually supported."
+          "uncertainty_notes": ""
         },
         "parse_error": null,
-        "tokens_used": 1431
+        "tokens_used": 1401
       }
     }
   }

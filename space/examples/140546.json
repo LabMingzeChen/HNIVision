@@ -20,7 +20,7 @@
         "urban greenery"
       ],
       "dominant": "park path",
-      "evidence": "[labeling] Google Vision tagged: tree | [segmentation] Top natural classes: tree 52.9%, sky 30.6%, earth 16.4% | [classification] ResNet classified scene as 'Woodland Settings' (confidence 0.96) | [vlm] A paved path runs through the scene, bordered by leafless trees and snow-covered shrubs, indicating a park environment.",
+      "evidence": "[labeling] Google Vision tagged: tree | [segmentation] Top natural classes: tree 52.9%, sky 30.6%, earth 16.4% | [classification] ResNet classified scene as 'Woodland Settings' (confidence 0.96) | [vlm] A paved path runs through the scene, bordered by leafless trees and snow-covered shrubs, indicating a park environment with woodland elements and urban greenery.",
       "pixel_shares": {
         "tree": 0.5295,
         "sky": 0.3065,
@@ -34,7 +34,7 @@
         "none"
       ],
       "dominant": "none",
-      "evidence": "[classification] ResNet classified scene as 'Woodland Settings' (confidence 0.96) | [vlm] No visible human activity such as walking, resting, or playing is present."
+      "evidence": "[classification] ResNet classified scene as 'Woodland Settings' (confidence 0.96) | [vlm] No visible human activity such as walking, resting, or gathering is present in the image."
     },
     "meaning": {
       "tags": [
@@ -44,9 +44,9 @@
         "relaxation"
       ],
       "dominant": "aesthetic appreciation",
-      "evidence": "[classification] ResNet classified scene as 'Woodland Settings' (confidence 0.96) | [vlm] The snow-covered landscape and orderly tree alignment suggest a scene that could be appreciated for its visual beauty and tranquility."
+      "evidence": "[classification] ResNet classified scene as 'Woodland Settings' (confidence 0.96) | [vlm] The snow-covered landscape and orderly tree alignment suggest a scene that may be appreciated for its visual beauty and tranquility."
     },
-    "summary": "A snow-covered park path lined with leafless trees and some snow-covered shrubs and benches, with no visible people or activities.",
+    "summary": "The image shows a snow-covered park path lined with leafless trees and some snow-covered bushes and benches. There are no visible people or activities occurring.",
     "hni_present": "no",
     "hni_strength": null,
     "confidence": "high",
@@ -1372,10 +1372,11 @@
       "nature": {
         "tags": [
           "park path",
+          "woodland",
           "urban greenery"
         ],
         "dominant": "park path",
-        "evidence": "A paved path runs through the scene, bordered by leafless trees and snow-covered shrubs, indicating a park environment.",
+        "evidence": "A paved path runs through the scene, bordered by leafless trees and snow-covered shrubs, indicating a park environment with woodland elements and urban greenery.",
         "pixel_shares": {}
       },
       "activity": {
@@ -1383,7 +1384,7 @@
           "none"
         ],
         "dominant": "none",
-        "evidence": "No visible human activity such as walking, resting, or playing is present."
+        "evidence": "No visible human activity such as walking, resting, or gathering is present in the image."
       },
       "meaning": {
         "tags": [
@@ -1391,17 +1392,17 @@
           "relaxation"
         ],
         "dominant": "aesthetic appreciation",
-        "evidence": "The snow-covered landscape and orderly tree alignment suggest a scene that could be appreciated for its visual beauty and tranquility."
+        "evidence": "The snow-covered landscape and orderly tree alignment suggest a scene that may be appreciated for its visual beauty and tranquility."
       },
-      "summary": "A snow-covered park path lined with leafless trees and some snow-covered shrubs and benches, with no visible people or activities.",
+      "summary": "The image shows a snow-covered park path lined with leafless trees and some snow-covered bushes and benches. There are no visible people or activities occurring.",
       "hni_present": "no",
       "hni_strength": null,
       "confidence": "high",
       "source_method": "vlm",
       "raw_output": {
-        "raw_response": "{\n  \"image_level_summary\": \"A snow-covered park path lined with leafless trees and some snow-covered shrubs and benches, with no visible people or activities.\",\n  \"human_presence\": {\n    \"visible\": \"no\",\n    \"presence_type\": [\"none\"],\n    \"estimated_people_count\": \"0\",\n    \"visual_evidence\": \"No individuals, groups, or any people are visible in the image.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"park path\", \"urban greenery\"],\n    \"dominant_nature_type\": \"park path\",\n    \"visual_evidence\": \"A paved path runs through the scene, bordered by leafless trees and snow-covered shrubs, indicating a park environment.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"none\"],\n    \"dominant_activity\": \"none\",\n    \"visual_evidence\": \"No visible human activity such as walking, resting, or playing is present.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"aesthetic appreciation\", \"relaxation\"],\n    \"dominant_meaning\": \"aesthetic appreciation\",\n    \"visual_evidence\": \"The snow-covered landscape and orderly tree alignment suggest a scene that could be appreciated for its visual beauty and tranquility.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"no\",\n    \"hni_strength\": \"none\",\n    \"reason\": \"No visible human presence or activity interacting with the natural environment is evident.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"None, the image clearly shows no people or activities.\"\n}",
+        "raw_response": "{\n  \"image_level_summary\": \"The image shows a snow-covered park path lined with leafless trees and some snow-covered bushes and benches. There are no visible people or activities occurring.\",\n  \"human_presence\": {\n    \"visible\": \"no\",\n    \"presence_type\": [\"none\"],\n    \"estimated_people_count\": \"0\",\n    \"visual_evidence\": \"No individuals, groups, or any people are visible in the image.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"park path\", \"woodland\", \"urban greenery\"],\n    \"dominant_nature_type\": \"park path\",\n    \"visual_evidence\": \"A paved path runs through the scene, bordered by leafless trees and snow-covered shrubs, indicating a park environment with woodland elements and urban greenery.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"none\"],\n    \"dominant_activity\": \"none\",\n    \"visual_evidence\": \"No visible human activity such as walking, resting, or gathering is present in the image.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"aesthetic appreciation\", \"relaxation\"],\n    \"dominant_meaning\": \"aesthetic appreciation\",\n    \"visual_evidence\": \"The snow-covered landscape and orderly tree alignment suggest a scene that may be appreciated for its visual beauty and tranquility.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"no\",\n    \"hni_strength\": \"none\",\n    \"reason\": \"No visible human presence or activity interacting with the natural environment is evident.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"None; the image clearly shows no people or activities.\"\n}",
         "parsed": {
-          "image_level_summary": "A snow-covered park path lined with leafless trees and some snow-covered shrubs and benches, with no visible people or activities.",
+          "image_level_summary": "The image shows a snow-covered park path lined with leafless trees and some snow-covered bushes and benches. There are no visible people or activities occurring.",
           "human_presence": {
             "visible": "no",
             "presence_type": [
@@ -1413,17 +1414,18 @@
           "nature_detection": {
             "nature_types": [
               "park path",
+              "woodland",
               "urban greenery"
             ],
             "dominant_nature_type": "park path",
-            "visual_evidence": "A paved path runs through the scene, bordered by leafless trees and snow-covered shrubs, indicating a park environment."
+            "visual_evidence": "A paved path runs through the scene, bordered by leafless trees and snow-covered shrubs, indicating a park environment with woodland elements and urban greenery."
           },
           "activity_evidence": {
             "activity_types": [
               "none"
             ],
             "dominant_activity": "none",
-            "visual_evidence": "No visible human activity such as walking, resting, or playing is present."
+            "visual_evidence": "No visible human activity such as walking, resting, or gathering is present in the image."
           },
           "cultural_experiential_meaning": {
             "meaning_types": [
@@ -1431,7 +1433,7 @@
               "relaxation"
             ],
             "dominant_meaning": "aesthetic appreciation",
-            "visual_evidence": "The snow-covered landscape and orderly tree alignment suggest a scene that could be appreciated for its visual beauty and tranquility."
+            "visual_evidence": "The snow-covered landscape and orderly tree alignment suggest a scene that may be appreciated for its visual beauty and tranquility."
           },
           "hni_overall_interpretation": {
             "is_hni_present": "no",
@@ -1439,10 +1441,10 @@
             "reason": "No visible human presence or activity interacting with the natural environment is evident."
           },
           "confidence": "high",
-          "uncertainty_notes": "None, the image clearly shows no people or activities."
+          "uncertainty_notes": "None; the image clearly shows no people or activities."
         },
         "parse_error": null,
-        "tokens_used": 1502
+        "tokens_used": 1520
       }
     }
   }
