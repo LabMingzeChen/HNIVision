@@ -161,7 +161,7 @@ tags = lab.extract("park.jpg")
 <td width="50%" valign="top">
 
 ### 2. Image classification
-**Backend:** ResNet-50 (fine-tuned on 8 HNI activity classes)
+**Backend:** ResNet-50 (fine-tuned on 7 HNI scenario classes)
 **Output:** Single top-1 category with softmax confidence
 **Best for:** Standardized activity-category tagging; reproducible across studies
 
@@ -295,7 +295,7 @@ A visual deep-dive into how each method actually sees an image. Below, the same 
 
 #### What each method contributed
 
-This scene illustrates why HNI extraction benefits from method triangulation rather than relying on any single model. **Object detection** nailed the human count (2 visitors) with precise bounding-box localization but contributed nothing to the natural context. **Image segmentation** simultaneously quantified that ~70% of the frame is natural environment (sky 42% + tree 18% + grass 9%) versus ~27% built (bannister + sidewalk + fence + wall), giving rich spatial composition data — but with no understanding of activity. The **vision-LLM** filled in the critical gap: by reasoning about gaze direction, body posture, and the spatial relationship between humans and waterfront, it inferred *landscape viewing* as the activity and *aesthetic appreciation* as the experiential meaning. **Image labeling** tagged this generically as "Leisure" and "People in nature"; **classification** correctly placed it in the *Informal Recreation & Social Interaction* bucket but lost all spatial detail. Together, the five methods cover all four HNI levels with high confidence — but only the VLM does so in a single pass.
+This scene illustrates why HNI extraction benefits from method triangulation rather than relying on any single model. **Object detection** nailed the human count (2 visitors) with precise bounding-box localization but contributed nothing to the natural context. **Image segmentation** simultaneously quantified that ~70% of the frame is natural environment (sky 42% + tree 18% + grass 9%) versus ~27% built (bannister + sidewalk + fence + wall), giving rich spatial composition data — but with no understanding of activity. The **vision-LLM** filled in the critical gap: by reasoning about gaze direction, body posture, and the spatial relationship between humans and waterfront, it inferred *landscape viewing* as the activity and *aesthetic appreciation* as the experiential meaning. **Image labeling** tagged this generically as "Leisure" and "People in nature"; **classification** predicted *Garden Vegetation* as the top scenario (60% confidence) with *Waterscape and Built Settings* second (24%) — interestingly, neither captures the actual relationship between the children and the river view, illustrating the limitations of single-label scenario classification on multi-faceted scenes. Together, the five methods cover all four HNI levels with high confidence — but only the VLM does so in a single pass.
 
 ---
 
