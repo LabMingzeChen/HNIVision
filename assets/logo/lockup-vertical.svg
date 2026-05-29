@@ -1,0 +1,20 @@
+<svg width="280" height="320" viewBox="0 0 280 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HNIVision vertical lockup">
+  <title>HNIVision</title>
+  <desc>Vertical lockup with the mark above the wordmark and a two-line tagline.</desc>
+  <g transform="translate(72 24) scale(0.53)">
+    <path d="M 28 128 Q 128 36 228 128 Q 128 220 28 128 Z"
+          fill="none" stroke="#1F5C3C" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M 128 66 C 90 82, 78 110, 86 138 C 94 168, 128 192, 128 192
+             C 128 192, 162 168, 170 138 C 178 110, 166 82, 128 66 Z"
+          fill="#1F5C3C"/>
+    <path d="M 128 72 L 128 188" stroke="#F8F6F1" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+    <circle cx="128" cy="128" r="7" fill="#E8593C"/>
+    <circle cx="128" cy="128" r="3.5" fill="#F8F6F1"/>
+  </g>
+  <!-- Wordmark, positioned as two separate elements for correct kerning -->
+  <text x="78" y="218" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#1F5C3C" letter-spacing="-0.5">HNI</text>
+  <text x="148" y="218" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="300" fill="#2A3441" letter-spacing="-0.5">Vision</text>
+  <!-- Tagline -->
+  <text x="140" y="252" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#5F6B6A">Five computer vision methods.</text>
+  <text x="140" y="270" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#5F6B6A">One framework for human-nature interaction.</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HNIVision monochrome logo">
+  <title>HNIVision (monochrome)</title>
+  <desc>Single-color monochrome variant for print, stamps, and limited-color contexts.</desc>
+  <path d="M 28 128 Q 128 36 228 128 Q 128 220 28 128 Z"
+        fill="none" stroke="#2A3441" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M 128 66
+           C 90 82, 78 110, 86 138
+           C 94 168, 128 192, 128 192
+           C 128 192, 162 168, 170 138
+           C 178 110, 166 82, 128 66 Z"
+        fill="#2A3441"/>
+  <path d="M 128 72 L 128 188" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="128" cy="128" r="6" fill="#FFFFFF"/>
+</svg>

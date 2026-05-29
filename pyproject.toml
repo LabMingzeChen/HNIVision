@@ -1,0 +1,91 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hnivision"
+version = "0.1.0"
+description = "A unified Python toolkit and benchmark for extracting human-nature interaction (HNI) evidence from social media imagery."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Mingze Chen" }
+]
+keywords = [
+    "computer-vision",
+    "human-nature-interaction",
+    "cultural-ecosystem-services",
+    "social-media-analysis",
+    "urban-parks",
+    "benchmark",
+    "vision-language-models",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+
+# Core dependencies — installed by `pip install hnivision`
+dependencies = [
+    "numpy>=1.23",
+    "Pillow>=9.0",
+    "pydantic>=2.0",
+    "requests>=2.28",
+    "python-dotenv>=1.0",
+    "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+# Per-method extras — install only what you need
+labeling = [
+    "google-cloud-vision>=3.4",
+    "nltk>=3.8",
+]
+classification = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+]
+detection = [
+    "ultralytics>=8.0",
+]
+segmentation = [
+    "torch>=2.0",
+    "transformers>=4.40",
+    "opencv-python>=4.8",
+]
+vlm = [
+    "openai>=1.0",
+]
+viz = [
+    "matplotlib>=3.7",
+    "seaborn>=0.13",
+]
+# Developer tools — for contributors
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1.0",
+]
+# Kitchen sink — everything
+all = [
+    "hnivision[labeling,classification,detection,segmentation,vlm,viz]",
+]
+
+[project.urls]
+Homepage = "https://github.com/LabMingzeChen/HNIVision"
+Documentation = "https://labmingzechen.github.io/HNIVision"
+Repository = "https://github.com/LabMingzeChen/HNIVision"
+Issues = "https://github.com/LabMingzeChen/HNIVision/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hnivision*"]
+exclude = ["tests*", "docs*", "assets*"]

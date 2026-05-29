@@ -1,0 +1,7 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HNIVision favicon">
+  <title>HNIVision favicon</title>
+  <desc>Compact favicon version of the HNIVision logo.</desc>
+  <path d="M 3 16 Q 16 4 29 16 Q 16 28 3 16 Z" fill="none" stroke="#1F5C3C" stroke-width="2"/>
+  <path d="M 16 8 C 11 10, 9 14, 11 18 C 13 22, 16 25, 16 25 C 16 25, 19 22, 21 18 C 23 14, 21 10, 16 8 Z" fill="#1F5C3C"/>
+  <circle cx="16" cy="16" r="1.4" fill="#E8593C"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg width="360" height="100" viewBox="0 0 360 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HNIVision compact lockup">
+  <title>HNIVision</title>
+  <desc>Compact horizontal lockup of the HNIVision logo with wordmark only.</desc>
+  <g transform="translate(20 18) scale(0.3125)">
+    <path d="M 28 128 Q 128 36 228 128 Q 128 220 28 128 Z"
+          fill="none" stroke="#1F5C3C" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M 128 66 C 90 82, 78 110, 86 138 C 94 168, 128 192, 128 192
+             C 128 192, 162 168, 170 138 C 178 110, 166 82, 128 66 Z"
+          fill="#1F5C3C"/>
+    <path d="M 128 72 L 128 188" stroke="#F8F6F1" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+    <circle cx="128" cy="128" r="7" fill="#E8593C"/>
+    <circle cx="128" cy="128" r="3.5" fill="#F8F6F1"/>
+  </g>
+  <text x="120" y="64" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="700" fill="#1F5C3C" letter-spacing="-1">HNI</text>
+  <text x="208" y="64" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="300" fill="#2A3441" letter-spacing="-1">Vision</text>
+</svg>
