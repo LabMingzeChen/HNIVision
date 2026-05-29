@@ -6,6 +6,8 @@
 
 <br>
 
+[![HF Space](https://img.shields.io/badge/🤗_Spaces-Live_Demo-FFD21E)](https://huggingface.co/spaces/Mingze/HNIVision)
+[![HF Model](https://img.shields.io/badge/🤗_Model-ResNet--50_weights-FFD21E)](https://huggingface.co/Mingze/HNIVision-ResNet50)
 [![License](https://img.shields.io/badge/license-MIT-1F5C3C.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-1F5C3C)](https://www.python.org/)
 [![PyPI](https://img.shields.io/badge/pypi-coming%20soon-E8593C)](https://pypi.org/project/hnivision/)
@@ -15,6 +17,7 @@
 
 **A unified Python toolkit and benchmark for extracting human–nature interaction (HNI) evidence from social media imagery.**
 
+[🤗 Live demo](https://huggingface.co/spaces/Mingze/HNIVision) ·
 [Documentation](https://labmingzechen.github.io/HNIVision) ·
 [Quick start](#-quick-start) ·
 [Methods](#-the-five-methods) ·
