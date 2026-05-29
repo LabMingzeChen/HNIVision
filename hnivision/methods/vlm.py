@@ -1,4 +1,4 @@
-"""Vision-Language Model method (Method 5) — Qwen via DashScope (OpenAI-compatible).
+"""Vision-Language Model method (Method 5) — Qwen via OpenAI (OpenAI-compatible).
 
 Sends image + structured prompt, parses JSON response into HNIResult.
 This is the only method that fills ALL 4 HNI levels coherently +
@@ -6,7 +6,7 @@ image-level summary + overall HNI judgement + confidence.
 
 Requirements:
   - `pip install "hnivision[vlm]"`
-  - DASHSCOPE_API_KEY env var (or .env at project root)
+  - OPENAI_API_KEY env var (or .env at project root)
 """
 
 from __future__ import annotations
@@ -30,9 +30,7 @@ from hnivision.hni.schema import (
 )
 
 
-# --- DashScope endpoints ---
-DASHSCOPE_CHINA = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-DASHSCOPE_INTL = "https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
+# OpenAI uses its default endpoint; no base_url override needed.
 
 
 # --- The HNI prompt (1:1 from GPT_HNI Review.ipynb Cell 0 - the "new logic" 4-dim version) ---
@@ -140,7 +138,7 @@ class VLMOutput(BaseModel):
 # --- The Method ---
 
 class VLM(BaseHNIMethod):
-    """Vision-Language Model method via DashScope (Qwen).
+    """Vision-Language Model method via OpenAI (Qwen).
 
     Uses Alibaba's OpenAI-compatible API to call Qwen vision models.
     Sends an image + structured HNI prompt and parses the JSON response
@@ -161,8 +159,7 @@ class VLM(BaseHNIMethod):
     def __init__(
         self,
         api_key: Optional[str] = None,
-        base_url: str = DASHSCOPE_CHINA,
-        model_name: str = "qwen3-omni-flash",
+        model_name: str = "gpt-4.1-mini",
         max_image_size: int = 768,
         image_quality: int = 75,
         temperature: float = 0.0,
@@ -170,11 +167,9 @@ class VLM(BaseHNIMethod):
     ):
         """
         Args:
-            api_key: DashScope API key. If None, reads DASHSCOPE_API_KEY from
+            api_key: OpenAI API key. If None, reads OPENAI_API_KEY from
                 env (and tries .env at project root).
-            base_url: DashScope OpenAI-compatible endpoint.
-                Default = China region. Use DASHSCOPE_INTL for Singapore.
-            model_name: Qwen vision model. Default 'qwen3-omni-flash'.
+            model_name: OpenAI vision model. Default 'gpt-4.1-mini'.
                 Alternatives: 'qwen-vl-max-latest', 'qwen-vl-plus-latest'.
             max_image_size: Longest side after resize (smaller = cheaper).
             image_quality: JPEG quality (1-100). Default 75 = good balance.
@@ -182,7 +177,6 @@ class VLM(BaseHNIMethod):
             max_output_tokens: Cap on response length.
         """
         self.model_name = model_name
-        self.base_url = base_url
         self.max_image_size = max_image_size
         self.image_quality = image_quality
         self.temperature = temperature
@@ -190,7 +184,7 @@ class VLM(BaseHNIMethod):
 
         # --- Resolve API key ---
         if api_key:
-            os.environ["DASHSCOPE_API_KEY"] = api_key
+            os.environ["OPENAI_API_KEY"] = api_key
         else:
             try:
                 from dotenv import load_dotenv
@@ -203,11 +197,11 @@ class VLM(BaseHNIMethod):
             except ImportError:
                 pass
 
-        if not os.environ.get("DASHSCOPE_API_KEY"):
+        if not os.environ.get("OPENAI_API_KEY"):
             raise EnvironmentError(
-                "DASHSCOPE_API_KEY not set. Either:\n"
+                "OPENAI_API_KEY not set. Either:\n"
                 "  1. Pass api_key=... to VLM(...)\n"
-                "  2. Set in shell: export DASHSCOPE_API_KEY=sk-...\n"
+                "  2. Set in shell: export OPENAI_API_KEY=sk-...\n"
                 "  3. Put it in .env at the project root"
             )
 
@@ -221,8 +215,7 @@ class VLM(BaseHNIMethod):
             ) from e
 
         self._client = OpenAI(
-            api_key=os.environ["DASHSCOPE_API_KEY"],
-            base_url=base_url,
+            api_key=os.environ["OPENAI_API_KEY"],
         )
 
     def _image_to_data_url(self, image: ImageInput) -> str:

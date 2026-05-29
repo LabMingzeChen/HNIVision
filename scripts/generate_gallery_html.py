@@ -276,7 +276,7 @@ HTML = f"""<!DOCTYPE html>
   <article class="method-card" style="--card-color:{COLORS[3]}">
     <div class="card-header"><span class="card-index">03</span><h2 class="card-title">Object detection</h2></div>
     <div class="card-body">
-      <div class="card-backend">YOLO11s · Ultralytics (COCO 80)</div>
+      <div class="card-backend">YOLO26-s · Ultralytics (COCO 80)</div>
       <img class="card-image" src="detection_overlay.png" alt="">
       <div class="card-image-caption">Output: bounding boxes drawn on input</div>
       <div class="output-label">OUTPUT</div>
@@ -297,7 +297,7 @@ HTML = f"""<!DOCTYPE html>
   <article class="method-card" style="--card-color:{COLORS[4]}">
     <div class="card-header"><span class="card-index">04</span><h2 class="card-title">Image segmentation</h2></div>
     <div class="card-body">
-      <div class="card-backend">SegFormer-b0 · ADE20K · {n_classes} classes</div>
+      <div class="card-backend">SAM2 + SegFormer · ADE20K · {n_classes} cls</div>
       <img class="card-image" src="segmentation_overlay.png" alt="">
       <div class="card-image-caption">Output: per-pixel semantic overlay</div>
       <div class="output-label">OUTPUT</div>
@@ -313,7 +313,7 @@ HTML = f"""<!DOCTYPE html>
   <article class="method-card" style="--card-color:{COLORS[5]}">
     <div class="card-header"><span class="card-index">05</span><h2 class="card-title">Vision-LLM</h2></div>
     <div class="card-body">
-      <div class="card-backend">Qwen3-Omni-Flash · structured prompt</div>
+      <div class="card-backend">GPT-4 · JSON prompt</div>
       <img class="card-image" src="01_original.jpg" alt="">
       <div class="card-image-caption">Input image + structured HNI prompt</div>
       <div class="output-label">SCENE SUMMARY</div>

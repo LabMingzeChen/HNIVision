@@ -124,7 +124,7 @@ body { margin:0; padding:0; background:var(--bg);
   <article class="method-card" style="--card-color:#2563EB">
     <div class="card-header"><span class="card-index">03</span><h2 class="card-title">Object detection</h2></div>
     <div class="card-body">
-      <div class="card-backend">YOLO11s · Ultralytics (COCO 80)</div>
+      <div class="card-backend">YOLO26-s · Ultralytics (COCO 80)</div>
       <img class="card-image" src="detection_overlay.png" alt="">
       <div class="card-image-caption">Output: bounding boxes drawn on input</div>
       <div class="output-label">OUTPUT</div>
@@ -132,21 +132,21 @@ body { margin:0; padding:0; background:var(--bg);
     <div class="det-box">
       <div class="det-box-row">
         <span class="det-box-name">person</span>
-        <span class="det-box-conf">0.81</span>
+        <span class="det-box-conf">0.89</span>
       </div>
-      <div class="det-box-coords">bbox [404, 353, 457, 523]</div>
+      <div class="det-box-coords">bbox [402, 353, 459, 523]</div>
     </div>
     <div class="det-box">
       <div class="det-box-row">
         <span class="det-box-name">person</span>
-        <span class="det-box-conf">0.75</span>
+        <span class="det-box-conf">0.79</span>
       </div>
-      <div class="det-box-coords">bbox [361, 366, 406, 518]</div>
+      <div class="det-box-coords">bbox [360, 366, 409, 518]</div>
     </div>
       <div class="det-stats">
         <div class="det-stat-row"><span>Total person count</span><span class="det-stat-val">2</span></div>
         <div class="det-stat-row"><span>Other classes</span><span class="det-stat-val">0</span></div>
-        <div class="det-stat-row"><span>Avg confidence</span><span class="det-stat-val">0.78</span></div>
+        <div class="det-stat-row"><span>Avg confidence</span><span class="det-stat-val">0.84</span></div>
       </div>
     </div>
     <div class="card-footer">
@@ -159,11 +159,11 @@ body { margin:0; padding:0; background:var(--bg);
   <article class="method-card" style="--card-color:#B45309">
     <div class="card-header"><span class="card-index">04</span><h2 class="card-title">Image segmentation</h2></div>
     <div class="card-body">
-      <div class="card-backend">SegFormer-b0 · ADE20K · 18 classes</div>
+      <div class="card-backend">SAM2 + SegFormer · ADE20K · 8 cls</div>
       <img class="card-image" src="segmentation_overlay.png" alt="">
       <div class="card-image-caption">Output: per-pixel semantic overlay</div>
       <div class="output-label">OUTPUT</div>
-      <div class="bar-row"><span class="bar-label">sky</span><div class="bar-track"><div class="bar-fill" style="width:91.6%;background:#b3d9f0;"></div></div><span class="bar-value">50.4%</span></div><div class="bar-row"><span class="bar-label">tree</span><div class="bar-track"><div class="bar-fill" style="width:32.6%;background:#4b7d50;"></div></div><span class="bar-value">17.9%</span></div><div class="bar-row"><span class="bar-label">bannister</span><div class="bar-track"><div class="bar-fill" style="width:14.4%;background:#d7c8af;"></div></div><span class="bar-value">7.9%</span></div><div class="bar-row"><span class="bar-label">grass</span><div class="bar-track"><div class="bar-fill" style="width:8.5%;background:#a0c364;"></div></div><span class="bar-value">4.7%</span></div><div class="bar-row"><span class="bar-label">person</span><div class="bar-track"><div class="bar-fill" style="width:6.0%;background:#9e89c8;"></div></div><span class="bar-value">3.3%</span></div><div class="bar-row"><span class="bar-label">path</span><div class="bar-track"><div class="bar-fill" style="width:5.7%;background:#b9aa91;"></div></div><span class="bar-value">3.2%</span></div><div class="bar-row"><span class="bar-label">stairs</span><div class="bar-track"><div class="bar-fill" style="width:5.0%;background:#a09682;"></div></div><span class="bar-value">2.8%</span></div><div class="bar-row"><span class="bar-label">sidewalk</span><div class="bar-track"><div class="bar-fill" style="width:4.5%;background:#afafaf;"></div></div><span class="bar-value">2.5%</span></div>
+      <div class="bar-row"><span class="bar-label">sky</span><div class="bar-track"><div class="bar-fill" style="width:83.0%;background:#b3d9f0;"></div></div><span class="bar-value">45.6%</span></div><div class="bar-row"><span class="bar-label">tree</span><div class="bar-track"><div class="bar-fill" style="width:34.3%;background:#4b7d50;"></div></div><span class="bar-value">18.9%</span></div><div class="bar-row"><span class="bar-label">path</span><div class="bar-track"><div class="bar-fill" style="width:24.6%;background:#b9aa91;"></div></div><span class="bar-value">13.5%</span></div><div class="bar-row"><span class="bar-label">bannister</span><div class="bar-track"><div class="bar-fill" style="width:20.7%;background:#d7c8af;"></div></div><span class="bar-value">11.4%</span></div><div class="bar-row"><span class="bar-label">grass</span><div class="bar-track"><div class="bar-fill" style="width:16.0%;background:#a0c364;"></div></div><span class="bar-value">8.8%</span></div><div class="bar-row"><span class="bar-label">person</span><div class="bar-track"><div class="bar-fill" style="width:3.1%;background:#9e89c8;"></div></div><span class="bar-value">1.7%</span></div><div class="bar-row"><span class="bar-label">wall</span><div class="bar-track"><div class="bar-fill" style="width:0.3%;background:#dcc3c3;"></div></div><span class="bar-value">0.1%</span></div><div class="bar-row"><span class="bar-label">sidewalk</span><div class="bar-track"><div class="bar-fill" style="width:0.0%;background:#afafaf;"></div></div><span class="bar-value">0.0%</span></div>
     </div>
     <div class="card-footer">
       <div class="hni-levels-label">HNI LEVELS CAPTURED</div>
@@ -175,16 +175,16 @@ body { margin:0; padding:0; background:var(--bg);
   <article class="method-card" style="--card-color:#B91C1C">
     <div class="card-header"><span class="card-index">05</span><h2 class="card-title">Vision-LLM</h2></div>
     <div class="card-body">
-      <div class="card-backend">Qwen3-Omni-Flash · structured prompt</div>
+      <div class="card-backend">GPT-4 · JSON prompt</div>
       <img class="card-image" src="01_original.jpg" alt="">
       <div class="card-image-caption">Input image + structured HNI prompt</div>
       <div class="output-label">SCENE SUMMARY</div>
-      <div class="scene-summary">Two individuals stand at a stone balustrade overlooking a waterfront landscape with green lawn, trees, and a distant river under a cloudy sky.</div>
+      <div class="scene-summary">The image shows two people standing by a stone balustrade overlooking a natural landscape with trees, a lawn, and a body of water under a partly cloudy sky.</div>
       <div class="hni-tag h"><div class="hni-tag-label">human</div><div class="hni-tag-value">individual · 2-5</div></div>
-      <div class="hni-tag n"><div class="hni-tag-label">nature</div><div class="hni-tag-value">waterfront <span class="extra">+3 more</span></div></div>
+      <div class="hni-tag n"><div class="hni-tag-label">nature</div><div class="hni-tag-value">waterfront <span class="extra">+2 more</span></div></div>
       <div class="hni-tag a"><div class="hni-tag-label">activity</div><div class="hni-tag-value">landscape viewing <span class="extra">+1 more</span></div></div>
       <div class="hni-tag m"><div class="hni-tag-label">meaning</div><div class="hni-tag-value">aesthetic appreciation <span class="extra">+1 more</span></div></div>
-      <div class="vlm-meta">strength: moderate · conf: high · 1504 tokens</div>
+      <div class="vlm-meta">strength: moderate · conf: high · 1718 tokens</div>
     </div>
     <div class="card-footer">
       <div class="hni-levels-label">HNI LEVELS CAPTURED</div>

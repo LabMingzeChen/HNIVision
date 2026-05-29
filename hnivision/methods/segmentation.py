@@ -1,214 +1,270 @@
-"""Image segmentation method (Method 4) — SegFormer-b0 on ADE20K.
+"""Method 4: Hybrid SAM2 + SegFormer (ADE20K) instance-level segmentation.
 
-Per-pixel semantic labeling across 150 ADE20K classes, aggregated to
-per-class pixel shares. Primary HNI contribution: nature composition
-(sky/tree/grass/water shares) and human presence (person mask area).
+Two-stage pipeline matching the user's NHI_SAM2+ADK20.ipynb research workflow:
+  Stage 1: SAM2.1-hiera-small generates N instance masks (auto mode)
+  Stage 2: SegFormer-b0 on ADE20K labels each mask via majority vote
+  Stage 3: Aggregate per-mask labels into pixel_shares for HNI mapping
 
-Note: This is the v0.1 SegFormer-only backend. A SAM2-based mask-level
-enhancement is planned for v0.2 (requires arm64 native Python env).
+Output is richer than either model alone — SAM2 gives precise object
+boundaries, ADE20K gives class names. Each mask carries both pieces.
 """
 
 from __future__ import annotations
 
-# Apple Silicon (mps) safety: enable CPU fallback for any unsupported ops
-import os
-os.environ.setdefault("PYTORCH_ENABLE_MPS_FALLBACK", "1")
-
-from typing import Dict, List, Optional, Tuple
+from collections import defaultdict
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
-from pydantic import BaseModel, Field
+import torch
+import torch.nn.functional as F
+from PIL import Image
+from pydantic import BaseModel, ConfigDict, Field
 
 from hnivision.base import BaseHNIMethod, ImageInput
 from hnivision.hni.schema import HNIResult, HumanLevel, NatureLevel
 
 
-# --- ADE20K class buckets for HNI mapping (canonical-name based) ---
-# Match against the first synonym (e.g., "mountain" from "mountain, mount")
+# ============================================================
+# Output schema
+# ============================================================
+class MaskInstance(BaseModel):
+    """One SAM2 mask with its ADE20K semantic label (majority vote)."""
+    model_config = ConfigDict(arbitrary_types_allowed=True)
 
-NATURE_CANONICAL = {
-    "sky", "tree", "grass", "earth", "mountain", "plant", "water",
-    "sea", "field", "rock", "sand", "river", "flower", "hill",
-    "palm", "dirt track", "land", "waterfall", "lake",
-}
-
-HUMAN_CANONICAL = {"person"}
-
-
-def _canonical_name(full_label: str) -> str:
-    """Extract the first synonym from ADE20K's comma-separated label.
-
-    Examples:
-        'person, individual, someone, ...' → 'person'
-        'mountain, mount' → 'mountain'
-        'sky' → 'sky'
-    """
-    return full_label.split(",")[0].strip().lower()
-
-
-# --- Output schemas ---
-
-class PixelShares(BaseModel):
-    """Per-class pixel share for one image."""
-    shares: Dict[str, float] = Field(default_factory=dict)
-    image_size: Tuple[int, int] = (0, 0)  # (width, height)
-
-    def top_n(self, n: int = 10) -> List[Tuple[str, float]]:
-        """Return the top N classes sorted by pixel share."""
-        return sorted(self.shares.items(), key=lambda x: -x[1])[:n]
-
-    def dominant(self) -> Optional[str]:
-        if not self.shares:
-            return None
-        return max(self.shares.items(), key=lambda x: x[1])[0]
+    mask_id: int
+    area: int                     # pixel count
+    pixel_share: float            # area / total image pixels
+    bbox: List[int]               # [x, y, w, h] from SAM2
+    sam2_iou: float               # SAM2 predicted IoU
+    sam2_stability: float         # SAM2 stability score
+    ade20k_label: str             # majority class name
+    ade20k_label_idx: int         # ADE20K class id (0-149)
+    ade20k_confidence: float      # fraction of mask pixels matching dominant label
 
 
 class SegmentationOutput(BaseModel):
-    """Output of Segmentation on one image."""
-    pixel_shares: PixelShares = Field(default_factory=PixelShares)
-    semantic_map_shape: Tuple[int, int] = (0, 0)  # (H, W)
+    """Hybrid SAM2 + SegFormer segmentation output."""
+    model_config = ConfigDict(arbitrary_types_allowed=True)
+
+    masks: List[MaskInstance] = Field(default_factory=list)
+    n_masks: int = 0
+    image_size: Tuple[int, int] = (0, 0)  # (W, H)
+
+    # Backward-compat: aggregated pixel shares per ADE20K class
+    pixel_shares: Dict[str, Any] = Field(
+        default_factory=lambda: {"shares": {}, "image_size": [0, 0]}
+    )
     n_classes_detected: int = 0
 
+    coverage_ratio: float = 0.0   # total SAM2 mask px / image px (>1 = overlap)
+    method_meta: Dict[str, str] = Field(default_factory=dict)
 
-# --- Method ---
 
+# ============================================================
+# Class → HNI category mappings
+# ============================================================
+NATURE_FIRST_WORDS = {
+    "sky", "tree", "grass", "plant", "flower", "earth", "field",
+    "mountain", "rock", "sea", "water", "river", "lake", "sand",
+    "snow", "waterfall", "fountain", "hill", "land", "vegetation",
+}
+HUMAN_KEYWORDS = ("person", "individual", "soul", "people")
+
+
+# ============================================================
+# Segmentation method
+# ============================================================
 class Segmentation(BaseHNIMethod):
-    """Image segmentation via SegFormer-b0 fine-tuned on ADE20K.
-
-    Returns per-pixel semantic classes (150 categories), aggregated to per-class
-    pixel shares of the image.
-
-    Requirements:
-      - `pip install "hnivision[segmentation]"`
-
-    Example:
-        >>> seg = Segmentation()
-        >>> out = seg.extract("park.jpg")
-        >>> out.pixel_shares.top_n(3)
-        [('sky', 0.42), ('tree', 0.18), ('grass', 0.09)]
-        >>> hni = seg.to_hni(out)
-        >>> hni.nature.tags
-        ['sky', 'tree', 'grass']
-    """
-
-    name = "segmentation"
+    """Hybrid SAM2 + SegFormer (ADE20K) — paper config."""
 
     def __init__(
         self,
+        sam2_checkpoint: Optional[str] = None,
+        sam2_config: str = "configs/sam2.1/sam2.1_hiera_s.yaml",
         segformer_model: str = "nvidia/segformer-b0-finetuned-ade-512-512",
-        device: Optional[str] = None,
-        min_share_for_hni: float = 0.005,
+        device: str = "cpu",
+        # SAM2 params matching user's notebook
+        points_per_side: int = 32,
+        pred_iou_thresh: float = 0.6,
+        stability_score_thresh: float = 0.6,
+        min_mask_region_area: int = 100,
     ):
-        """
-        Args:
-            segformer_model: HuggingFace model ID for SegFormer ADE20K checkpoint.
-            device: 'cuda', 'mps', 'cpu', or None for auto-detect.
-            min_share_for_hni: Minimum pixel share (0-1) to count a class
-                in the HNI mapping. Default 0.005 = 0.5% of image area.
-        """
-        self.model_name = segformer_model
-        self.min_share_for_hni = min_share_for_hni
+        super().__init__()
+        if sam2_checkpoint is None:
+            sam2_checkpoint = str(
+                Path.home() / ".cache/hnivision/sam2/sam2.1_hiera_small.pt"
+            )
+        if not Path(sam2_checkpoint).exists():
+            raise FileNotFoundError(
+                f"SAM2 checkpoint not found at {sam2_checkpoint}. "
+                f"Download: curl -L --continue-at - -o {sam2_checkpoint} "
+                f"https://huggingface.co/facebook/sam2.1-hiera-small/resolve/main/sam2.1_hiera_small.pt"
+            )
 
-        try:
-            import torch
-        except ImportError as e:
-            raise ImportError("Segmentation requires PyTorch") from e
-
-        if device is None:
-            # NOTE: MPS gives numerically wrong results on SegFormer (transformer
-            # ops aren't fully supported as of PyTorch 2.2). Force CPU on Mac.
-            # CUDA still preferred when available.
-            if torch.cuda.is_available():
-                device = "cuda"
-            else:
-                device = "cpu"
         self.device = device
-        self._torch = torch
 
-        try:
-            from transformers import AutoImageProcessor, SegformerForSemanticSegmentation
-        except ImportError as e:
-            raise ImportError(
-                "Segmentation requires `transformers`. Install with:\n"
-                "    pip install 'hnivision[segmentation]'"
-            ) from e
+        # Lazy imports
+        from sam2.build_sam import build_sam2
+        from sam2.automatic_mask_generator import SAM2AutomaticMaskGenerator
+        from transformers import (
+            SegformerForSemanticSegmentation,
+            SegformerImageProcessor,
+        )
 
-        self._processor = AutoImageProcessor.from_pretrained(segformer_model)
-        self._model = SegformerForSemanticSegmentation.from_pretrained(segformer_model)
-        self._model.to(device)
-        self._model.eval()
-        self._id2label = self._model.config.id2label
+        # === Load SAM2 ===
+        print(f"  Loading SAM2 ({Path(sam2_checkpoint).name}, device={device})...")
+        sam2_model = build_sam2(sam2_config, sam2_checkpoint, device=device)
+        self._sam2_gen = SAM2AutomaticMaskGenerator(
+            model=sam2_model,
+            points_per_side=points_per_side,
+            pred_iou_thresh=pred_iou_thresh,
+            stability_score_thresh=stability_score_thresh,
+            min_mask_region_area=min_mask_region_area,
+        )
 
+        # === Load SegFormer ===
+        print(f"  Loading SegFormer ({segformer_model}, device={device})...")
+        self._processor = SegformerImageProcessor.from_pretrained(segformer_model)
+        self._segformer = (
+            SegformerForSemanticSegmentation.from_pretrained(segformer_model)
+            .to(device)
+            .eval()
+        )
+        self._id2label = self._segformer.config.id2label
+
+        self._sam2_model_name = "facebook/sam2.1-hiera-small"
+        self._segformer_model_name = segformer_model
+
+    # ------------------------------------------------------------
+    @staticmethod
+    def _load_image(image: ImageInput) -> np.ndarray:
+        if isinstance(image, (str, Path)):
+            img = Image.open(image).convert("RGB")
+        elif isinstance(image, Image.Image):
+            img = image.convert("RGB")
+        elif isinstance(image, np.ndarray):
+            return image if image.ndim == 3 else np.stack([image] * 3, axis=-1)
+        else:
+            raise ValueError(f"Unsupported image type: {type(image)}")
+        return np.array(img)
+
+    # ------------------------------------------------------------
     def extract(self, image: ImageInput) -> SegmentationOutput:
-        """Run SegFormer and compute per-class pixel shares."""
-        img = self.load_image(image)
-        width, height = img.size
-        total_pixels = width * height
+        img_np = self._load_image(image)
+        H, W = img_np.shape[:2]
+        total_px = float(H * W)
 
-        inputs = self._processor(images=img, return_tensors="pt").to(self.device)
+        # === Stage 1: SAM2 instance masks ===
+        sam2_masks = self._sam2_gen.generate(img_np)
 
-        with self._torch.no_grad():
-            outputs = self._model(**inputs)
+        # === Stage 2: SegFormer per-pixel ADE20K labels ===
+        pil_img = Image.fromarray(img_np)
+        inputs = self._processor(images=pil_img, return_tensors="pt").to(self.device)
+        with torch.no_grad():
+            outputs = self._segformer(**inputs)
+        logits = outputs.logits  # (1, 150, h, w)
+        upsampled = F.interpolate(
+            logits, size=(H, W), mode="bilinear", align_corners=False
+        )
+        ade20k_map = (
+            upsampled.argmax(dim=1).squeeze().cpu().numpy().astype(np.int32)
+        )  # (H, W)
 
-        # Post-process: resize logits back to original image size
-        seg_map = self._processor.post_process_semantic_segmentation(
-            outputs,
-            target_sizes=[(height, width)],
-        )[0].cpu().numpy()
+        # === Stage 3: per-mask majority vote ===
+        masks_out: List[MaskInstance] = []
+        agg: Dict[str, float] = defaultdict(float)
 
-        class_ids, pixel_counts = np.unique(seg_map, return_counts=True)
-        shares: Dict[str, float] = {}
-        for cls_id, count in zip(class_ids, pixel_counts):
-            label = self._id2label[int(cls_id)]
-            shares[label] = float(count) / total_pixels
+        for mid, m in enumerate(sam2_masks):
+            seg = m["segmentation"]  # bool (H, W)
+            labels_in_mask = ade20k_map[seg]
+            if labels_in_mask.size == 0:
+                continue
+
+            counts = np.bincount(labels_in_mask, minlength=150)
+            majority_idx = int(counts.argmax())
+            majority_count = int(counts[majority_idx])
+            confidence = majority_count / labels_in_mask.size
+            label_name = self._id2label.get(majority_idx, f"class_{majority_idx}")
+
+            masks_out.append(
+                MaskInstance(
+                    mask_id=mid,
+                    area=int(m["area"]),
+                    pixel_share=m["area"] / total_px,
+                    bbox=[int(x) for x in m["bbox"]],
+                    sam2_iou=float(m["predicted_iou"]),
+                    sam2_stability=float(m["stability_score"]),
+                    ade20k_label=label_name,
+                    ade20k_label_idx=majority_idx,
+                    ade20k_confidence=confidence,
+                )
+            )
+            agg[label_name] += m["area"] / total_px
+
+        # Normalize aggregated shares (sum to 1 after overlap correction)
+        total = sum(agg.values())
+        normalized = {k: v / total for k, v in agg.items()} if total > 0 else {}
+        sorted_shares = dict(
+            sorted(normalized.items(), key=lambda x: x[1], reverse=True)
+        )
+        coverage = sum(m["area"] for m in sam2_masks) / total_px
 
         return SegmentationOutput(
-            pixel_shares=PixelShares(shares=shares, image_size=(width, height)),
-            semantic_map_shape=tuple(seg_map.shape),
-            n_classes_detected=len(class_ids),
+            masks=masks_out,
+            n_masks=len(masks_out),
+            image_size=(W, H),
+            pixel_shares={"shares": sorted_shares, "image_size": [W, H]},
+            n_classes_detected=len(sorted_shares),
+            coverage_ratio=coverage,
+            method_meta={
+                "sam2_model": self._sam2_model_name,
+                "ade20k_model": self._segformer_model_name,
+            },
         )
 
+    # ------------------------------------------------------------
     def to_hni(self, output: SegmentationOutput) -> HNIResult:
-        """Map per-class pixel shares into HNI levels."""
-        result = HNIResult()
-
-        # Filter classes above the HNI threshold
-        relevant = {
-            cls: share
-            for cls, share in output.pixel_shares.shares.items()
-            if share >= self.min_share_for_hni
-        }
-
-        # --- Human ---
-        person_share = sum(
-            share for cls, share in relevant.items()
-            if _canonical_name(cls) in HUMAN_CANONICAL
+        result = HNIResult(
+            source_method="segmentation",
+            raw_output={
+                "n_masks": output.n_masks,
+                "n_classes": output.n_classes_detected,
+            },
         )
-        if person_share > 0:
+        shares = output.pixel_shares.get("shares", {})
+        if not shares:
+            return result
+
+        human_tags, nature_tags = [], []
+        nature_pixel_shares: Dict[str, float] = {}
+        human_share = 0.0
+
+        for label, share in shares.items():
+            label_lower = label.lower()
+            first = label_lower.split(",")[0].strip()
+            if any(k in label_lower for k in HUMAN_KEYWORDS):
+                human_tags.append(first)
+                human_share += share
+            if first in NATURE_FIRST_WORDS:
+                nature_tags.append(first)
+                nature_pixel_shares[first] = round(share, 4)
+
+        if human_tags:
             result.human = HumanLevel(
                 present=True,
-                evidence=f"SegFormer detected 'person' covering {person_share:.1%} of image",
+                tags=list(dict.fromkeys(human_tags)),
+                evidence=f"Detected person in SAM2 masks ({human_share*100:.1f}% pixel share)",
             )
 
-        # --- Nature ---
-        nature_pairs: List[Tuple[str, float]] = sorted(
-            [
-                (_canonical_name(cls), share)
-                for cls, share in relevant.items()
-                if _canonical_name(cls) in NATURE_CANONICAL
-            ],
-            key=lambda x: -x[1],
-        )
-        if nature_pairs:
+        if nature_tags:
+            dominant = max(nature_pixel_shares.items(), key=lambda x: x[1])[0]
+            ev_parts = [f"{k} {v*100:.1f}%" for k, v in list(nature_pixel_shares.items())[:5]]
             result.nature = NatureLevel(
-                tags=[name for name, _ in nature_pairs],
-                dominant=nature_pairs[0][0],
-                pixel_shares=dict(nature_pairs),
-                evidence=(
-                    f"SegFormer detected {len(nature_pairs)} nature class(es): "
-                    + ", ".join(f"{n} ({s:.1%})" for n, s in nature_pairs[:5])
-                ),
+                tags=list(dict.fromkeys(nature_tags)),
+                dominant=dominant,
+                pixel_shares=nature_pixel_shares,
+                evidence=f"Top natural classes: {', '.join(ev_parts)}",
             )
 
-        # Activity, Meaning: segmentation doesn't capture these
         return result

@@ -20,7 +20,7 @@ from hnivision.methods.labeling import (
     LabelingOutput,
 )
 from hnivision.methods.segmentation import (
-    PixelShares,
+    MaskInstance,
     Segmentation,
     SegmentationOutput,
 )

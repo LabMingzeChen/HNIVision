@@ -94,20 +94,20 @@
       {
         "class_name": "person",
         "class_id": 0,
-        "confidence": 0.8144432902336121,
-        "x1": 403.5112609863281,
-        "y1": 352.8435974121094,
-        "x2": 456.5898742675781,
-        "y2": 523.173828125
+        "confidence": 0.8943712115287781,
+        "x1": 402.469970703125,
+        "y1": 352.6731872558594,
+        "x2": 459.2059020996094,
+        "y2": 523.0397338867188
       },
       {
         "class_name": "person",
         "class_id": 0,
-        "confidence": 0.7546769380569458,
-        "x1": 360.81927490234375,
-        "y1": 365.53314208984375,
-        "x2": 405.6036682128906,
-        "y2": 517.8699951171875
+        "confidence": 0.7905950546264648,
+        "x1": 360.4848327636719,
+        "y1": 366.08447265625,
+        "x2": 408.75531005859375,
+        "y2": 517.6867065429688
       }
     ],
     "image_size": [
@@ -116,85 +116,1043 @@
     ]
   },
   "segmentation": {
+    "masks": [
+      {
+        "mask_id": 0,
+        "area": 211054,
+        "pixel_share": 0.49589755639097743,
+        "bbox": [
+          0,
+          0,
+          799,
+          290
+        ],
+        "sam2_iou": 0.9938127994537354,
+        "sam2_stability": 0.9860143661499023,
+        "ade20k_label": "sky",
+        "ade20k_label_idx": 2,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 1,
+        "area": 7606,
+        "pixel_share": 0.01787124060150376,
+        "bbox": [
+          49,
+          140,
+          152,
+          67
+        ],
+        "sam2_iou": 0.9484029412269592,
+        "sam2_stability": 0.9411090016365051,
+        "ade20k_label": "sky",
+        "ade20k_label_idx": 2,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 2,
+        "area": 11319,
+        "pixel_share": 0.026595394736842106,
+        "bbox": [
+          0,
+          284,
+          468,
+          34
+        ],
+        "sam2_iou": 0.928273618221283,
+        "sam2_stability": 0.9378526210784912,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.8367346938775511
+      },
+      {
+        "mask_id": 3,
+        "area": 11496,
+        "pixel_share": 0.027011278195488722,
+        "bbox": [
+          0,
+          284,
+          468,
+          59
+        ],
+        "sam2_iou": 0.9210327863693237,
+        "sam2_stability": 0.9394399523735046,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.840205288796103
+      },
+      {
+        "mask_id": 4,
+        "area": 2880,
+        "pixel_share": 0.006766917293233083,
+        "bbox": [
+          206,
+          149,
+          89,
+          55
+        ],
+        "sam2_iou": 0.9187471270561218,
+        "sam2_stability": 0.9392917156219482,
+        "ade20k_label": "sky",
+        "ade20k_label_idx": 2,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 5,
+        "area": 34135,
+        "pixel_share": 0.08020441729323308,
+        "bbox": [
+          0,
+          0,
+          551,
+          117
+        ],
+        "sam2_iou": 0.9152947068214417,
+        "sam2_stability": 0.9179475903511047,
+        "ade20k_label": "sky",
+        "ade20k_label_idx": 2,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 6,
+        "area": 4269,
+        "pixel_share": 0.010030545112781956,
+        "bbox": [
+          361,
+          370,
+          39,
+          145
+        ],
+        "sam2_iou": 0.9071351289749146,
+        "sam2_stability": 0.9344373941421509,
+        "ade20k_label": "person",
+        "ade20k_label_idx": 12,
+        "ade20k_confidence": 0.9988287655188569
+      },
+      {
+        "mask_id": 7,
+        "area": 17216,
+        "pixel_share": 0.04045112781954887,
+        "bbox": [
+          0,
+          350,
+          799,
+          51
+        ],
+        "sam2_iou": 0.9059117436408997,
+        "sam2_stability": 0.8594353199005127,
+        "ade20k_label": "grass",
+        "ade20k_label_idx": 9,
+        "ade20k_confidence": 0.9275092936802974
+      },
+      {
+        "mask_id": 8,
+        "area": 5435,
+        "pixel_share": 0.012770206766917293,
+        "bbox": [
+          402,
+          353,
+          51,
+          167
+        ],
+        "sam2_iou": 0.905498743057251,
+        "sam2_stability": 0.9217422008514404,
+        "ade20k_label": "person",
+        "ade20k_label_idx": 12,
+        "ade20k_confidence": 0.9821527138914443
+      },
+      {
+        "mask_id": 9,
+        "area": 4232,
+        "pixel_share": 0.009943609022556392,
+        "bbox": [
+          357,
+          293,
+          94,
+          63
+        ],
+        "sam2_iou": 0.8989290595054626,
+        "sam2_stability": 0.9294304251670837,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 10,
+        "area": 11580,
+        "pixel_share": 0.027208646616541352,
+        "bbox": [
+          0,
+          284,
+          799,
+          74
+        ],
+        "sam2_iou": 0.8936609625816345,
+        "sam2_stability": 0.8285561800003052,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.8364421416234887
+      },
+      {
+        "mask_id": 11,
+        "area": 19240,
+        "pixel_share": 0.04520676691729323,
+        "bbox": [
+          469,
+          193,
+          205,
+          164
+        ],
+        "sam2_iou": 0.8924418687820435,
+        "sam2_stability": 0.8236584067344666,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.9673596673596674
+      },
+      {
+        "mask_id": 12,
+        "area": 17604,
+        "pixel_share": 0.04136278195488722,
+        "bbox": [
+          0,
+          350,
+          799,
+          89
+        ],
+        "sam2_iou": 0.8820895552635193,
+        "sam2_stability": 0.8713712692260742,
+        "ade20k_label": "grass",
+        "ade20k_label_idx": 9,
+        "ade20k_confidence": 0.9047375596455351
+      },
+      {
+        "mask_id": 13,
+        "area": 55361,
+        "pixel_share": 0.13007753759398497,
+        "bbox": [
+          0,
+          399,
+          799,
+          102
+        ],
+        "sam2_iou": 0.8803697228431702,
+        "sam2_stability": 0.6997753381729126,
+        "ade20k_label": "bannister",
+        "ade20k_label_idx": 95,
+        "ade20k_confidence": 0.5927277325192826
+      },
+      {
+        "mask_id": 14,
+        "area": 661,
+        "pixel_share": 0.0015531015037593984,
+        "bbox": [
+          22,
+          334,
+          34,
+          25
+        ],
+        "sam2_iou": 0.8672633171081543,
+        "sam2_stability": 0.943148672580719,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 15,
+        "area": 2526,
+        "pixel_share": 0.00593515037593985,
+        "bbox": [
+          680,
+          345,
+          78,
+          53
+        ],
+        "sam2_iou": 0.8654805421829224,
+        "sam2_stability": 0.9055117964744568,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.982185273159145
+      },
+      {
+        "mask_id": 16,
+        "area": 19911,
+        "pixel_share": 0.046783364661654135,
+        "bbox": [
+          0,
+          503,
+          799,
+          28
+        ],
+        "sam2_iou": 0.8602011799812317,
+        "sam2_stability": 0.8664410710334778,
+        "ade20k_label": "path",
+        "ade20k_label_idx": 52,
+        "ade20k_confidence": 0.2967706293003867
+      },
+      {
+        "mask_id": 17,
+        "area": 7755,
+        "pixel_share": 0.018221334586466166,
+        "bbox": [
+          49,
+          140,
+          241,
+          68
+        ],
+        "sam2_iou": 0.8593500256538391,
+        "sam2_stability": 0.7798656225204468,
+        "ade20k_label": "sky",
+        "ade20k_label_idx": 2,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 18,
+        "area": 1756,
+        "pixel_share": 0.00412593984962406,
+        "bbox": [
+          298,
+          327,
+          86,
+          29
+        ],
+        "sam2_iou": 0.8530333638191223,
+        "sam2_stability": 0.903607964515686,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.9806378132118451
+      },
+      {
+        "mask_id": 19,
+        "area": 696,
+        "pixel_share": 0.0016353383458646616,
+        "bbox": [
+          640,
+          193,
+          42,
+          23
+        ],
+        "sam2_iou": 0.847078800201416,
+        "sam2_stability": 0.9077134728431702,
+        "ade20k_label": "sky",
+        "ade20k_label_idx": 2,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 20,
+        "area": 758,
+        "pixel_share": 0.001781015037593985,
+        "bbox": [
+          165,
+          325,
+          32,
+          29
+        ],
+        "sam2_iou": 0.8321350812911987,
+        "sam2_stability": 0.928121030330658,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 21,
+        "area": 526,
+        "pixel_share": 0.0012359022556390977,
+        "bbox": [
+          784,
+          418,
+          15,
+          41
+        ],
+        "sam2_iou": 0.8304927349090576,
+        "sam2_stability": 0.9575645923614502,
+        "ade20k_label": "bannister",
+        "ade20k_label_idx": 95,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 22,
+        "area": 14709,
+        "pixel_share": 0.03456062030075188,
+        "bbox": [
+          0,
+          365,
+          660,
+          35
+        ],
+        "sam2_iou": 0.8299866914749146,
+        "sam2_stability": 0.7607623338699341,
+        "ade20k_label": "grass",
+        "ade20k_label_idx": 9,
+        "ade20k_confidence": 0.9789244680127813
+      },
+      {
+        "mask_id": 23,
+        "area": 28114,
+        "pixel_share": 0.06605733082706768,
+        "bbox": [
+          0,
+          486,
+          799,
+          45
+        ],
+        "sam2_iou": 0.8250672221183777,
+        "sam2_stability": 0.6261773109436035,
+        "ade20k_label": "path",
+        "ade20k_label_idx": 52,
+        "ade20k_confidence": 0.31774205022408764
+      },
+      {
+        "mask_id": 24,
+        "area": 6599,
+        "pixel_share": 0.01550516917293233,
+        "bbox": [
+          308,
+          293,
+          162,
+          64
+        ],
+        "sam2_iou": 0.8159818053245544,
+        "sam2_stability": 0.7217403054237366,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.9989392332171542
+      },
+      {
+        "mask_id": 25,
+        "area": 454,
+        "pixel_share": 0.0010667293233082708,
+        "bbox": [
+          516,
+          468,
+          27,
+          18
+        ],
+        "sam2_iou": 0.805318295955658,
+        "sam2_stability": 0.954935610294342,
+        "ade20k_label": "wall",
+        "ade20k_label_idx": 0,
+        "ade20k_confidence": 0.6916299559471366
+      },
+      {
+        "mask_id": 26,
+        "area": 159,
+        "pixel_share": 0.00037359022556390976,
+        "bbox": [
+          382,
+          500,
+          11,
+          15
+        ],
+        "sam2_iou": 0.8024368286132812,
+        "sam2_stability": 0.9329268336296082,
+        "ade20k_label": "person",
+        "ade20k_label_idx": 12,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 27,
+        "area": 207,
+        "pixel_share": 0.00048637218045112783,
+        "bbox": [
+          79,
+          365,
+          16,
+          15
+        ],
+        "sam2_iou": 0.8009116053581238,
+        "sam2_stability": 0.934883713722229,
+        "ade20k_label": "grass",
+        "ade20k_label_idx": 9,
+        "ade20k_confidence": 0.6714975845410628
+      },
+      {
+        "mask_id": 28,
+        "area": 378,
+        "pixel_share": 0.0008881578947368421,
+        "bbox": [
+          183,
+          362,
+          26,
+          17
+        ],
+        "sam2_iou": 0.7994517683982849,
+        "sam2_stability": 0.9211195707321167,
+        "ade20k_label": "grass",
+        "ade20k_label_idx": 9,
+        "ade20k_confidence": 0.9761904761904762
+      },
+      {
+        "mask_id": 29,
+        "area": 11386,
+        "pixel_share": 0.02675281954887218,
+        "bbox": [
+          664,
+          252,
+          135,
+          104
+        ],
+        "sam2_iou": 0.7927272319793701,
+        "sam2_stability": 0.8884615302085876,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.9984191111891797
+      },
+      {
+        "mask_id": 30,
+        "area": 660,
+        "pixel_share": 0.001550751879699248,
+        "bbox": [
+          249,
+          348,
+          45,
+          15
+        ],
+        "sam2_iou": 0.7910321950912476,
+        "sam2_stability": 0.9349112510681152,
+        "ade20k_label": "grass",
+        "ade20k_label_idx": 9,
+        "ade20k_confidence": 0.33636363636363636
+      },
+      {
+        "mask_id": 31,
+        "area": 3288,
+        "pixel_share": 0.007725563909774436,
+        "bbox": [
+          748,
+          265,
+          51,
+          86
+        ],
+        "sam2_iou": 0.7898080945014954,
+        "sam2_stability": 0.8514851331710815,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 32,
+        "area": 492,
+        "pixel_share": 0.001156015037593985,
+        "bbox": [
+          60,
+          333,
+          31,
+          26
+        ],
+        "sam2_iou": 0.7730242013931274,
+        "sam2_stability": 0.8824662566184998,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 33,
+        "area": 398,
+        "pixel_share": 0.0009351503759398496,
+        "bbox": [
+          319,
+          467,
+          25,
+          17
+        ],
+        "sam2_iou": 0.7679104208946228,
+        "sam2_stability": 0.908433735370636,
+        "ade20k_label": "wall",
+        "ade20k_label_idx": 0,
+        "ade20k_confidence": 0.5703517587939698
+      },
+      {
+        "mask_id": 34,
+        "area": 31038,
+        "pixel_share": 0.07292763157894737,
+        "bbox": [
+          0,
+          464,
+          799,
+          67
+        ],
+        "sam2_iou": 0.7607375383377075,
+        "sam2_stability": 0.7809329032897949,
+        "ade20k_label": "path",
+        "ade20k_label_idx": 52,
+        "ade20k_confidence": 0.28742186996584834
+      },
+      {
+        "mask_id": 35,
+        "area": 3022,
+        "pixel_share": 0.007100563909774436,
+        "bbox": [
+          0,
+          316,
+          367,
+          34
+        ],
+        "sam2_iou": 0.7535684108734131,
+        "sam2_stability": 0.7992852926254272,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.6505625413633356
+      },
+      {
+        "mask_id": 36,
+        "area": 1050,
+        "pixel_share": 0.0024671052631578946,
+        "bbox": [
+          382,
+          0,
+          56,
+          27
+        ],
+        "sam2_iou": 0.7443958520889282,
+        "sam2_stability": 0.9293578267097473,
+        "ade20k_label": "sky",
+        "ade20k_label_idx": 2,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 37,
+        "area": 225,
+        "pixel_share": 0.0005286654135338346,
+        "bbox": [
+          18,
+          365,
+          18,
+          14
+        ],
+        "sam2_iou": 0.7397401332855225,
+        "sam2_stability": 0.948051929473877,
+        "ade20k_label": "grass",
+        "ade20k_label_idx": 9,
+        "ade20k_confidence": 0.6977777777777778
+      },
+      {
+        "mask_id": 38,
+        "area": 739,
+        "pixel_share": 0.001736372180451128,
+        "bbox": [
+          759,
+          417,
+          24,
+          42
+        ],
+        "sam2_iou": 0.7394238114356995,
+        "sam2_stability": 0.9106002449989319,
+        "ade20k_label": "bannister",
+        "ade20k_label_idx": 95,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 39,
+        "area": 690,
+        "pixel_share": 0.0016212406015037595,
+        "bbox": [
+          734,
+          417,
+          23,
+          42
+        ],
+        "sam2_iou": 0.735228419303894,
+        "sam2_stability": 0.8956043720245361,
+        "ade20k_label": "bannister",
+        "ade20k_label_idx": 95,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 40,
+        "area": 1568,
+        "pixel_share": 0.0036842105263157894,
+        "bbox": [
+          245,
+          317,
+          59,
+          31
+        ],
+        "sam2_iou": 0.7225798964500427,
+        "sam2_stability": 0.8825644254684448,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.9993622448979592
+      },
+      {
+        "mask_id": 41,
+        "area": 582,
+        "pixel_share": 0.0013674812030075188,
+        "bbox": [
+          107,
+          416,
+          15,
+          43
+        ],
+        "sam2_iou": 0.7222955822944641,
+        "sam2_stability": 0.9177631735801697,
+        "ade20k_label": "bannister",
+        "ade20k_label_idx": 95,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 42,
+        "area": 1078,
+        "pixel_share": 0.002532894736842105,
+        "bbox": [
+          382,
+          0,
+          98,
+          27
+        ],
+        "sam2_iou": 0.711742103099823,
+        "sam2_stability": 0.914893627166748,
+        "ade20k_label": "sky",
+        "ade20k_label_idx": 2,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 43,
+        "area": 75,
+        "pixel_share": 0.00017622180451127819,
+        "bbox": [
+          206,
+          502,
+          13,
+          6
+        ],
+        "sam2_iou": 0.7062523365020752,
+        "sam2_stability": 0.8717948794364929,
+        "ade20k_label": "sidewalk",
+        "ade20k_label_idx": 11,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 44,
+        "area": 2809,
+        "pixel_share": 0.006600093984962406,
+        "bbox": [
+          166,
+          318,
+          139,
+          34
+        ],
+        "sam2_iou": 0.7033698558807373,
+        "sam2_stability": 0.770153820514679,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.9978640085439658
+      },
+      {
+        "mask_id": 45,
+        "area": 276,
+        "pixel_share": 0.0006484962406015037,
+        "bbox": [
+          0,
+          347,
+          22,
+          13
+        ],
+        "sam2_iou": 0.685153603553772,
+        "sam2_stability": 0.9103448390960693,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 46,
+        "area": 451,
+        "pixel_share": 0.0010596804511278195,
+        "bbox": [
+          389,
+          256,
+          44,
+          17
+        ],
+        "sam2_iou": 0.6816941499710083,
+        "sam2_stability": 0.8264299631118774,
+        "ade20k_label": "sky",
+        "ade20k_label_idx": 2,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 47,
+        "area": 2883,
+        "pixel_share": 0.006773966165413534,
+        "bbox": [
+          0,
+          316,
+          373,
+          23
+        ],
+        "sam2_iou": 0.6794254183769226,
+        "sam2_stability": 0.808722734451294,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.627471383975026
+      },
+      {
+        "mask_id": 48,
+        "area": 382,
+        "pixel_share": 0.0008975563909774437,
+        "bbox": [
+          568,
+          354,
+          24,
+          21
+        ],
+        "sam2_iou": 0.6756947636604309,
+        "sam2_stability": 0.9416243433952332,
+        "ade20k_label": "grass",
+        "ade20k_label_idx": 9,
+        "ade20k_confidence": 0.6282722513089005
+      },
+      {
+        "mask_id": 49,
+        "area": 638,
+        "pixel_share": 0.0014990601503759398,
+        "bbox": [
+          125,
+          316,
+          23,
+          42
+        ],
+        "sam2_iou": 0.6716505289077759,
+        "sam2_stability": 0.871345043182373,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 50,
+        "area": 606,
+        "pixel_share": 0.0014238721804511279,
+        "bbox": [
+          154,
+          415,
+          17,
+          42
+        ],
+        "sam2_iou": 0.6691379547119141,
+        "sam2_stability": 0.9065420627593994,
+        "ade20k_label": "bannister",
+        "ade20k_label_idx": 95,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 51,
+        "area": 530,
+        "pixel_share": 0.0012453007518796993,
+        "bbox": [
+          134,
+          415,
+          12,
+          42
+        ],
+        "sam2_iou": 0.6684154868125916,
+        "sam2_stability": 0.9429097771644592,
+        "ade20k_label": "bannister",
+        "ade20k_label_idx": 95,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 52,
+        "area": 213,
+        "pixel_share": 0.00050046992481203,
+        "bbox": [
+          782,
+          212,
+          17,
+          19
+        ],
+        "sam2_iou": 0.6589344143867493,
+        "sam2_stability": 0.8728070259094238,
+        "ade20k_label": "sky",
+        "ade20k_label_idx": 2,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 53,
+        "area": 2585,
+        "pixel_share": 0.006073778195488722,
+        "bbox": [
+          216,
+          317,
+          89,
+          34
+        ],
+        "sam2_iou": 0.6557488441467285,
+        "sam2_stability": 0.8926223516464233,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.9980657640232108
+      },
+      {
+        "mask_id": 54,
+        "area": 530,
+        "pixel_share": 0.0012453007518796993,
+        "bbox": [
+          179,
+          415,
+          15,
+          40
+        ],
+        "sam2_iou": 0.6431419849395752,
+        "sam2_stability": 0.8969804644584656,
+        "ade20k_label": "bannister",
+        "ade20k_label_idx": 95,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 55,
+        "area": 926,
+        "pixel_share": 0.002175751879699248,
+        "bbox": [
+          124,
+          305,
+          27,
+          52
+        ],
+        "sam2_iou": 0.6374825835227966,
+        "sam2_stability": 0.8409090638160706,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 56,
+        "area": 2601,
+        "pixel_share": 0.0061113721804511275,
+        "bbox": [
+          298,
+          323,
+          188,
+          34
+        ],
+        "sam2_iou": 0.6343518495559692,
+        "sam2_stability": 0.7150360941886902,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.9888504421376394
+      },
+      {
+        "mask_id": 57,
+        "area": 6976,
+        "pixel_share": 0.016390977443609022,
+        "bbox": [
+          0,
+          456,
+          304,
+          28
+        ],
+        "sam2_iou": 0.6328427791595459,
+        "sam2_stability": 0.7879294753074646,
+        "ade20k_label": "bannister",
+        "ade20k_label_idx": 95,
+        "ade20k_confidence": 0.4461009174311927
+      },
+      {
+        "mask_id": 58,
+        "area": 2272,
+        "pixel_share": 0.005338345864661654,
+        "bbox": [
+          50,
+          322,
+          114,
+          36
+        ],
+        "sam2_iou": 0.614244282245636,
+        "sam2_stability": 0.6137735247612,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 1.0
+      },
+      {
+        "mask_id": 59,
+        "area": 5354,
+        "pixel_share": 0.012579887218045113,
+        "bbox": [
+          0,
+          349,
+          773,
+          25
+        ],
+        "sam2_iou": 0.6016606688499451,
+        "sam2_stability": 0.6430971622467041,
+        "ade20k_label": "tree",
+        "ade20k_label_idx": 4,
+        "ade20k_confidence": 0.4131490474411655
+      }
+    ],
+    "n_masks": 60,
+    "image_size": [
+      800,
+      532
+    ],
     "pixel_shares": {
       "shares": {
-        "wall": 0.02206531954887218,
-        "building": 0.0010385338345864662,
-        "sky": 0.5039238721804511,
-        "floor": 0.0005310150375939849,
-        "tree": 0.17923637218045113,
-        "road": 0.006663533834586466,
-        "grass": 0.04690319548872181,
-        "sidewalk": 0.024555921052631578,
-        "person": 0.03319078947368421,
-        "mountain": 5.4041353383458644e-05,
-        "plant": 0.001386278195488722,
-        "field": 0.005608552631578947,
-        "fence": 0.01743656015037594,
-        "grandstand": 0.01625,
-        "path": 0.031574248120300755,
-        "stairs": 0.027507048872180452,
-        "bannister": 0.07895676691729324,
-        "fountain": 0.0031179511278195487
+        "sky": 0.45630206561485503,
+        "tree": 0.18850380966871186,
+        "path": 0.13515990009556225,
+        "bannister": 0.11375156207529076,
+        "grass": 0.08783692532297135,
+        "person": 0.016861010771695113,
+        "wall": 0.0014565123367620636,
+        "sidewalk": 0.00012821411415159012
       },
       "image_size": [
         800,
         532
       ]
     },
-    "semantic_map_shape": [
-      532,
-      800
-    ],
-    "n_classes_detected": 18
+    "n_classes_detected": 8,
+    "coverage_ratio": 1.3744337406015037,
+    "method_meta": {
+      "sam2_model": "facebook/sam2.1-hiera-small",
+      "ade20k_model": "nvidia/segformer-b0-finetuned-ade-512-512"
+    }
   },
   "vlm": {
-    "raw_response": "{\n  \"image_level_summary\": \"Two individuals stand at a stone balustrade overlooking a waterfront landscape with green lawn, trees, and a distant river under a cloudy sky.\",\n  \"human_presence\": {\n    \"visible\": \"yes\",\n    \"presence_type\": [\"individual\"],\n    \"estimated_people_count\": \"2-5\",\n    \"visual_evidence\": \"Two figures are clearly visible standing side-by-side at the balustrade, facing away from the camera toward the landscape.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"lawn\", \"waterfront\", \"woodland\", \"urban greenery\"],\n    \"dominant_nature_type\": \"waterfront\",\n    \"visual_evidence\": \"A wide river or large body of water is visible in the mid-ground, bordered by green grassy areas and trees, suggesting a waterfront park setting.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"landscape viewing\", \"watching\"],\n    \"dominant_activity\": \"landscape viewing\",\n    \"visual_evidence\": \"The two individuals are standing still, oriented toward the distant view, suggesting they are observing or appreciating the landscape.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"aesthetic appreciation\", \"recreation\"],\n    \"dominant_meaning\": \"aesthetic appreciation\",\n    \"visual_evidence\": \"The posture and orientation of the individuals toward the expansive natural view, combined with the scenic composition, suggest aesthetic appreciation of the landscape.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"yes\",\n    \"hni_strength\": \"moderate\",\n    \"reason\": \"Human presence is clearly visible, oriented toward nature, with visual cues indicating landscape viewing and aesthetic appreciation. The setting is clearly a park-like waterfront environment, supporting human\u2013nature interaction.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"\"\n}",
+    "raw_response": "{\n  \"image_level_summary\": \"The image shows two people standing by a stone balustrade overlooking a natural landscape with trees, a lawn, and a body of water under a partly cloudy sky.\",\n  \"human_presence\": {\n    \"visible\": \"yes\",\n    \"presence_type\": [\"individual\", \"visitors\"],\n    \"estimated_people_count\": \"2-5\",\n    \"visual_evidence\": \"Two individuals are visible standing side by side facing the landscape.\"\n  },\n  \"nature_detection\": {\n    \"nature_types\": [\"lawn\", \"woodland\", \"waterfront\"],\n    \"dominant_nature_type\": \"waterfront\",\n    \"visual_evidence\": \"The image shows a large body of water in the background, surrounded by trees and a grassy lawn area.\"\n  },\n  \"activity_evidence\": {\n    \"activity_types\": [\"watching\", \"landscape viewing\"],\n    \"dominant_activity\": \"landscape viewing\",\n    \"visual_evidence\": \"The two individuals are standing still and facing the natural scenery, suggesting they are observing or viewing the landscape.\"\n  },\n  \"cultural_experiential_meaning\": {\n    \"meaning_types\": [\"aesthetic appreciation\", \"relaxation\"],\n    \"dominant_meaning\": \"aesthetic appreciation\",\n    \"visual_evidence\": \"The positioning of the individuals and the scenic view suggest an appreciation of the natural beauty and a moment of calm.\"\n  },\n  \"hni_overall_interpretation\": {\n    \"is_hni_present\": \"yes\",\n    \"hni_strength\": \"moderate\",\n    \"reason\": \"Human presence is clear with individuals engaging in landscape viewing in a natural waterfront setting, indicating interaction with nature primarily through observation and appreciation.\"\n  },\n  \"confidence\": \"high\",\n  \"uncertainty_notes\": \"No visible activities beyond standing and viewing; emotional or social interactions are not visually evident.\"\n}",
     "parsed": {
-      "image_level_summary": "Two individuals stand at a stone balustrade overlooking a waterfront landscape with green lawn, trees, and a distant river under a cloudy sky.",
+      "image_level_summary": "The image shows two people standing by a stone balustrade overlooking a natural landscape with trees, a lawn, and a body of water under a partly cloudy sky.",
       "human_presence": {
         "visible": "yes",
         "presence_type": [
-          "individual"
+          "individual",
+          "visitors"
         ],
         "estimated_people_count": "2-5",
-        "visual_evidence": "Two figures are clearly visible standing side-by-side at the balustrade, facing away from the camera toward the landscape."
+        "visual_evidence": "Two individuals are visible standing side by side facing the landscape."
       },
       "nature_detection": {
         "nature_types": [
           "lawn",
-          "waterfront",
           "woodland",
-          "urban greenery"
+          "waterfront"
         ],
         "dominant_nature_type": "waterfront",
-        "visual_evidence": "A wide river or large body of water is visible in the mid-ground, bordered by green grassy areas and trees, suggesting a waterfront park setting."
+        "visual_evidence": "The image shows a large body of water in the background, surrounded by trees and a grassy lawn area."
       },
       "activity_evidence": {
         "activity_types": [
-          "landscape viewing",
-          "watching"
+          "watching",
+          "landscape viewing"
         ],
         "dominant_activity": "landscape viewing",
-        "visual_evidence": "The two individuals are standing still, oriented toward the distant view, suggesting they are observing or appreciating the landscape."
+        "visual_evidence": "The two individuals are standing still and facing the natural scenery, suggesting they are observing or viewing the landscape."
       },
       "cultural_experiential_meaning": {
         "meaning_types": [
           "aesthetic appreciation",
-          "recreation"
+          "relaxation"
         ],
         "dominant_meaning": "aesthetic appreciation",
-        "visual_evidence": "The posture and orientation of the individuals toward the expansive natural view, combined with the scenic composition, suggest aesthetic appreciation of the landscape."
+        "visual_evidence": "The positioning of the individuals and the scenic view suggest an appreciation of the natural beauty and a moment of calm."
       },
       "hni_overall_interpretation": {
         "is_hni_present": "yes",
         "hni_strength": "moderate",
-        "reason": "Human presence is clearly visible, oriented toward nature, with visual cues indicating landscape viewing and aesthetic appreciation. The setting is clearly a park-like waterfront environment, supporting human\u2013nature interaction."
+        "reason": "Human presence is clear with individuals engaging in landscape viewing in a natural waterfront setting, indicating interaction with nature primarily through observation and appreciation."
       },
       "confidence": "high",
-      "uncertainty_notes": ""
+      "uncertainty_notes": "No visible activities beyond standing and viewing; emotional or social interactions are not visually evident."
     },
     "parse_error": null,
-    "tokens_used": 1504
+    "tokens_used": 1718
   }
 }

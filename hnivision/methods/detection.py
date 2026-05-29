@@ -134,7 +134,7 @@ class Detection(BaseHNIMethod):
 
     def __init__(
         self,
-        model_name: str = "yolo11s.pt",
+        model_name: str = "yolo26s.pt",
         conf_threshold: float = 0.25,
         imgsz: int = 640,
         device: Optional[str] = None,
