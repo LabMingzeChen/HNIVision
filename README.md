@@ -170,7 +170,7 @@ from hnivision.methods import Classification
 
 clf = Classification(weights="resnet50-hni-v1.pt")
 cat = clf.extract("park.jpg")
-# Category("Informal Recreation and Social Interaction", p=0.91)
+# Category("Social and Informal Recreation", p=0.91)
 ```
 
 **HNI coverage:** ○ human · ○ nature · ◐ activity · ◐ meaning
