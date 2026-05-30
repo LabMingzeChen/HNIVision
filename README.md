@@ -158,7 +158,7 @@ tags = lab.extract("park.jpg")
 #  ("Leisure", 0.76), ("Walkway", 0.71), ...]
 ```
 
-**HNI coverage:** ◐ human · ◐ nature · ○ activity · ◐ meaning
+**HNI coverage:** ◐ human · ◐ nature · ◐ activity · ◐ meaning
 
 </td>
 <td width="50%" valign="top">
