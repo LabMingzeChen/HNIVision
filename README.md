@@ -176,7 +176,7 @@ cat = clf.extract("park.jpg")
 # Category("Social and Informal Recreation", p=0.91)
 ```
 
-**HNI coverage:** ○ human · ○ nature · ◐ activity · ◐ meaning
+**HNI coverage:** ○ human · ◐ nature · ◐ activity · ◐ meaning
 
 </td>
 </tr>
